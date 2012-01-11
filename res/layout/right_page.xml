@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="fill_parent"
+              android:layout_width="fill_parent"
+              android:orientation="vertical">
+	<TextView
+			android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:textSize="25dip"
+			android:id="@+id/champName">
+	</TextView>
+
+	<ScrollView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+		<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				android:orientation="vertical">
+			<TextView
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:textSize="16dip"
+					android:id="@+id/champ_build"
+                    android:text="Press a button to select your item!"/>
+			<Button
+					android:id="@+id/itemButton1"
+					android:layout_height="wrap_content"
+					android:layout_width="wrap_content"
+					android:text="Item 1"/>
+            <Button
+                    android:id="@+id/itemButton2"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Item 2"/>
+            <Button
+                    android:id="@+id/itemButton3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Item 3"/>
+            <Button
+                    android:id="@+id/itemButton4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Item 4"/>
+            <Button
+                    android:id="@+id/itemButton5"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Item 5"/>
+            <Button
+                    android:id="@+id/itemButton6"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Item 6"/>
+            <Button
+                    android:id="@+id/itemButton7"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Item 7"/>
+            <Button
+                    android:id="@+id/itemButton8"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Item 8"/>
+            <Button
+                    android:id="@+id/itemButton9"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Item 9"/>
+            <Button
+                    android:id="@+id/itemButton10"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:text="Item 10"/>
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
