@@ -1,14 +1,12 @@
 package net.neonlotus.lolandroidapp;
- 
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.ArrayList;
-
 // A basic object that can be parcelled to transfer between objects
 public class ChampObj implements Parcelable {
+
+	//Hi git?
  
 	// Standard basic constructor for non-parcel object creations
 	private String champName;
