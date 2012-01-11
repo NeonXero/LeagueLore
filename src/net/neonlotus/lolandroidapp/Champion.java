@@ -20,6 +20,7 @@ import com.viewpagerindicator.TitleProvider;
 public class Champion extends Activity implements View.OnClickListener{
 
 	private ChampObj mChampData;
+    private String mPrefPrefix;
 	
 	Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b10;
 	private SharedPreferences mPrefs;
@@ -36,18 +37,27 @@ public class Champion extends Activity implements View.OnClickListener{
 		setContentView(R.layout.othermain);
 
 		//LoadPreferences();
+        Bundle b = getIntent().getExtras();
+        if(b != null && b.getParcelable("net.neonlotus.lolandroidapp.ChampObj") != null){
+            mChampData = b.getParcelable("net.neonlotus.lolandroidapp.ChampObj");
+        }else {
+            Toast.makeText(this, "No Champion selected!", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+
+        mPrefPrefix = mChampData.getChampName() + "_";
 
 		mPrefs = getPreferences(MODE_PRIVATE);
-		item1 = mPrefs.getString("item1","Item 1");
-		item2 = mPrefs.getString("item2","Item 2");
-		item3 = mPrefs.getString("item3","Item 3");
-		item4 = mPrefs.getString("item4","Item 4");
-		item5 = mPrefs.getString("item5","Item 5");
-		item6 = mPrefs.getString("item6","Item 6");
-		item7 = mPrefs.getString("item7","Item 7");
-		item8 = mPrefs.getString("item8","Item 8");
-		item9 = mPrefs.getString("item9","Item 9");
-		item10 = mPrefs.getString("item10","Item 10");
+		item1 = mPrefs.getString(mPrefPrefix+"item1","Item 1");
+		item2 = mPrefs.getString(mPrefPrefix+"item2","Item 2");
+		item3 = mPrefs.getString(mPrefPrefix+"item3","Item 3");
+		item4 = mPrefs.getString(mPrefPrefix+"item4","Item 4");
+		item5 = mPrefs.getString(mPrefPrefix+"item5","Item 5");
+		item6 = mPrefs.getString(mPrefPrefix+"item6","Item 6");
+		item7 = mPrefs.getString(mPrefPrefix+"item7","Item 7");
+		item8 = mPrefs.getString(mPrefPrefix+"item8","Item 8");
+		item9 = mPrefs.getString(mPrefPrefix+"item9","Item 9");
+		item10 = mPrefs.getString(mPrefPrefix+"item10","Item 10");
 
 		MyPagerAdapter adapter = new MyPagerAdapter();
 		ViewPager myPager = (ViewPager) findViewById(R.id.thisshouldwork);
@@ -56,14 +66,6 @@ public class Champion extends Activity implements View.OnClickListener{
 
 		TitlePageIndicator titleIndicator = (TitlePageIndicator)findViewById(R.id.titles);
 		titleIndicator.setViewPager(myPager);
-
-		Bundle b = getIntent().getExtras();
-		if(b != null && b.getParcelable("net.neonlotus.lolandroidapp.ChampObj") != null){
-			mChampData = b.getParcelable("net.neonlotus.lolandroidapp.ChampObj");
-		}else {
-			Toast.makeText(this, "No Champion selected!", Toast.LENGTH_SHORT).show();
-			finish();
-		}
 	}
 
 	public void onClick(View view) {
@@ -275,52 +277,52 @@ public class Champion extends Activity implements View.OnClickListener{
 							case 0:
 								b1.setText(big_item_list[i]);
 								t1 = b1.getText().toString();
-								SavePreferences("item1",t1);
+								SavePreferences(mPrefPrefix+"item1",t1);
 								break;
 							case 1:
 								b2.setText(big_item_list[i]);
 								t2 = b2.getText().toString();
-								SavePreferences("item2",t2);
+								SavePreferences(mPrefPrefix+"item2",t2);
 								break;
 							case 2:
 								b3.setText(big_item_list[i]);
 								t3 = b3.getText().toString();
-								SavePreferences("item3",t3);
+								SavePreferences(mPrefPrefix+"item3",t3);
 								break;
 							case 3:
 								b4.setText(big_item_list[i]);
 								t4 = b4.getText().toString();
-								SavePreferences("item4",t4);
+								SavePreferences(mPrefPrefix+"item4",t4);
 								break;
 							case 4:
 								b5.setText(big_item_list[i]);
 								t5 = b5.getText().toString();
-								SavePreferences("item5",t5);
+								SavePreferences(mPrefPrefix+"item5",t5);
 								break;
 							case 5:
 								b6.setText(big_item_list[i]);
 								t6 = b6.getText().toString();
-								SavePreferences("item6",t6);
+								SavePreferences(mPrefPrefix+"item6",t6);
 								break;
 							case 6:
 								b7.setText(big_item_list[i]);
 								t7 = b7.getText().toString();
-								SavePreferences("item7",t7);
+								SavePreferences(mPrefPrefix+"item7",t7);
 								break;
 							case 7:
 								b8.setText(big_item_list[i]);
 								t8 = b8.getText().toString();
-								SavePreferences("item8",t8);
+								SavePreferences(mPrefPrefix+"item8",t8);
 								break;
 							case 8:
 								b9.setText(big_item_list[i]);
 								t9 = b9.getText().toString();
-								SavePreferences("item9",t9);
+								SavePreferences(mPrefPrefix+"item9",t9);
 								break;
 							case 9:
 								b10.setText(big_item_list[i]);
 								t10 = b10.getText().toString();
-								SavePreferences("item10",t10);
+								SavePreferences(mPrefPrefix+"item10",t10);
 								break;
 						}
 
@@ -338,25 +340,25 @@ public class Champion extends Activity implements View.OnClickListener{
 
 	private void LoadPreferences(){
 		mPrefs = getPreferences(MODE_PRIVATE);
-		String s1=mPrefs.getString("item1","Item 1");
+		String s1=mPrefs.getString(mPrefPrefix+"item1","Item 1");
 		b1.setText(s1);
-		String s2=mPrefs.getString("item2","Item 2");
+		String s2=mPrefs.getString(mPrefPrefix+"item2","Item 2");
 		b2.setText(s2);
-		String s3=mPrefs.getString("item3","Item 3");
+		String s3=mPrefs.getString(mPrefPrefix+"item3","Item 3");
 		b3.setText(s3);
-		String s4=mPrefs.getString("item4","Item 4");
+		String s4=mPrefs.getString(mPrefPrefix+"item4","Item 4");
 		b4.setText(s4);
-		String s5=mPrefs.getString("item5","Item 5");
+		String s5=mPrefs.getString(mPrefPrefix+"item5","Item 5");
 		b5.setText(s5);
-		String s6=mPrefs.getString("item6","Item 6");
+		String s6=mPrefs.getString(mPrefPrefix+"item6","Item 6");
 		b6.setText(s6);
-		String s7=mPrefs.getString("item7","Item 7");
+		String s7=mPrefs.getString(mPrefPrefix+"item7","Item 7");
 		b7.setText(s7);
-		String s8=mPrefs.getString("item8","Item 8");
+		String s8=mPrefs.getString(mPrefPrefix+"item8","Item 8");
 		b8.setText(s8);
-		String s9=mPrefs.getString("item9","Item 9");
+		String s9=mPrefs.getString(mPrefPrefix+"item9","Item 9");
 		b9.setText(s9);
-		String s10=mPrefs.getString("item10","Item 10");
+		String s10=mPrefs.getString(mPrefPrefix+"item10","Item 10");
 		b10.setText(s10);
 	}
 }
