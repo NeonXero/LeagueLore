@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">LoL Lore And More</string>
+	<string name="app_name">League Lore</string>
 	<array name="champ_list">
         <item>Ahri</item>
         <item>Akali</item>
@@ -2801,7 +2801,7 @@
     </array>
 
     <array name="champ_banners">
-        <item>@drawable/temp_ban</item> <!--Ahri missing-->
+        <item>@drawable/ahri_ban</item>
         <item>@drawable/akali_ban</item>
         <item>@drawable/ali_ban</item>
         <item>@drawable/amu_ban</item>
@@ -2882,9 +2882,9 @@
         <item>@drawable/urgot_ban</item>
         <item>@drawable/vayne_ban</item>
         <item>@drawable/vig_ban</item>
-        <item>@drawable/temp_ban</item> <!--Viktor missing-->
+        <item>@drawable/vik_ban</item>
         <item>@drawable/vlad_ban</item>
-        <item>@drawable/temp_ban</item> <!--Volibear missing-->
+        <item>@drawable/voli_ban</item>
         <item>@drawable/war_ban</item>
         <item>@drawable/wukong_ban</item>
         <item>@drawable/xer_ban</item>
