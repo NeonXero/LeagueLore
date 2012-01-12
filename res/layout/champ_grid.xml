@@ -8,5 +8,4 @@
           android:horizontalSpacing="10dp"
           android:columnWidth="70dp"
           android:stretchMode="columnWidth"
-          android:gravity="center"
-        />
+          android:gravity="center"/>

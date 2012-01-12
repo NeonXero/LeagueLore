@@ -19,7 +19,6 @@
         <activity android:name=".Lore"></activity>
         <activity android:name=".Info"></activity>
         <activity android:name=".Champion"></activity>
-        <activity android:name=".Items"></activity>
         <activity android:name=".Champion"></activity>
     </application>
 <!--

@@ -1,25 +1,14 @@
 package net.neonlotus.lolandroidapp;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.ListActivity;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Created by IntelliJ IDEA.
@@ -53,11 +42,6 @@ public class Info extends Activity {
 		final String[] champ_stats_array = getResources().getStringArray(R.array.champ_stats);
 		final String[] champ_tag_lines = getResources().getStringArray(R.array.champ_taglines);
 
-
-		//setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, champ_list_array)); THIS
-
-		//ListView lv = getListView(); THIS
-		//lv.setTextFilterEnabled(true); THIS
 		gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			public void onItemClick(AdapterView parent, View v, int position, long id) {
 				//Copying stuff from list adapter click thing
@@ -68,49 +52,12 @@ public class Info extends Activity {
 				obj.setChampTags(champ_tag_lines[position]);
 
 				obj.setIndex(position);
-				Log.d(TAG, "Position=" + position);
+				//Log.d(TAG, "Position=" + position);
 
 				intent.putExtra("net.neonlotus.lolandroidapp.ChampObj", obj);
 				startActivity(intent);
 			}
 		});
-
-		//registerForContextMenu();
-
-		/*AdapterView.OnItemLongClickListener listener = new AdapterView.OnItemLongClickListener() {
-
-			@Override
-			public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-				//Log.d(TAG, "OnItemLongClickListener");
-				//Toast.makeText(getApplicationContext(),"LONG",Toast.LENGTH_SHORT).show();
-				//showOptionsMenu(position);
-				return true;
-			}
-		};
-
-
-
-		gridview.setOnItemLongClickListener(listener);*/
-
-
-
-		/*lv.setOnItemClickListener(new AdapterView.OnItemClickListener() { THIS
-			public void onItemClick(AdapterView<?> parent, final View view, final int position, long id) {
-				//Trying Scott parcel thing
-				ChampObj obj = new ChampObj();
-				//Set values etc.
-				obj.setChampName(champ_list_array[position]);
-				obj.setChampStory(champ_lore_array[position]);
-				obj.setChampStats(champ_stats_array[position]);
-				obj.setChampTags(champ_tag_lines[position]);
-
-				//Intent stuff :D
-				intent.putExtra("net.neonlotus.lolandroidapp.ChampObj", obj);
-				startActivity(intent);
-
-
-			} //end on click
-		});*/
 	}
 
 
@@ -150,7 +97,7 @@ public class Info extends Activity {
 			tv.setText(champ_list_array[position]);
 			ImageView iv = (ImageView) v.findViewById(R.id.icon_image);
 			iv.setImageResource(mThumbIds[position]);
-			iv.setPadding(5,5,5,5);
+			iv.setPadding(5, 5, 5, 5);
 			return v;
 		}
 

@@ -3,20 +3,20 @@
               android:layout_height="fill_parent"
               android:layout_width="fill_parent"
               android:paddingBottom="20dp"
-              android:orientation="vertical" >
+              android:orientation="vertical">
 
     <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
         <LinearLayout
-            android:layout_height="fill_parent"
-            android:layout_width="wrap_content"
-            android:orientation="vertical"
-            >
+                android:layout_height="fill_parent"
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                >
 
             <RelativeLayout android:layout_height="wrap_content"
-                            android:layout_width="fill_parent" >
+                            android:layout_width="fill_parent">
 
                 <ImageView
                         android:layout_height="189dp"
@@ -31,19 +31,12 @@
                         android:textStyle="bold"
                         style="@style/dropShadowText"
                         android:id="@+id/champName"/>
-
-
             </RelativeLayout>
             <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:textSize="16dip"
-                    android:id="@+id/lorechamp" />
-
-
-
-            </LinearLayout>
-
-
+                    android:id="@+id/lorechamp"/>
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>

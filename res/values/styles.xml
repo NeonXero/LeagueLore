@@ -8,5 +8,4 @@
         <item name="android:shadowDy">4</item>
         <item name="android:shadowRadius">3</item>
     </style>
-
 </resources>

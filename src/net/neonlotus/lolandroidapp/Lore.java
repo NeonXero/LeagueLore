@@ -4,9 +4,10 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.*;
-
-import java.io.IOException;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,7 +17,7 @@ import java.io.IOException;
  * To change this template use File | Settings | File Templates.
  */
 public class Lore extends ListActivity {
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
