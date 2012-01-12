@@ -24,13 +24,13 @@ public class Main extends TabActivity {
 		intent = new Intent().setClass(this, Lore.class);
 
 		// Initialize a TabSpec for each tab and add it to the TabHost
-		spec = tabHost.newTabSpec("artists").setIndicator("Game Lore", res.getDrawable(R.drawable.ken_tab))
+		spec = tabHost.newTabSpec("lore").setIndicator("Game Lore", res.getDrawable(R.drawable.ken_tab))
 				.setContent(intent);
 		tabHost.addTab(spec);
 
 		// Do the same for the other tabs
 		intent = new Intent().setClass(this, Info.class);
-		spec = tabHost.newTabSpec("albums").setIndicator("Champion Info", res.getDrawable(R.drawable.pop_tab))
+		spec = tabHost.newTabSpec("champs").setIndicator("Champion Info", res.getDrawable(R.drawable.pop_tab))
 				.setContent(intent);
 		tabHost.addTab(spec);
 	}

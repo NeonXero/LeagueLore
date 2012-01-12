@@ -5,13 +5,18 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.viewpagerindicator.TitlePageIndicator;
@@ -29,6 +34,7 @@ public class Champion extends Activity implements View.OnClickListener{
 	String item1, item2, item3, item4, item5, item6, item7, item8, item9, item10;
 	//Temp string...
 	String t1,t2,t3,t4,t5,t6,t7,t8,t9,t10;
+	private static final String TAG = "LeagueLore";
 
 	/** Called when the activity is first created. */
 	@Override
@@ -89,6 +95,16 @@ public class Champion extends Activity implements View.OnClickListener{
 					view = inflater.inflate(R.layout.left_page, null);
 					((TextView)view.findViewById(R.id.lorechamp)).setText(mChampData.getChampStory());
 					((TextView)view.findViewById(R.id.champName)).setText(mChampData.getChampTags());
+					//((ImageView)view.findViewById(R.id.champ_banner)).setImageResource(R.drawable.ali_ban);
+
+
+					//Banner work
+					Resources res = getResources();
+					TypedArray icons = res.obtainTypedArray(R.array.champ_banners);
+					Drawable drawable = icons.getDrawable(mChampData.getIndex());
+					Log.d(TAG, "Index=" + mChampData.getIndex());
+
+					((ImageView)view.findViewById(R.id.champ_banner)).setImageDrawable(drawable);
 
 					break;
 				case 1:
@@ -148,7 +164,7 @@ public class Champion extends Activity implements View.OnClickListener{
 				case 2:
 					view = inflater.inflate(R.layout.right_page, null);
 					((TextView)view.findViewById(R.id.champName)).setText(mChampData.getChampTags());
-					((TextView)view.findViewById(R.id.champ_build)).setText(mChampData.getChampBuilds());
+					//((TextView)view.findViewById(R.id.champ_build)).setText(mChampData.getChampBuilds());
 					b1 = ((Button)view.findViewById(R.id.itemButton1));
 					b2 = ((Button)view.findViewById(R.id.itemButton2));
 					b3 = ((Button)view.findViewById(R.id.itemButton3));
@@ -259,7 +275,7 @@ public class Champion extends Activity implements View.OnClickListener{
 				case 1:
 					return "Tags";
 				case 2:
-					return "Items";
+					return "Build";
 			}
 			return Integer.toString(position);
 		}

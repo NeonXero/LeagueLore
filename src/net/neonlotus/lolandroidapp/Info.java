@@ -8,6 +8,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,9 @@ import java.util.ArrayList;
  * To change this template use File | Settings | File Templates.
  */
 public class Info extends Activity {
+
+	private static final String TAG = "LeagueLore";
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -49,6 +53,7 @@ public class Info extends Activity {
 		final String[] champ_stats_array = getResources().getStringArray(R.array.champ_stats);
 		final String[] champ_tag_lines = getResources().getStringArray(R.array.champ_taglines);
 
+
 		//setListAdapter(new ArrayAdapter<String>(this, R.layout.list_item, champ_list_array)); THIS
 
 		//ListView lv = getListView(); THIS
@@ -61,6 +66,10 @@ public class Info extends Activity {
 				obj.setChampStory(champ_lore_array[position]);
 				obj.setChampStats(champ_stats_array[position]);
 				obj.setChampTags(champ_tag_lines[position]);
+
+				obj.setIndex(position);
+				Log.d(TAG, "Position=" + position);
+
 				intent.putExtra("net.neonlotus.lolandroidapp.ChampObj", obj);
 				startActivity(intent);
 			}

@@ -16,6 +16,8 @@ public class ChampObj implements Parcelable {
 	private String champBuilds;
 	private String champTags; //add
 	private String champAbil; //add
+	private int mIndex;
+	//add
 
 
 	public ChampObj() {};
@@ -84,6 +86,15 @@ public class ChampObj implements Parcelable {
 	public void setChampAbil(String champAbil) {
 		this.champAbil=champAbil;
 	}
+	
+	//GET for banenrs
+	public int getIndex() {
+		return mIndex;
+	}
+	public void setIndex(int index) {
+		this.mIndex = index;
+	}
+	
 
 	//@Override
 	public int describeContents() {
@@ -102,6 +113,7 @@ public class ChampObj implements Parcelable {
 		dest.writeString(statDesc);
 		dest.writeString(champTags); //add
 		dest.writeString(champAbil); //add
+		dest.writeInt(mIndex);//banner
 	}
  
 	// Called from the constructor to create this object from a parcel.
@@ -116,6 +128,7 @@ public class ChampObj implements Parcelable {
 		statDesc = in.readString();
 		champTags=in.readString(); //add
 		champAbil=in.readString();//add 2
+		mIndex=in.readInt();//banner
 	}
  
     /**

@@ -2800,9 +2800,97 @@
         <item>the chronokeeper, zilean</item>
     </array>
 
-    <array name="my_options">
-        <item>DOG</item>
-        <item>CAT</item>
+    <array name="champ_banners">
+        <item>@drawable/temp_ban</item> <!--Ahri missing-->
+        <item>@drawable/akali_ban</item>
+        <item>@drawable/ali_ban</item>
+        <item>@drawable/amu_ban</item>
+        <item>@drawable/anivia_ban</item>
+        <item>@drawable/annie_ban</item>
+        <item>@drawable/ashe_ban</item>
+        <item>@drawable/blitz_ban</item>
+        <item>@drawable/brand_ban</item>
+        <item>@drawable/cait_ban</item>
+        <item>@drawable/cass_ban</item>
+        <item>@drawable/cho_ban</item>
+        <item>@drawable/corki_ban</item>
+        <item>@drawable/drm_ban</item>
+        <item>@drawable/eve_ban</item>
+        <item>@drawable/ez_ban</item>
+        <item>@drawable/fiddle_ban</item>
+        <item>@drawable/fizz_ban</item>
+        <item>@drawable/galio_ban</item>
+        <item>@drawable/gang_ban</item>
+        <item>@drawable/garen_ban</item>
+        <item>@drawable/gragas_ban</item>
+        <item>@drawable/graves_ban</item>
+        <item>@drawable/heim_ban</item>
+        <item>@drawable/irelia_ban</item>
+        <item>@drawable/janna_ban</item>
+        <item>@drawable/jarvan_ban</item>
+        <item>@drawable/jax_ban</item>
+        <item>@drawable/karma_ban</item>
+        <item>@drawable/karth_ban</item>
+        <item>@drawable/kas_ban</item>
+        <item>@drawable/kat_ban</item>
+        <item>@drawable/kayle_ban</item>
+        <item>@drawable/kennen_ban</item>
+        <item>@drawable/kog_ban</item>
+        <item>@drawable/leblanc_ban</item>
+        <item>@drawable/lee_ban</item>
+        <item>@drawable/leona_ban</item>
+        <item>@drawable/lux_ban</item>
+        <item>@drawable/malph_ban</item>
+        <item>@drawable/malz_ban</item>
+        <item>@drawable/mookoo_ban</item>
+        <item>@drawable/master_ban</item>
+        <item>@drawable/missf_ban</item>
+        <item>@drawable/mord_ban</item>
+        <item>@drawable/morgana_ban</item>
+        <item>@drawable/nasus_ban</item>
+        <item>@drawable/nida_ban</item>
+        <item>@drawable/noc_ban</item>
+        <item>@drawable/nunu_ban</item>
+        <item>@drawable/olaf_ban</item>
+        <item>@drawable/orianna_ban</item>
+        <item>@drawable/panth_ban</item>
+        <item>@drawable/poppy_ban</item>
+        <item>@drawable/ram_ban</item>
+        <item>@drawable/ren_ban</item>
+        <item>@drawable/riven_ban</item>
+        <item>@drawable/rumble_ban</item>
+        <item>@drawable/ryze_ban</item>
+        <item>@drawable/shaco_ban</item>
+        <item>@drawable/shen_ban</item>
+        <item>@drawable/shyv_ban</item>
+        <item>@drawable/singed_ban</item>
+        <item>@drawable/sion_ban</item>
+        <item>@drawable/sivir_ban</item>
+        <item>@drawable/skarn_ban</item>
+        <item>@drawable/sona_ban</item>
+        <item>@drawable/soraka_ban</item>
+        <item>@drawable/swain_ban</item>
+        <item>@drawable/talon_ban</item>
+        <item>@drawable/taric_ban</item>
+        <item>@drawable/teemo_ban</item>
+        <item>@drawable/trist_ban</item>
+        <item>@drawable/trundle_ban</item>
+        <item>@drawable/tryn_ban</item>
+        <item>@drawable/tf_ban</item>
+        <item>@drawable/twitch_ban</item>
+        <item>@drawable/udyr_ban</item>
+        <item>@drawable/urgot_ban</item>
+        <item>@drawable/vayne_ban</item>
+        <item>@drawable/vig_ban</item>
+        <item>@drawable/temp_ban</item> <!--Viktor missing-->
+        <item>@drawable/vlad_ban</item>
+        <item>@drawable/temp_ban</item> <!--Volibear missing-->
+        <item>@drawable/war_ban</item>
+        <item>@drawable/wukong_ban</item>
+        <item>@drawable/xer_ban</item>
+        <item>@drawable/xin_ban</item>
+        <item>@drawable/yorick_ban</item>
+        <item>@drawable/zil_ban</item>
     </array>
 
 </resources>

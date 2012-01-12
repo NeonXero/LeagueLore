@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="net.neonlotus.lolandroidapp"
+          android:installLocation="auto"
           android:versionCode="1"
           android:versionName="1.0">
-    <application android:label="@string/app_name" android:icon="@drawable/icon">
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="7"/>
+
+
+    <application android:label="@string/app_name" android:icon="@drawable/icon"
+                 android:theme="@android:style/Theme.NoTitleBar">
         <activity android:name=".Main" android:label="@string/app_name"
-                  android:theme="@android:style/Theme.NoTitleBar">
+                  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -14,9 +19,10 @@
         <activity android:name=".Lore"></activity>
         <activity android:name=".Info"></activity>
         <activity android:name=".Champion"></activity>
-        <!--<activity android:name=".ChampObj"></activity>-->
         <activity android:name=".Items"></activity>
         <activity android:name=".Champion"></activity>
     </application>
+<!--
     <uses-permission android:name="android.permission.INTERNET" />
+-->
 </manifest>
