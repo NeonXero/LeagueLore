@@ -22,6 +22,7 @@
                         android:layout_height="189dp"
                         android:layout_width="320dp"
                         android:id="@+id/champ_banner"
+                        android:paddingBottom="7dp"
                         />
                 <TextView
                         android:layout_height="wrap_content"
