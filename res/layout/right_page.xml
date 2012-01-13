@@ -87,6 +87,16 @@
                         android:layout_height="wrap_content"
                         android:layout_width="fill_parent"
                         android:text="Item 10"/>
+                <Button
+                        android:id="@+id/itemButton11"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="Item 11"/>
+                <Button
+                        android:id="@+id/itemButton12"
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:text="Item 12"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

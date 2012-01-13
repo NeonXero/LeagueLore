@@ -27,13 +27,13 @@ public class Champion extends Activity implements View.OnClickListener {
 	private ChampObj mChampData;
 	private String mPrefPrefix;
 
-	Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b10;
+	Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12;
 	private SharedPreferences mPrefs;
 
 	//Saved stuff
-	String item1, item2, item3, item4, item5, item6, item7, item8, item9, item10;
+	String item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12;
 	//Temp string...
-	String t1, t2, t3, t4, t5, t6, t7, t8, t9, t10;
+	String t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12;
 	private static final String TAG = "LeagueLore";
 
 	/**
@@ -65,6 +65,8 @@ public class Champion extends Activity implements View.OnClickListener {
 		item8 = mPrefs.getString(mPrefPrefix + "item8", "Item 8");
 		item9 = mPrefs.getString(mPrefPrefix + "item9", "Item 9");
 		item10 = mPrefs.getString(mPrefPrefix + "item10", "Item 10");
+		item11 = mPrefs.getString(mPrefPrefix + "item11", "Item 11");
+		item12 = mPrefs.getString(mPrefPrefix + "item12", "Item 12");
 
 		MyPagerAdapter adapter = new MyPagerAdapter();
 		ViewPager myPager = (ViewPager) findViewById(R.id.thisshouldwork);
@@ -171,6 +173,8 @@ public class Champion extends Activity implements View.OnClickListener {
 					b8 = ((Button) view.findViewById(R.id.itemButton8));
 					b9 = ((Button) view.findViewById(R.id.itemButton9));
 					b10 = ((Button) view.findViewById(R.id.itemButton10));
+					b11 = ((Button) view.findViewById(R.id.itemButton11));
+					b12 = ((Button) view.findViewById(R.id.itemButton12));
 
 					LoadPreferences();
 
@@ -222,6 +226,16 @@ public class Champion extends Activity implements View.OnClickListener {
 					((Button) view.findViewById(R.id.itemButton10)).setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
 							showOptionsMenu(9);
+						}
+					});
+					((Button) view.findViewById(R.id.itemButton11)).setOnClickListener(new View.OnClickListener() {
+						public void onClick(View view) {
+							showOptionsMenu(10);
+						}
+					});
+					((Button) view.findViewById(R.id.itemButton12)).setOnClickListener(new View.OnClickListener() {
+						public void onClick(View view) {
+							showOptionsMenu(11);
 						}
 					});
 
@@ -336,6 +350,16 @@ public class Champion extends Activity implements View.OnClickListener {
 								t10 = b10.getText().toString();
 								SavePreferences(mPrefPrefix + "item10", t10);
 								break;
+							case 10:
+								b11.setText(big_item_list[i]);
+								t11 = b11.getText().toString();
+								SavePreferences(mPrefPrefix+"item11",t11);
+								break;
+							case 11:
+								b12.setText(big_item_list[i]);
+								t12 = b12.getText().toString();
+								SavePreferences(mPrefPrefix+"item12",t12);
+								break;
 						}
 					}
 				}
@@ -371,5 +395,9 @@ public class Champion extends Activity implements View.OnClickListener {
 		b9.setText(s9);
 		String s10 = mPrefs.getString(mPrefPrefix + "item10", "Item 10");
 		b10.setText(s10);
+		String s11 = mPrefs.getString(mPrefPrefix + "item11", "Item 11");
+		b11.setText(s11);
+		String s12 = mPrefs.getString(mPrefPrefix + "item12", "Item 12");
+		b12.setText(s12);
 	}
 }
