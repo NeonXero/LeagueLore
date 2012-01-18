@@ -119,7 +119,7 @@ public class Info extends Activity {
 				R.drawable.nidalee, R.drawable.noct, R.drawable.nunu, R.drawable.olaf, R.drawable.orian,
 				R.drawable.panth,
 				R.drawable.poppy, R.drawable.rammus, R.drawable.rene, R.drawable.riven, R.drawable.rumb,
-				R.drawable.ryze,
+				R.drawable.ryze,R.drawable.sej,
 				R.drawable.shaco, R.drawable.shen, R.drawable.shyv, R.drawable.singed, R.drawable.sion,
 				R.drawable.sivir,
 				R.drawable.skarn, R.drawable.sona, R.drawable.soraka, R.drawable.swain, R.drawable.talon,

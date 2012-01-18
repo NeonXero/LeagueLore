@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -27,7 +28,7 @@ public class Champion extends Activity implements View.OnClickListener {
 	private ChampObj mChampData;
 	private String mPrefPrefix;
 
-	Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12;
+	Button b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, bEmail;
 	private SharedPreferences mPrefs;
 
 	//Saved stuff
@@ -175,15 +176,16 @@ public class Champion extends Activity implements View.OnClickListener {
 					b10 = ((Button) view.findViewById(R.id.itemButton10));
 					b11 = ((Button) view.findViewById(R.id.itemButton11));
 					b12 = ((Button) view.findViewById(R.id.itemButton12));
+					bEmail=((Button)findViewById(R.id.emailButton));
 
 					LoadPreferences();
 
-					((Button) view.findViewById(R.id.itemButton1)).setOnClickListener(new View.OnClickListener() {
+					b1.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
 							showOptionsMenu(0);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton2)).setOnClickListener(new View.OnClickListener() {
+					b2.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
 							showOptionsMenu(1);
 						}
@@ -236,6 +238,23 @@ public class Champion extends Activity implements View.OnClickListener {
 					((Button) view.findViewById(R.id.itemButton12)).setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
 							showOptionsMenu(11);
+						}
+					});
+					((Button) view.findViewById(R.id.emailButton)).setOnClickListener(new View.OnClickListener() {
+						public void onClick(View view) {
+							Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+
+							emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "League Lore Build for " + mChampData.getChampName());
+							String sendThis = "1. " + b1.getText()+"\n2. "+b2.getText()+"\n3. "+b3.getText()+"\n4. "+b4.getText()
+									+"\n5. "+b5.getText()+"\n6. "+b6.getText()+"\n7. "+b7.getText()+"\n8. "+b8.getText()
+									+"\n9. "+b9.getText()+"\n10. "+b10.getText()+"\n11. "+b11.getText()+"\n12. "+b12.getText();
+							emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, sendThis);
+
+							emailIntent.setType("text/plain");
+
+							startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+
+							finish();
 						}
 					});
 

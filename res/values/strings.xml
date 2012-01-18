@@ -61,6 +61,7 @@
         <item>Riven</item>
         <item>Rumble</item>
         <item>Ryze</item>
+        <item>Sejuani</item>
         <item>Shaco</item>
         <item>Shen</item>
         <item>Shyvana</item>
@@ -1760,6 +1761,15 @@
             -High Councilor Heywan Relivash
         </item>
         <!--ryze_story-->
+        <!--Sejuani-->
+        <item>
+            When Sejuani was born, the mystics of her tribe foretold that she would be the one to unite and lead the divided territories of Freljord. Her people had suffered for centuries, as a losing war on the frozen tundra pushed them farther and farther from Freljord\'s limited food supplies. Sejuani grew up surrounded by this misery, and it fueled her desire to fulfill her destiny. She pushed herself to extremes, walking out into blizzards without food or furs and training while frigid winds raked her flesh. She sparred with the strongest warriors of her tribe, one after another, until her legs would give out beneath her. She sustained injuries that would have killed any other member of the tribe, but she would only rise again, driven by sheer force of will and what her tribe took to calling her \'heart of the blizzard.\'\n\n
+
+            On her twentieth birthday, Sejuani declared that she would lead her people out of their remote isolation to conquer the lands of their enemies. She had completed her training and she was ready to face the leaders of the opposing tribes. Her feats had already become legend and soldiers in her company were inspired to new heights of strength and resolve. However, before she struck out on her campaign, Ashe began campaigning for peace in Freljord, joining the League of Legends to demonstrate how the people could be spared violence. To Sejuani, this was a violation of tradition - a coward\'s ruse to hoard Freljord\'s precious few resources. She saw the confidence of her people wane as it seemed they would never be delivered from their plight. She decided that to truly prove herself as the rightful ruler of Freljord, she must defeat Ashe completely and unquestionably on the world\'s stage in the League of Legends.\n\n
+
+            \'Freljord provides for the few. For the others, \'peace\' means only death.\'
+            -Sejuani
+        </item>
         <item>Most would say that death isn\'t funny. It isn\'t, unless you\'re Shaco - then it\'s hysterical. He is
             Valoran\'s first fully functioning homicidal comic; he jests until someone dies, and then he laughs. The
             figure that has come to be known as the Demon Jester is an enigma. No one fully agrees from whence he came,
@@ -2544,6 +2554,7 @@
         <item>Fighter, melee</item>
         <item>Mage, melee, pusher</item>
         <item>Mage, ranged, recommended</item>
+        <!--Sej--><item>Tank, jungler, melee</item>
         <item>Assassin, stealth, melee</item>
         <item>Tank, support, melee</item>
         <item>Fighter, melee</item>
@@ -2835,6 +2846,7 @@
         <item>the exile, riven</item>
         <item>the mechanized menace, rumble</item>
         <item>the rogue mage, ryze</item>
+        <!--Sej--><item>the winter\'s wrath, sejuani</item>
         <item>the demon jester, shaco</item>
         <item>eye of twilight, shen</item>
         <item>the half-dragon, shyvana</item>
@@ -2928,6 +2940,7 @@
         <item>@drawable/riven_ban</item>
         <item>@drawable/rumble_ban</item>
         <item>@drawable/ryze_ban</item>
+        <!--sej--><item>@drawable/sej_ban</item>
         <item>@drawable/shaco_ban</item>
         <item>@drawable/shen_ban</item>
         <item>@drawable/shyv_ban</item>
