@@ -28,6 +28,7 @@ public class Info extends Activity {
 
 		//Flurry
 		FlurryAgent.onStartSession(this, " ");
+		//I WANT TO BUY LUX
 
 		//===========================
 		//==== GRID VIEW TESTING ====
