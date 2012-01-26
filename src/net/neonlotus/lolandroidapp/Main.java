@@ -6,11 +6,16 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.TabHost;
+import com.flurry.android.FlurryAgent;
 
 public class Main extends TabActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		//Flurry
+		FlurryAgent.onStartSession(this, " ");
+
 		setContentView(R.layout.main);
 
 		Resources res = getResources(); // Resource object to get Drawables
@@ -31,5 +36,12 @@ public class Main extends TabActivity {
 		spec = tabHost.newTabSpec("champs").setIndicator("Champion Info", res.getDrawable(R.drawable.pop_tab))
 				.setContent(intent);
 		tabHost.addTab(spec);
+	}
+
+	public void onStop()
+	{
+		super.onStop();
+		FlurryAgent.onEndSession(this);
+		// your code
 	}
 }

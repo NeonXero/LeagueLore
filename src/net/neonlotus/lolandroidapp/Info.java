@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
+import com.flurry.android.FlurryAgent;
 
 /**
  * Created by IntelliJ IDEA.
@@ -24,6 +25,9 @@ public class Info extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		//Flurry
+		FlurryAgent.onStartSession(this, " ");
 
 		//===========================
 		//==== GRID VIEW TESTING ====
@@ -131,5 +135,12 @@ public class Info extends Activity {
 				R.drawable.volibear, R.drawable.warw, R.drawable.wukong, R.drawable.xera, R.drawable.xinz,
 				R.drawable.yorik, R.drawable.zil
 		};
+	}
+
+	public void onStop()
+	{
+		super.onStop();
+		FlurryAgent.onEndSession(this);
+		// your code
 	}
 }

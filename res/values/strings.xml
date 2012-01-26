@@ -2974,4 +2974,6 @@
         <item>@drawable/zil_ban</item>
     </array>
 
+    <string name="expandable_list_sample_action">wat</string>
+
 </resources>

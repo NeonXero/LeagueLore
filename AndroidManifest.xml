@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="net.neonlotus.lolandroidapp"
             android:installLocation="auto"
-          android:versionCode="3"
-          android:versionName="1.06">
+          android:versionCode="4"
+          android:versionName="1.11">
     <!-- New champ = .01 New feature = .05 New huge = .1-->
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="7"/>
 
@@ -20,8 +20,9 @@
         <activity android:name=".Lore"></activity>
         <activity android:name=".Info"></activity>
         <activity android:name=".Champion"></activity>
+        <activity android:name=".Ding"></activity>
     </application>
-<!--
+
     <uses-permission android:name="android.permission.INTERNET" />
--->
+
 </manifest>

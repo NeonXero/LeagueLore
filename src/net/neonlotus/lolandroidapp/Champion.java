@@ -13,6 +13,9 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,8 +23,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.flurry.android.FlurryAgent;
 import com.viewpagerindicator.TitlePageIndicator;
 import com.viewpagerindicator.TitleProvider;
+
+import java.util.regex.Pattern;
 
 public class Champion extends Activity implements View.OnClickListener {
 
@@ -43,6 +49,10 @@ public class Champion extends Activity implements View.OnClickListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		//Flurry
+		FlurryAgent.onStartSession(this, " ");
+
 		setContentView(R.layout.othermain);
 
 		Bundle b = getIntent().getExtras();
@@ -237,7 +247,9 @@ public class Champion extends Activity implements View.OnClickListener {
 					});
 					((Button) view.findViewById(R.id.itemButton12)).setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
-							showOptionsMenu(11);
+							// **DOING TESTS** showOptionsMenu(11);
+							Intent fish=new Intent(Champion.this, Ding.class);
+							startActivity(fish);
 						}
 					});
 					((Button) view.findViewById(R.id.emailButton)).setOnClickListener(new View.OnClickListener() {
@@ -418,5 +430,12 @@ public class Champion extends Activity implements View.OnClickListener {
 		b11.setText(s11);
 		String s12 = mPrefs.getString(mPrefPrefix + "item12", "Item 12");
 		b12.setText(s12);
+	}
+
+	public void onStop()
+	{
+		super.onStop();
+		FlurryAgent.onEndSession(this);
+		// your code
 	}
 }
