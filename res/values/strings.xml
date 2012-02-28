@@ -49,6 +49,7 @@
         <item>Mordekaiser</item>
         <item>Morgana</item>
         <item>Nasus</item>
+        <item>Nautilus</item>
         <item>Nidalee</item>
         <item>Nocturne</item>
         <item>Nunu</item>
@@ -92,6 +93,7 @@
         <item>Xerath</item>
         <item>Xin Zhao</item>
         <item>Yorick</item>
+        <item>Ziggs</item>
         <item>Zilean</item>
     </array>
 
@@ -1452,6 +1454,14 @@
             The Curator of the Sands, though contemplative, is not to be trifled with.
         </item>
         <!--nasus_story-->
+        <item>
+            Once, Nautilus was a sailor commissioned by the Institute of War to explore the uncharted reaches of the Guardian\'s Sea. This expedition took him deep into unknown waters where he and his crew found a vast section of the ocean\'s rich blue waves were replaced by a black, oozing liquid that none of the crew could identify. Though their job was to investigate anything new that they found, no man aboard was willing to brave the murk except Nautilus. Only moments after he donned the hulking diver\'s suit and climbed over the ship\'s rail, something lurking in the muck grabbed hold of him. He clung to the side of the ship, but the thing below pulled him fiercely, rocking the entire ship. The other sailors grew afraid and made a terrible decision. As he stared and pled for help, they wrenched his grip free of the rail. He tumbled to the ink, grabbing the anchor in futile desperation. As he sank, he could do nothing but watch as the dark outline of his ship faded away. Then everything went black.\n\n
+
+            When Nautilus awoke, he was something different. The great iron suit was now somehow part of him, he could not tell where it ended and he began. All the details of his memory were fuzzy and indistinct but one fact remained clear: he was left here, alone in the sunless depths, to die. In his hands he still clutched the anchor that belonged to the men who had condemned him. Having no other purpose, he took this clue and trudged - too heavy to swim or run - in search of answers. He wandered without direction or sense of passing time in what felt like an eternal dream. By the time he stumbled upon the shores of Bilgewater, he could find no traces of the man he was. No house, no family, no life to which he could return. Terrified sailors who\'d heard his tale directed Nautilus back to the Institute, but the summoners refused to relinquish the names of the others they commissioned. By then Nautilus had learned about the League of Legends and there he saw an opportunity to discover and punish those responsible for the time and life he lost.\n\n
+
+            \'When lost in utter darkness, there is nothing left but forward.\' - Nautilus
+        </item>
+        <!-- above = Nautilus-->
         <item>There are few dwellers, let alone champions, residing in the blasted and dangerous lands that lie south
             of
             the Great Barrier. Much of that world still bears the scars of past Runes Wars, especially the mysterious
@@ -2469,6 +2479,16 @@
             -Yorick
         </item>
         <!--yorick_story-->
+        <item>
+            Ziggs was born with a talent for tinkering, but his chaotic, hyperactive nature was unusual among yordle scientists. Aspiring to be a revered inventor like Heimerdinger, he rattled through ambitious projects with manic zeal, emboldened by both his explosive failures and his unprecedented discoveries. Word of Ziggs\’ volatile experimentation reached the famed Yordle Academy in Piltover and its esteemed professors invited him to demonstrate his craft. His characteristic disregard for safety brought the presentation to an early conclusion, however, when the hextech engine Ziggs was demonstrating overheated and exploded, blowing a huge hole in the wall of the Academy. The professors dusted themselves off and sternly motioned for him to leave. Devastated, Ziggs prepared to return to Bandle City in shame. However, before he could leave, a group of Zaunite agents infiltrated the Academy and kidnapped the professors. The Piltover military tracked the captives to a Zaunite prison, but their weapons were incapable of destroying the fortified walls. Determined to outdo them, Ziggs began experimenting on a new kind of armament, and quickly realized that he could harness his accidental gift for demolition to save the captured yordles.\n\n
+
+            Before long, Ziggs had created a line of powerful bombs he lovingly dubbed \'hexplosives.\' With his new creations ready for their first trial, Ziggs traveled to Zaun and sneaked into the prison compound. He launched a gigantic bomb at the prison and watched with glee as the explosion tore through the reinforced wall. Once the smoke had cleared, Ziggs scuttled into the facility, sending guards running with a hail of bombs. He rushed to the cell, blew the door off its hinges, and led the captive yordles to freedom. Upon returning to the Academy, the humbled professors recognized Ziggs with an honorary title - Dean of Demolitions - and proposed that he demonstrate this new form of yordle ingenuity in the League of Legends. Vindicated at last, Ziggs accepted the proposal, eager to bring his ever-expanding range of hexplosives to the greatest testing grounds in the world: the Fields of Justice.\n\n
+
+            \'Ziggs? Unpredictable, dangerous, yes yes. But quite brilliant!\'\n
+
+            – Heimerdinger
+        </item>
+        <!--Ziggs-->
         <item>In the wastelands of Urtistan, there was once a great city. It perished long ago in a terrible Rune War,
             like most of the lands below the Great Barrier. Nevertheless, one man survived: a sorcerer named Zilean.
             Being obsessed with time, it was only fitting that he dwelled in the city\'s Clock Tower. As the havoc of
@@ -2542,6 +2562,7 @@
         <item>Fighter, pusher, melee</item>
         <item>Mage, support, ranged</item>
         <item>Fighter, pusher, melee, recommended</item>
+        <!--Nautilus--><item>Melee, fighter</item>
         <item>Support, pusher</item>
         <item>Assassin, melee</item>
         <item>Fighter, melee, jungler, recommended</item>
@@ -2583,12 +2604,10 @@
         <item>Fighter, jungler, melee, recommended</item>
         <item>Fighter, melee, stealth</item>
         <item>Mage, ranged</item>
-        <item>Fighter, assassin, melee</item>
-        <!--Xin-->
-        <item>Fighter, pusher, melee</item>
-        <!--Yor-->
-        <item>Mage, support, ranged</item>
-        <!--Zilean?-->
+        <item>Fighter, assassin, melee</item>        <!--Xin-->
+        <item>Fighter, pusher, melee</item>        <!--Yor-->
+        <!--Zigs--><item>Mage, ranged, pusher</item>
+        <item>Mage, support, ranged</item>        <!--Zilean?-->
     </array>
 
     <!-- Role explanations-->
@@ -2834,6 +2853,7 @@
         <item>the master of metal, mordekaiser</item>
         <item>fallen angel, morgana</item>
         <item>the curator of the sands, nasus</item>
+        <!--Nautilus--><item>the titan of the depths, nautilus</item>
         <item>the bestial huntress, nidalee</item>
         <item>the eternal nightmare, nocturne</item>
         <item>the yeti rider, nunu</item>
@@ -2877,6 +2897,7 @@
         <item>the magus ascendant, xerath</item>
         <item>the seneschal of demacia, xin zhao</item>
         <item>the gravedigger, yorick</item>
+        <item>the hexplosives expert, ziggs</item>
         <item>the chronokeeper, zilean</item>
     </array>
 
@@ -2928,6 +2949,7 @@
         <item>@drawable/mord_ban</item>
         <item>@drawable/morgana_ban</item>
         <item>@drawable/nasus_ban</item>
+        <!--Naut--><item>@drawable/naut_ban</item>
         <item>@drawable/nida_ban</item>
         <item>@drawable/noc_ban</item>
         <item>@drawable/nunu_ban</item>
@@ -2971,9 +2993,320 @@
         <item>@drawable/xer_ban</item>
         <item>@drawable/xin_ban</item>
         <item>@drawable/yorick_ban</item>
+        <!--Ziggs--><item>@drawable/ziggs_ban</item>
         <item>@drawable/zil_ban</item>
     </array>
 
     <string name="expandable_list_sample_action">wat</string>
+
+    <array name="shoplvlone">
+        <item>Defense</item>
+        <item>Attack</item>
+        <item>Magic</item>
+        <item>Movement</item>
+        <item>Consumables</item>
+    </array>
+    <array name="shopDefense">
+        <item>Health</item>
+        <item>Magic Resist</item>
+        <item>Health Regen</item>
+        <item>Armor</item>
+    </array>
+    <array name="shopAttack">
+        <item>Damage</item>
+        <item>Critical Strike</item>
+        <item>Attack Speed</item>
+        <item>Life Steal</item>
+    </array>
+    <array name="shopMagic">
+        <item>Ability Power</item>
+        <item>Cooldown Reduction</item>
+        <item>Mana</item>
+        <item>Mana Regen</item>
+    </array>
+    <array name="healthItems">
+        <item>Aegis of the Legion</item>
+        <item>Banshee\'s Veil</item>
+        <item>Catalyst the Protector</item>
+        <item>Doran\'s Blade</item>
+        <item>Doran\'s Ring</item>
+        <item>Doran\'s Shield</item>
+        <item>Elixir of Fortitude</item>
+        <item>Entropy</item>
+        <item>Frozen Mallet</item>
+        <item>Giant\'s Belt</item>
+        <item>Haunting Guise</item>
+        <item>Heart of Gold</item>
+        <item>Hextech Sweeper</item>
+        <item>Ionic Spark</item>
+        <item>Kindlegem</item>
+        <item>Leviathan</item>
+        <item>Locket of the Iron Solari</item>
+        <item>Odyn\'s Veil</item>
+        <item>Phage</item>
+        <item>Prospector\'s Blade</item>
+        <item>Prospector\'s Ring</item>
+        <item>Randuin\'s Omen</item>
+        <item>Rod of Ages</item>
+        <item>Ruby Crystal</item>
+        <item>Rylai\'s Crystal Scepter</item>
+        <item>Shurelya\'s Reverie</item>
+        <item>Soul Shroud</item>
+        <item>Spirit Visage</item>
+        <item>Sunfire Cape</item>
+        <item>Trinity Force</item>
+        <item>Warmog\'s Armor</item>
+        <item>Zeke\'s Herald</item>
+    </array>
+    <array name="mresistItems">
+        <item>Abyssal Scepter</item>
+        <item>Aegis of the Legion</item>
+        <item>Banshee\'s Veil</item>
+        <item>Chalice of Harmony</item>
+        <item>Force of Nature</item>
+        <item>Guardian Angel</item>
+        <item>Hexdrinker</item>
+        <item>Lich Bane</item>
+        <item>Mercury\'s Treads</item>
+        <item>Negatron Cloak</item>
+        <item>Null-Magic Mantle</item>
+        <item>Odyn\'s Veil</item>
+        <item>Quicksilver Sash</item>
+        <item>Spirit Visage</item>
+        <item>Wit\'s End</item>
+    </array>
+    <array name="hregenItems">
+        <item>Doran\'s Shield</item>
+        <item>Eleisa\'s Miracle</item>
+        <item>Emblem of Valor</item>
+        <item>Force of Nature</item>
+        <item>Guardian Angel</item>
+        <item>Locket of the Iron Solari</item>
+        <item>Philosopher\'s Stone</item>
+        <item>Randuin\'s Omen</item>
+        <item>Regrowth Pendant</item>
+        <item>Rejuvenation Bead</item>
+        <item>Shurelya\'s Reverie</item>
+        <item>Quicksilver Sash</item>
+        <item>Tiamat</item>
+        <item>Warden\'s Mail</item>
+        <item>Warmog\'s Armor</item>
+    </array>
+    <array name="armor">
+        <item>Aegis of the Legion</item>
+        <item>Atma\'s Impaler</item>
+        <item>Chain Vest</item>
+        <item>Cloth Armor</item>
+        <item>Doran\'s Shield</item>
+        <item>Emblem of Valor</item>
+        <item>Frozen Heart</item>
+        <item>Glacial Shroud</item>
+        <item>Guardian Angel</item>
+        <item>Locket of the Iron Solari</item>
+        <item>Madred\'s Razors</item>
+        <item>Ninja Tabi</item>
+        <item>Randuin\'s Omen</item>
+        <item>Sunfire Cape</item>
+        <item>Thornmail</item>
+        <item>Warden\'s Mail</item>
+        <item>Wriggle\'s Lantern</item>
+        <item>Zhonya\'s Hourglass</item>
+    </array>
+    <array name="damageItems">
+        <item>Atma\'s Impaler</item>
+        <item>B. F. Sword</item>
+        <item>Bilgewater Cutlass</item>
+        <item>Doran\'s Blade</item>
+        <item>Elixir of Fortitude</item>
+        <item>Entropy</item>
+        <item>Frozen Mallet</item>
+        <item>Guinsoo\'s Rageblade</item>
+        <item>Hexdrinker</item>
+        <item>Hextech Gunblade</item>
+        <item>Infinity Edge</item>
+        <item>Kitae\'s Bloodrazor</item>
+        <item>Last Whisper</item>
+        <item>Long Sword</item>
+        <item>Madred\'s Bloodrazor</item>
+        <item>Madred\'s Razors</item>
+        <item>Madred\'s Razors</item>
+        <item>Phage</item>
+        <item>Pickaxe</item>
+        <item>Prospector\'s Blade</item>
+        <item>Sanguine Blade</item>
+        <item>Sword of the Occult</item>
+        <item>The Black Cleaver</item>
+        <item>The Bloodthirster</item>
+        <item>The Brutalizer</item>
+        <item>The Lightbringer</item>
+        <item>Tiamat</item>
+        <item>Trinity Force</item>
+        <item>Wriggle\'s Lantern</item>
+        <item>Youmuu\'s Ghostblade</item>
+    </array>
+    <array name="critItems">
+        <item>Atma\'s Impaler</item>
+        <item>Avarice Blade</item>
+        <item>Brawler\'s Gloves</item>
+        <item>Cloak and Dagger</item>
+        <item>Cloak of Agility</item>
+        <item>Elixir of Agility</item>
+        <item>Executioner\'s Calling</item>
+        <item>Infinity Edge</item>
+        <item>Phantom Dancer</item>
+        <item>Trinity Force</item>
+        <item>Youmuu\'s Ghostblade</item>
+        <item>Zeal</item>
+    </array>
+    <array name="aspeedItems">
+        <item>Berserker\'s Greaves</item>
+        <item>Cloak and Dagger</item>
+        <item>Dagger</item>
+        <item>Elixir of Agility</item>
+        <item>Guinsoo\'s Rageblade</item>
+        <item>Ionic Spark</item>
+        <item>Kitae\'s Bloodrazor</item>
+        <item>Madred\'s Bloodrazor</item>
+        <item>Malady</item>
+        <item>Nashor\'s Tooth</item>
+        <item>Phantom Dancer</item>
+        <item>Recurve Bow</item>
+        <item>Stinger</item>
+        <item>The Black Cleaver</item>
+        <item>The Lightbringer</item>
+        <item>Trinity Force</item>
+        <item>Wit\'s End</item>
+        <item>Youmuu\'s Ghostblade</item>
+        <item>Zeal</item>
+        <item>	Zeke\'s Herald</item>
+    </array>
+    <array name="lifestealItems">
+        <item>Bilgewater Cutlass</item>
+        <item>Doran\'s Blade</item>
+        <item>Executioner\'s Calling</item>
+        <item>Hextech Gunblade</item>
+        <item>Prospector\'s Blade</item>
+        <item>Sanguine Blade</item>
+        <item>The Bloodthirster</item>
+        <item>Vampiric Scepter</item>
+        <item>Wriggle\'s Lantern</item>
+        <item>Zeke\'s Herald</item>
+    </array>
+    <array name="apItems">
+        <item>Abyssal Scepter</item>
+        <item>Amplifying Tome</item>
+        <item>Archangel\'s Staff</item>
+        <item>Blasting Wand</item>
+        <item>Deathfire Grasp</item>
+        <item>Doran\'s Ring</item>
+        <item>Elixir of Brilliance</item>
+        <item>Fiendish Codex</item>
+        <item>Guinsoo\'s Rageblade</item>
+        <item>Haunting Guise</item>
+        <item>Hextech Gunblade</item>
+        <item>Hextech Revolver</item>
+        <item>Hextech Sweeper</item>
+        <item>Kage\'s Lucky Pick</item>
+        <item>Lich Bane</item>
+        <item>Malady</item>
+        <item>Mejai\'s Soulstealer</item>
+        <item>Moonflair Spellblade</item>
+        <item>Morello\'s Evil Tome</item>
+        <item>Nashor\'s Tooth</item>
+        <item>Needlessly Large Rod</item>
+        <item>Prospector\'s Ring</item>
+        <item>Rabadon\'s Deathcap</item>
+        <item>Rod of Ages</item>
+        <item>Rylai\'s Crystal Scepter</item>
+        <item>Sheen</item>
+        <item>Trinity Force</item>
+        <item>Void Staff</item>
+        <item>Will of the Ancients</item>
+        <item>Zhonya\'s Hourglass</item>
+    </array>
+    <array name="cdrItems">
+        <item>Deathfire Grasp</item>
+        <item>Elixir of Brilliance</item>
+        <item>Fiendish Codex</item>
+        <item>Frozen Heart</item>
+        <item>Glacial Shroud</item>
+        <item>Hextech Sweeper</item>
+        <item>Ionian Boots of Lucidity</item>
+        <item>Kindlegem</item>
+        <item>Morello\'s Evil Tome</item>
+        <item>Nashor\'s Tooth</item>
+        <item>Randuin\'s Omen</item>
+        <item>Shurelya\'s Reverie</item>
+        <item>Soul Shroud</item>
+        <item>Spirit Visage</item>
+        <item>Stinger</item>
+        <item>The Brutalizer</item>
+        <item>Youmuu\'s Ghostblade</item>
+        <item>Zeke\'s Herald</item>
+    </array>
+    <array name="manaItems">
+        <item>Archangel\'s Staff</item>
+        <item>Banshee\'s Veil</item>
+        <item>Catalyst the Protector</item>
+        <item>Frozen Heart</item>
+        <item>Glacial Shroud</item>
+        <item>Lich Bane</item>
+        <item>Manamune</item>
+        <item>Odyn\'s Veil</item>
+        <item>Rod of Ages</item>
+        <item>Sapphire Crystal</item>
+        <item>Sheen</item>
+        <item>Tear of the Goddess</item>
+        <item>Trinity Force</item>
+    </array>
+    <array name="manaregenItems">
+        <item>Archangel\'s Staff</item>
+        <item>Chalice of Harmony</item>
+        <item>Deathfire Grasp</item>
+        <item>Doran\'s Ring</item>
+        <item>Eleisa\'s Miracle</item>
+        <item>Faerie Charm</item>
+        <item>Fiendish Codex</item>
+        <item>Mana Manipulator</item>
+        <item>Manamune</item>
+        <item>Meki Pendant</item>
+        <item>Morello\'s Evil Tome</item>
+        <item>Nashor\'s Tooth</item>
+        <item>Philosopher\'s Stone</item>
+        <item>Prospector\'s Ring</item>
+        <item>Shurelya\'s Reverie</item>
+        <item>Soul Shroud</item>
+        <item>Tear of the Goddess</item>
+        <item>Tiamat</item>
+    </array>
+
+    <array name="moveItems">
+        <item>Berserker\'s Greaves</item>
+        <item>Boots of Mobility</item>
+        <item>Boots of Speed</item>
+        <item>Boots of Swiftness</item>
+        <item>Force of Nature</item>
+        <item>Ionian Boots of Lucidity</item>
+        <item>Lich Bane</item>
+        <item>Mercury\'s Treads</item>
+        <item>Ninja Tabi</item>
+        <item>Phantom Dancer</item>
+        <item>Shurelya\'s Reverie</item>
+        <item>Sorcerer\'s Shoes</item>
+        <item>Trinity Force</item>
+        <item>Youmuu\'s Ghostblade</item>
+        <item>Zeal</item>
+    </array>
+    <array name="consumeItems">
+        <item>Elixir of Agility</item>
+        <item>Elixir of Brilliance</item>
+        <item>Elixir of Fortitude</item>
+        <item>Health Potion</item>
+        <item>Mana Potion</item>
+        <item>Oracle\'s Elixir</item>
+        <item>Oracle\'s Extract</item>
+        <item>Sight Ward</item>
+        <item>Vision Ward</item>
+    </array>
 
 </resources>

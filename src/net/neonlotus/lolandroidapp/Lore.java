@@ -55,7 +55,6 @@ public class Lore extends ListActivity {
 
 	@Override
 	public void onListItemClick(ListView parent, View v, int position,long id) {
-		//Log.d("MergeAdapterDemo", String.valueOf(position));
 		AlertDialog.Builder builder = new AlertDialog.Builder(Lore.this);
 		String urlPartOne="http://leagueoflegends.wikia.com/wiki/The_Journal_of_Justice:_Volume_1,_Issue_";
 		Intent intent = new Intent();

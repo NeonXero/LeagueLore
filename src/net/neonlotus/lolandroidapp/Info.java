@@ -28,7 +28,6 @@ public class Info extends Activity {
 
 		//Flurry
 		FlurryAgent.onStartSession(this, " ");
-		//I WANT TO BUY LUX
 
 		//===========================
 		//==== GRID VIEW TESTING ====
@@ -120,7 +119,7 @@ public class Info extends Activity {
 				R.drawable.leblanc, R.drawable.leesin, R.drawable.leona, R.drawable.lux, R.drawable.malph,
 				R.drawable.malz,
 				R.drawable.mao, R.drawable.master, R.drawable.missfort, R.drawable.mord, R.drawable.morg,
-				R.drawable.nasus,
+				R.drawable.nasus, R.drawable.naut,
 				R.drawable.nidalee, R.drawable.noct, R.drawable.nunu, R.drawable.olaf, R.drawable.orian,
 				R.drawable.panth,
 				R.drawable.poppy, R.drawable.rammus, R.drawable.rene, R.drawable.riven, R.drawable.rumb,
@@ -134,7 +133,7 @@ public class Info extends Activity {
 				R.drawable.udyr, R.drawable.urgot, R.drawable.vayne, R.drawable.veig, R.drawable.viktor,
 				R.drawable.vlad,
 				R.drawable.volibear, R.drawable.warw, R.drawable.wukong, R.drawable.xera, R.drawable.xinz,
-				R.drawable.yorik, R.drawable.zil
+				R.drawable.yorik, R.drawable.ziggs,R.drawable.zil
 		};
 	}
 

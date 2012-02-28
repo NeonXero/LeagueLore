@@ -13,9 +13,6 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
-import android.text.util.Linkify;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,8 +24,6 @@ import com.flurry.android.FlurryAgent;
 import com.viewpagerindicator.TitlePageIndicator;
 import com.viewpagerindicator.TitleProvider;
 
-import java.util.regex.Pattern;
-
 public class Champion extends Activity implements View.OnClickListener {
 
 	private ChampObj mChampData;
@@ -39,9 +34,11 @@ public class Champion extends Activity implements View.OnClickListener {
 
 	//Saved stuff
 	String item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12;
-	//Temp string...
+	//Temp string... for saving prefs
 	String t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12;
 	private static final String TAG = "LeagueLore";
+	
+	private int bPost;
 
 	/**
 	 * Called when the activity is first created.
@@ -91,6 +88,7 @@ public class Champion extends Activity implements View.OnClickListener {
 	public void onClick(View view) {
 		//To change body of implemented methods use File | Settings | File Templates.
 	}
+
 
 	private class MyPagerAdapter extends PagerAdapter implements TitleProvider {
 
@@ -174,6 +172,9 @@ public class Champion extends Activity implements View.OnClickListener {
 				case 2:
 					view = inflater.inflate(R.layout.right_page, null);
 					((TextView) view.findViewById(R.id.champName)).setText(mChampData.getChampTags());
+
+					//======= WISH I COULD CLEAN THIS UP A BIT... DURR ======//
+
 					b1 = ((Button) view.findViewById(R.id.itemButton1));
 					b2 = ((Button) view.findViewById(R.id.itemButton2));
 					b3 = ((Button) view.findViewById(R.id.itemButton3));
@@ -186,73 +187,83 @@ public class Champion extends Activity implements View.OnClickListener {
 					b10 = ((Button) view.findViewById(R.id.itemButton10));
 					b11 = ((Button) view.findViewById(R.id.itemButton11));
 					b12 = ((Button) view.findViewById(R.id.itemButton12));
-					bEmail=((Button)findViewById(R.id.emailButton));
+					bEmail=((Button)view.findViewById(R.id.emailButton));
 
 					LoadPreferences();
 
 					b1.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost=1;
 							showOptionsMenu(0);
 						}
 					});
 					b2.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost=2;
 							showOptionsMenu(1);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton3)).setOnClickListener(new View.OnClickListener() {
+					b3.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost=3;
 							showOptionsMenu(2);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton4)).setOnClickListener(new View.OnClickListener() {
+					b4.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost = 4;
 							showOptionsMenu(3);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton5)).setOnClickListener(new View.OnClickListener() {
+					b5.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost=5;
 							showOptionsMenu(4);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton6)).setOnClickListener(new View.OnClickListener() {
+					b6.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost=6;
 							showOptionsMenu(5);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton7)).setOnClickListener(new View.OnClickListener() {
+					b7.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost=7;
 							showOptionsMenu(6);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton8)).setOnClickListener(new View.OnClickListener() {
+					b8.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost=8;
 							showOptionsMenu(7);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton9)).setOnClickListener(new View.OnClickListener() {
+					b9.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost=9;
 							showOptionsMenu(8);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton10)).setOnClickListener(new View.OnClickListener() {
+					b10.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost=10;
 							showOptionsMenu(9);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton11)).setOnClickListener(new View.OnClickListener() {
+					b11.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
+							bPost=11;
 							showOptionsMenu(10);
 						}
 					});
-					((Button) view.findViewById(R.id.itemButton12)).setOnClickListener(new View.OnClickListener() {
+					b12.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
-							// **DOING TESTS** showOptionsMenu(11);
-							Intent fish=new Intent(Champion.this, Ding.class);
-							startActivity(fish);
+							bPost=12;
+							showOptionsMenu(11);
 						}
 					});
-					((Button) view.findViewById(R.id.emailButton)).setOnClickListener(new View.OnClickListener() {
+					bEmail.setOnClickListener(new View.OnClickListener() {
 						public void onClick(View view) {
 							Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
 
@@ -322,79 +333,322 @@ public class Champion extends Activity implements View.OnClickListener {
 		}
 	}
 
-	public void showOptionsMenu(final int position) {
-		new AlertDialog.Builder(this)
-				.setTitle("Item List").setCancelable(true).setItems(R.array.item_list,
-				new DialogInterface.OnClickListener() {
-					public void onClick(DialogInterface dialoginterface, int i) {
-						//take actions here according to what the user has selected
-						final String[] big_item_list = getResources().getStringArray(R.array.item_list);
+	public void showOptionsMenu(final int position) { //position = which button was pressed
 
-						switch (position) {
+		new AlertDialog.Builder(this)
+				.setTitle("Item List").setCancelable(true).setItems(R.array.shoplvlone,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialoginterface, int i) { //int i = which item in dialog was pressed
+						//take actions here according to what the user has selected
+						final String[] topLevel = getResources().getStringArray(R.array.shoplvlone);
+
+						switch (i) {
 							case 0:
-								b1.setText(big_item_list[i]);
-								t1 = b1.getText().toString();
-								SavePreferences(mPrefPrefix + "item1", t1);
+								//Defense method
+								dialogDefense();
 								break;
 							case 1:
-								b2.setText(big_item_list[i]);
-								t2 = b2.getText().toString();
-								SavePreferences(mPrefPrefix + "item2", t2);
+								//Attack Method
+								dialogAttack();
 								break;
 							case 2:
-								b3.setText(big_item_list[i]);
-								t3 = b3.getText().toString();
-								SavePreferences(mPrefPrefix + "item3", t3);
+								//Magic Method
+								dialogMagic();
 								break;
 							case 3:
-								b4.setText(big_item_list[i]);
-								t4 = b4.getText().toString();
-								SavePreferences(mPrefPrefix + "item4", t4);
+								//Movement
+								movementItems();
 								break;
 							case 4:
-								b5.setText(big_item_list[i]);
-								t5 = b5.getText().toString();
-								SavePreferences(mPrefPrefix + "item5", t5);
-								break;
-							case 5:
-								b6.setText(big_item_list[i]);
-								t6 = b6.getText().toString();
-								SavePreferences(mPrefPrefix + "item6", t6);
-								break;
-							case 6:
-								b7.setText(big_item_list[i]);
-								t7 = b7.getText().toString();
-								SavePreferences(mPrefPrefix + "item7", t7);
-								break;
-							case 7:
-								b8.setText(big_item_list[i]);
-								t8 = b8.getText().toString();
-								SavePreferences(mPrefPrefix + "item8", t8);
-								break;
-							case 8:
-								b9.setText(big_item_list[i]);
-								t9 = b9.getText().toString();
-								SavePreferences(mPrefPrefix + "item9", t9);
-								break;
-							case 9:
-								b10.setText(big_item_list[i]);
-								t10 = b10.getText().toString();
-								SavePreferences(mPrefPrefix + "item10", t10);
-								break;
-							case 10:
-								b11.setText(big_item_list[i]);
-								t11 = b11.getText().toString();
-								SavePreferences(mPrefPrefix+"item11",t11);
-								break;
-							case 11:
-								b12.setText(big_item_list[i]);
-								t12 = b12.getText().toString();
-								SavePreferences(mPrefPrefix+"item12",t12);
+								//Consumables
+								consumeItems();
 								break;
 						}
 					}
 				}
 		).show();
+	}
+
+	//DEFENSE SUB CATEGORY done
+	public void dialogDefense () {
+		new AlertDialog.Builder(this).setTitle("Defense Items").setCancelable(true).setItems(R.array.shopDefense,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						switch (b) {
+							case 0:
+								healthItems();
+								break;
+							case 1:
+								mresistItems();
+								break;
+							case 2:
+								hregenItems();
+								break;
+							case 3:
+								armorItems();
+								break;
+						}
+					}
+				}).show();
+	}
+	//ATTACK SUB CATEGORY done
+	public void dialogAttack () {
+		new AlertDialog.Builder(this).setTitle("Attack Items").setCancelable(true).setItems(R.array.shopAttack,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						switch (b) { //damange, crit, aspd, life steal
+							case 0:
+								damageItems();
+								break;
+							case 1:
+								critItems();
+								break;
+							case 2:
+								aspdItems();
+								break;
+							case 3:
+								lifestealItems();
+								break;
+						}
+					}
+				}).show();
+	}
+	//MAGIC SUB CATEGORY done
+	public void dialogMagic () {
+		new AlertDialog.Builder(this).setTitle("Magic Items").setCancelable(true).setItems(R.array.shopMagic,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						switch (b) {
+							case 0:
+								abpoItems();
+								break;
+							case 1:
+								cdrItems();
+								break;
+							case 2:
+								manaItems();
+								break;
+							case 3:
+								mregItems();
+								break;
+						}
+					}
+				}).show();
+	}
+	//MOVEMENT SUB CATEGORY done
+	public void movementItems() {
+		new AlertDialog.Builder(this).setTitle("Movement Items").setCancelable(true).setItems(R.array.moveItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.moveItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//CONSUMABLES SUB CATEGORY done
+	public void consumeItems() {
+		new AlertDialog.Builder(this).setTitle("Consumables").setCancelable(true).setItems(R.array.consumeItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.consumeItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//HEALTH ITEMS
+	public void healthItems() {
+		new AlertDialog.Builder(this).setTitle("Health Items").setCancelable(true).setItems(R.array.healthItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.healthItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//MAGIC RESIST ITEMS
+	public void mresistItems() {
+		new AlertDialog.Builder(this).setTitle("Magic Resist Items").setCancelable(true).setItems(R.array.mresistItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.mresistItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//HEALTH REGEN ITEMS
+	public void hregenItems() {
+		new AlertDialog.Builder(this).setTitle("Health Regen Items").setCancelable(true).setItems(R.array.hregenItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.hregenItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//ARMOR ITEMS
+	public void armorItems() {
+		new AlertDialog.Builder(this).setTitle("Armor Items").setCancelable(true).setItems(R.array.armor,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.armor);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//DAMAGE ITEMS
+	public void damageItems() {
+		new AlertDialog.Builder(this).setTitle("Damage Items").setCancelable(true).setItems(R.array.damageItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.damageItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//CRITICAL STRIKE ITEMS
+	public void critItems() {
+		new AlertDialog.Builder(this).setTitle("Crit Strike Items").setCancelable(true).setItems(R.array.critItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.critItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//ATTACK SPEED ITEMS
+	public void aspdItems() {
+		new AlertDialog.Builder(this).setTitle("Attack Speed Items").setCancelable(true).setItems(R.array.aspeedItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.aspeedItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//LIFE STEAL ITEMS
+	public void lifestealItems() {
+		new AlertDialog.Builder(this).setTitle("Life Steal Items").setCancelable(true).setItems(R.array.lifestealItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.lifestealItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//ABILITY POWER ITEMS
+	public void abpoItems() {
+		new AlertDialog.Builder(this).setTitle("Spell Damage Items").setCancelable(true).setItems(R.array.apItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.apItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//COOLDOWN REDUCTION ITEMS
+	public void cdrItems() {
+		new AlertDialog.Builder(this).setTitle("CDR Items").setCancelable(true).setItems(R.array.cdrItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.cdrItems);
+						takinCareOfBusiness(bPost,b,itemArray);
+					}
+				}).show();
+	}
+	//MANA ITEMS
+	public void manaItems() {
+		new AlertDialog.Builder(this).setTitle("Mana Items").setCancelable(true).setItems(R.array.manaItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray = getResources().getStringArray(R.array.manaItems);
+						takinCareOfBusiness(bPost, b, itemArray);
+					}
+				}).show();
+	}
+	//MANA REGEN ITEMS
+	public void mregItems() {
+		new AlertDialog.Builder(this).setTitle("Mana Regen Items").setCancelable(true).setItems(R.array.manaregenItems,
+				new DialogInterface.OnClickListener() {
+					public void onClick(DialogInterface dialogInterface, int b) {
+						String[] itemArray= getResources().getStringArray(R.array.manaregenItems);
+						takinCareOfBusiness(bPost,b, itemArray);
+					}
+				}).show();
+	}
+	
+	public void takinCareOfBusiness(int theButton, int theB, String[] theArray) {
+		int test = theButton;
+		int test2 = theB;
+		String[] someItems = theArray;
+
+		//==== LOG testing ====//
+		//Log.d(TAG,"Button ?? " +test);
+		//Log.d(TAG,"Other thing ?? " +test2);
+
+		//switch for test
+		switch (test) { //initial button press
+			case 1:
+				b1.setText(someItems[test2]); //b, menu selection
+				t1 = b1.getText().toString(); //change button text
+				SavePreferences(mPrefPrefix + "item1", t1); //save preference
+				break;
+			case 2:
+				b2.setText(someItems[test2]);
+				t2 = b2.getText().toString();
+				SavePreferences(mPrefPrefix + "item2", t2);
+				break;
+			case 3:
+				b3.setText(someItems[test2]);
+				t3 = b3.getText().toString();
+				SavePreferences(mPrefPrefix + "item3", t3);
+				break;
+			case 4:
+				b4.setText(someItems[test2]);
+				t4 = b4.getText().toString();
+				SavePreferences(mPrefPrefix + "item4", t4);
+				break;
+			case 5:
+				b5.setText(someItems[test2]);
+				t5 = b5.getText().toString();
+				SavePreferences(mPrefPrefix + "item5", t5);
+				break;
+			case 6:
+				b6.setText(someItems[test2]);
+				t6 = b6.getText().toString();
+				SavePreferences(mPrefPrefix + "item6", t6);
+				break;
+			case 7:
+				b7.setText(someItems[test2]);
+				t7 = b7.getText().toString();
+				SavePreferences(mPrefPrefix + "item7", t7);
+				break;
+			case 8:
+				b8.setText(someItems[test2]);
+				t8 = b8.getText().toString();
+				SavePreferences(mPrefPrefix + "item8", t8);
+				break;
+			case 9:
+				b9.setText(someItems[test2]);
+				t9 = b9.getText().toString();
+				SavePreferences(mPrefPrefix + "item9", t9);
+				break;
+			case 10:
+				b10.setText(someItems[test2]);
+				t10 = b10.getText().toString();
+				SavePreferences(mPrefPrefix + "item10", t10);
+				break;
+			case 11:
+				b11.setText(someItems[test2]);
+				t11 = b11.getText().toString();
+				SavePreferences(mPrefPrefix + "item11", t11);
+				break;
+			case 12:
+				b12.setText(someItems[test2]);
+				t12 = b12.getText().toString();
+				SavePreferences(mPrefPrefix + "item12", t12);
+				break;
+		}
+
 	}
 
 	private void SavePreferences(String key, String value) {
