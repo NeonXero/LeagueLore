@@ -9,6 +9,7 @@ import android.widget.TabHost;
 import com.flurry.android.FlurryAgent;
 
 public class Main extends TabActivity {
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,24 +19,32 @@ public class Main extends TabActivity {
 
 		setContentView(R.layout.main);
 
-		Resources res = getResources(); // Resource object to get Drawables
 		TabHost tabHost = getTabHost();  // The activity TabHost
-		TabHost.TabSpec spec;  // Resusable TabSpec for each tab
-		Intent intent;  // Reusable Intent for each tab
+		Resources res = getResources(); // Resource object to get Drawables
 
-		// Create an Intent to launch an Activity for the tab (to be reused)
-		intent = new Intent().setClass(this, Lore.class);
+		// Tab for Photos
+		TabHost.TabSpec loreSpec = tabHost.newTabSpec("Lore");
+		// setting Title and Icon for the Tab
+		loreSpec.setIndicator("Lore", getResources().getDrawable(R.drawable.ken_tab));
+		Intent loreIntent = new Intent(this, Lore.class);
+		loreSpec.setContent(loreIntent);
 
-		// Initialize a TabSpec for each tab and add it to the TabHost
-		spec = tabHost.newTabSpec("lore").setIndicator("Game Lore", res.getDrawable(R.drawable.ken_tab))
-				.setContent(intent);
-		tabHost.addTab(spec);
+		// Tab for Songs
+		TabHost.TabSpec champSpec = tabHost.newTabSpec("Champions");
+		champSpec.setIndicator("Champions", getResources().getDrawable(R.drawable.pop_tab));
+		Intent champIntent = new Intent(this, Info.class);
+		champSpec.setContent(champIntent);
 
-		// Do the same for the other tabs
-		intent = new Intent().setClass(this, Info.class);
-		spec = tabHost.newTabSpec("champs").setIndicator("Champion Info", res.getDrawable(R.drawable.pop_tab))
-				.setContent(intent);
-		tabHost.addTab(spec);
+		// Tab for Videos
+		TabHost.TabSpec moreSpec = tabHost.newTabSpec("More");
+		moreSpec.setIndicator("More", getResources().getDrawable(R.drawable.teemo_tab));
+		Intent moreIntent = new Intent(this, AppInfo.class);
+		moreSpec.setContent(moreIntent);
+
+		// Adding all TabSpec to TabHost
+		tabHost.addTab(loreSpec); // Adding photos tab
+		tabHost.addTab(champSpec); // Adding songs tab
+		tabHost.addTab(moreSpec); // Adding videos tab
 	}
 
 	public void onStop()

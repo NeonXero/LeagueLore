@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,18 +25,18 @@ public class Info extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		//Flurry
+//Flurry
 		FlurryAgent.onStartSession(this, " ");
 
-		//===========================
-		//==== GRID VIEW TESTING ====
+//===========================
+//==== GRID VIEW TESTING ====
 		setContentView(R.layout.champ_grid);
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);
 		gridview.setAdapter(new CustomAdapter(this));
 
 
-		//bundle test stuff
+//bundle test stuff
 		final Intent intent = new Intent(Info.this, Champion.class);
 		final Bundle b = new Bundle();
 
@@ -48,7 +47,7 @@ public class Info extends Activity {
 
 		gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			public void onItemClick(AdapterView parent, View v, int position, long id) {
-				//Copying stuff from list adapter click thing
+//Copying stuff from list adapter click thing
 				ChampObj obj = new ChampObj();
 				obj.setChampName(champ_list_array[position]);
 				obj.setChampStory(champ_lore_array[position]);
@@ -56,7 +55,7 @@ public class Info extends Activity {
 				obj.setChampTags(champ_tag_lines[position]);
 
 				obj.setIndex(position);
-				//Log.d(TAG, "Position=" + position);
+//Log.d(TAG, "Position=" + position);
 
 				intent.putExtra("net.neonlotus.lolandroidapp.ChampObj", obj);
 				startActivity(intent);
@@ -89,12 +88,12 @@ public class Info extends Activity {
 		// create a new ImageView for each item referenced by the Adapter
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View v;
-			if (convertView == null) {  // if it's not recycled, initialize some attributes
+			if (convertView == null) { // if it's not recycled, initialize some attributes
 				v = new View(getApplicationContext());
 			} else {
 				v = (View) convertView;
 			}
-			//Set content here...
+//Set content here...
 			LayoutInflater li = getLayoutInflater();
 			v = li.inflate(R.layout.icon, null);
 			TextView tv = (TextView) v.findViewById(R.id.icon_text);
@@ -111,12 +110,13 @@ public class Info extends Activity {
 				R.drawable.annie, R.drawable.ashe, R.drawable.blitz, R.drawable.brand, R.drawable.cait,
 				R.drawable.cassi,
 				R.drawable.cho, R.drawable.cork, R.drawable.drmu, R.drawable.evel, R.drawable.ezr, R.drawable.fiddle,
+				R.drawable.fiora,
 				R.drawable.fizz, R.drawable.galio, R.drawable.gang, R.drawable.garen, R.drawable.gragas,
 				R.drawable.graves,
 				R.drawable.heim, R.drawable.irel, R.drawable.janna, R.drawable.jarv, R.drawable.jax, R.drawable.karma,
 				R.drawable.karth, R.drawable.kass, R.drawable.kata, R.drawable.kayle, R.drawable.kennen,
 				R.drawable.kog,
-				R.drawable.leblanc, R.drawable.leesin, R.drawable.leona, R.drawable.lux, R.drawable.malph,
+				R.drawable.leblanc, R.drawable.leesin, R.drawable.leona,R.drawable.lulu,R.drawable.lux, R.drawable.malph,
 				R.drawable.malz,
 				R.drawable.mao, R.drawable.master, R.drawable.missfort, R.drawable.mord, R.drawable.morg,
 				R.drawable.nasus, R.drawable.naut,
@@ -141,6 +141,6 @@ public class Info extends Activity {
 	{
 		super.onStop();
 		FlurryAgent.onEndSession(this);
-		// your code
+// your code
 	}
 }

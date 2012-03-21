@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dip"
+            android:id="@+id/itemmessage"
+            android:paddingBottom="20dp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:text="Press a button to select your item!"/>
+
+</LinearLayout>

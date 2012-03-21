@@ -19,6 +19,8 @@
         <item>Evelynn</item>
         <item>Ezreal</item>
         <item>Fiddlesticks</item>
+        <!-- Fiora, Feb 29 -->
+        <item>Fiora</item>
         <item>Fizz</item>
         <item>Galio</item>
         <item>Gangplank</item>
@@ -40,6 +42,7 @@
         <item>LeBlanc</item>
         <item>Lee Sin</item>
         <item>Leona</item>
+        <item>Lulu</item> <!--March 20-->
         <item>Lux</item>
         <item>Malphite</item>
         <item>Malzahar</item>
@@ -696,6 +699,16 @@
             Those who say \'you have nothing to fear but fear itself\' have not yet felt the crows.
         </item>
         <!--Fiddle-->
+        <!-- below: Fiora-->
+        <item>
+            As the youngest child of the noble House Laurent, Fiora always considered herself destined for greatness. The Laurents had dominated the dueling culture of Demacia\'s aristocracy for centuries, and Fiora\'s father was regarded as one of the finest swordsmen the nation had ever seen. Inspired by his tales of glory, Fiora began training as soon as she could wield a blade and quickly showed greater talent than any of her siblings. As she grew older, her self-confidence and rigid discipline only widened the gulf of expertise between Fiora and her peers. Her fellow duelists perceived her confidence as arrogance, but none could defeat her in combat, and each victory only heightened her lofty self-esteem. Even so, Fiora never allowed herself to become complacent in her training, and she drove herself ever harder to become a worthy successor to her father\'s legacy.\n\n
+
+            Her devotion turned out to be misplaced. On the eve of an arranged duel, Fiora\'s father was caught slipping a slow paralysis poison into his opponent\'s drink. Following the incident, many of his past opponents came forward with their own accusations: envenomed weapons, bribery, blackmail, and more. In an instant, he had destroyed his family\'s honorable reputation. Fiora was outraged. Not only had her hero betrayed her ideals, but Demacia\'s dueling elite now doubted her own ability. She desperately wanted to wipe the stain from her family\'s history but, even more, she wanted the world to acknowledge her mastery. She found her solution in the one arena where she could fight the world\'s strongest warriors without being accused of dishonesty: the League of Legends.\n\n
+
+            \'Fiora\'s ego would be insufferable if it wasn\'t so . . . justified.\'\n
+
+            -Jarvan IV
+        </item>
         <item>Centuries ago, an ancient water-dwelling race built a hidden city beneath a mountain in the sea. Though
             these creatures had their enemies, the city was an impenetrable fortress, and, in the safety it provided,
             they grew complacent. Fizz, however, harbored a curious spirit that could not be satisfied living so
@@ -1225,7 +1238,17 @@
             \'The sun\'s rays reach all of Runeterra, so too must the image of its champion.\'
             -Leona
         </item>
-        <!--leona_story-->
+        <!-- Leona Story-->
+        <item>
+            Perhaps more than any other champion in the League, Lulu marches to the beat of her own drum. During her youth in Bandle City, she spent most of her time wandering alone in the forest or lost in a daydream. It wasn\’t that she was antisocial; the day-to-day bustle of Bandle City just couldn\’t compete with the vibrant world of her imagination. She saw wonder in places most people overlooked. This was how she found Pix, a fae spirit, pretending to be stuck in a birdhouse. Lulu\’s imagination distinguished her to Pix, and he seized the opportunity to lure her into his life. He brought her to the Glade, the enchanted home of the fae, which lay nestled in a clearing in the woods. There the rigid properties of the outside world - things like size and color - changed as frequently and whimsically as the direction of the wind. Lulu felt at home in the Glade and she lingered there with Pix, fascinated by this secret place.\n\n
+
+            She quickly lost track of time. Her life in the Glade was comfortable, natural. She and Pix played fae games together, the sorts of games that she had been told were \'only pretend,\' and she got exceedingly good at them. It caught her by surprise when she suddenly remembered that she had left a life behind in Bandle City. The Glade had a way of making everything outside seem distant and surreal. Lulu decided to revisit her former home, to share some of the lovely things she\’d learned, but when she and Pix returned the world had changed. Time, she discovered, was another property that behaved differently in the Glade, and centuries had passed while she was away. Lulu sought to reconnect to the residents of the outside world, but her attempt had unfortunate results. She led all the children off to play hide and seek, temporarily changing them into flowers and animals to spice up the game, but their parents didn’t appreciate her efforts. When the yordles insisted that she leave their land, she turned to a vibrant, magic place where those with unusual gifts were not just accepted but adored: the League of Legends.\n\n
+
+            \'The best path between two points is upside-down, between, then inside-out and round again.\'
+            Lulu
+        </item>
+        <!-- Lulu March 20-->
+
         <item>Born to the prestigious Crownguards, the paragon family of Demacian service, Luxanna was destined for
             greatness. She grew up as the family\'s only daughter, and she immediately took to the advanced education
             and lavish parties required of families as high profile as the Crownguards. As Lux matured, it became clear
@@ -2532,6 +2555,7 @@
         <item>Assassin, stealth, melee</item>
         <item>Carry, ranged</item>
         <item>Mage, jungler, ranged</item>
+        <!--Fiora--><item>Carry, melee</item>
         <item>Fighter, assassin, melee</item>
         <item>Tank, support, melee</item>
         <item>Carry, melee</item>
@@ -2553,6 +2577,7 @@
         <item>Assassin, mage, ranged</item>
         <item>Assassin, melee</item>
         <item>Tank, melee</item>
+        <item>Ranged, support</item><!-- Lulu March 20-->
         <item>Mage, support, ranged</item>
         <item>Fighter, melee</item>
         <item>Mage, ranged</item>
@@ -2823,6 +2848,7 @@
         <item>the widowmaker, evelynn</item>
         <item>the prodigal explorer, ezreal</item>
         <item>the harbinger of doom, fiddlesticks</item>
+        <!--Fiora--><item>the grand duelist, fiora</item>
         <item>the tidal trickster, fizz</item>
         <item>the sentinel\'s sorrow, galio</item>
         <item>the saltwater scourge, gangplank</item>
@@ -2844,6 +2870,8 @@
         <item>the deceiver, leblanc</item>
         <item>the blind monk, lee sin</item>
         <item>the radiant dawn, leona</item>
+        <!-- March 20-->
+        <item>the fae sorceress, lulu</item>
         <item>the lady of luminosity, lux</item>
         <item>shard of the monolith, malphite</item>
         <item>the prophet of the void, malzahar</item>
@@ -2919,6 +2947,7 @@
         <item>@drawable/eve_ban</item>
         <item>@drawable/ez_ban</item>
         <item>@drawable/fiddle_ban</item>
+        <item>@drawable/fiora_ban</item>
         <item>@drawable/fizz_ban</item>
         <item>@drawable/galio_ban</item>
         <item>@drawable/gang_ban</item>
@@ -2940,6 +2969,7 @@
         <item>@drawable/leblanc_ban</item>
         <item>@drawable/lee_ban</item>
         <item>@drawable/leona_ban</item>
+        <item>@drawable/lulu_ban</item>       <!--Lulu :) March 20-->
         <item>@drawable/lux_ban</item>
         <item>@drawable/malph_ban</item>
         <item>@drawable/malz_ban</item>
@@ -3067,6 +3097,7 @@
         <item>Guardian Angel</item>
         <item>Hexdrinker</item>
         <item>Lich Bane</item>
+        <item>Maw of Malmortius</item>
         <item>Mercury\'s Treads</item>
         <item>Negatron Cloak</item>
         <item>Null-Magic Mantle</item>
@@ -3129,7 +3160,7 @@
         <item>Long Sword</item>
         <item>Madred\'s Bloodrazor</item>
         <item>Madred\'s Razors</item>
-        <item>Madred\'s Razors</item>
+        <item>Maw of Malmortius</item>
         <item>Phage</item>
         <item>Pickaxe</item>
         <item>Prospector\'s Blade</item>
