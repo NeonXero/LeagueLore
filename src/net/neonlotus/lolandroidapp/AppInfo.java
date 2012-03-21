@@ -2,9 +2,10 @@ package net.neonlotus.lolandroidapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.preference.PreferenceActivity;
 import com.flurry.android.FlurryAgent;
 
-public class AppInfo extends Activity {
+public class AppInfo extends PreferenceActivity {
 	private static final String TAG = "LeagueLore";
 
 	/**
@@ -13,11 +14,11 @@ public class AppInfo extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		addPreferencesFromResource(R.xml.preferences);
 
 		//Flurry
 		FlurryAgent.onStartSession(this, " ");
 
-		setContentView(R.layout.information);
 
 
 	}
