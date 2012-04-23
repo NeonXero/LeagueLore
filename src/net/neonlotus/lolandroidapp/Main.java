@@ -22,20 +22,23 @@ public class Main extends TabActivity {
 		TabHost tabHost = getTabHost();  // The activity TabHost
 		Resources res = getResources(); // Resource object to get Drawables
 
-		// Tab for Photos
+
+
+		// Tab for Left page, overall lore
 		TabHost.TabSpec loreSpec = tabHost.newTabSpec("Lore");
 		// setting Title and Icon for the Tab
 		loreSpec.setIndicator("Lore", getResources().getDrawable(R.drawable.ken_tab));
 		Intent loreIntent = new Intent(this, Lore.class);
 		loreSpec.setContent(loreIntent);
 
-		// Tab for Songs
+		// Tab for mid page, champ info [this is the one to refresh]
 		TabHost.TabSpec champSpec = tabHost.newTabSpec("Champions");
 		champSpec.setIndicator("Champions", getResources().getDrawable(R.drawable.pop_tab));
 		Intent champIntent = new Intent(this, Info.class);
+		champIntent.putExtra("RefreshChamps", true);
 		champSpec.setContent(champIntent);
 
-		// Tab for Videos
+		// Tab for righ tpage, more tab..
 		TabHost.TabSpec moreSpec = tabHost.newTabSpec("More");
 		moreSpec.setIndicator("More", getResources().getDrawable(R.drawable.teemo_tab));
 		Intent moreIntent = new Intent(this, AppInfo.class);
@@ -45,6 +48,8 @@ public class Main extends TabActivity {
 		tabHost.addTab(loreSpec); // Adding photos tab
 		tabHost.addTab(champSpec); // Adding songs tab
 		tabHost.addTab(moreSpec); // Adding videos tab
+
+
 	}
 
 	public void onStop()

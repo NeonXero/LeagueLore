@@ -27,6 +27,7 @@
         <item>Garen</item>
         <item>Gragas</item>
         <item>Graves</item>
+        <item>Hecarim</item> <!-- April 18-->
         <item>Heimerdinger</item>
         <item>Irelia</item>
         <item>Janna</item>
@@ -855,6 +856,15 @@
             -Graves
         </item>
         <!--Graves-->
+        <!-- Hecarim below-->
+        <item>
+            Since his first sighting on the northwestern shores of Valoran, the towering, armored specter known as Hecarim struck a chilling fear into the hearts of all who laid eyes upon him. No one had ever seen anything like his titanic, ethereal form before, and the mystery of his sudden arrival was deeply unnerving. When Hecarim began to march eastwards, leaving a trail of desolate, lifeless ground behind him, the villagers of the plains fled their homes for the safety of nearby Demacia. In the city\'s now-overcrowded taverns, rumors about this inhuman phantom spread in hushed whispers. Some claimed that he was the vengeful shade of an ancient warrior, intent on destroying all living beings; one man insisted that they had seen him leading an entire legion of spectral cavalrymen; others still believed him to be the creation of some hateful necromancer. One Demacian commander, seeking to dispel the terror that had gripped the city, assembled a few of his finest soldiers and rode out to turn back or destroy Hecarim.\n\n
+
+            The commander led his soldiers to stand in Hecarim\'s path and braced for his assault. As the apparition bore down on them, an overwhelming sensation of dread gripped the warriors. The men, frozen in fear, could only scream as the ghostly titan ran them down, tearing them apart and trampling them beneath his iron hooves. Hecarim turned to the crippled, cowering commander and uttered a chilling statement: \'This is merely the beginning. No mortal army can withstand the might of the Shadow Isles.\' With that, Hecarim departed, resuming his grim march. Driven to insanity by his nightmarish experience, the commander stumbled back to Demacia, where his dire warnings were dismissed as the ravings of a madman. While Hecarim\'s origin and intent were still a mystery, his destination became clear when he reached the Institute of War and, in a voice both ominous and commanding, demanded entry into the League of Legends.\n\n
+
+            \'You don\'t understand... the shadows will consume us all...\'\n
+            Former Demacian Commander
+        </item>
         <item>It is unusual to see yordles outside of Bandle City, but the lure of science was something Heimerdinger
             could not resist. By the time he\'d completed his third doctorate, he had already become the greatest of
             all
@@ -2562,6 +2572,7 @@
         <item>Fighter, melee, recommended</item>
         <item>Fighter, melee</item>
         <item>Carry, ranged</item>
+        <item>Fighter, jungler, melee</item> <!-- Hecarim 4/18-->
         <item>Mage, pusher, ranged</item>
         <item>Assassin, melee</item>
         <item>Support, ranged</item>
@@ -2855,6 +2866,7 @@
         <item>the might of demacia, garen</item>
         <item>the rabble rouser, gragas</item>
         <item>the outlaw, graves</item>
+        <item>the shadow of war, hecarim</item> <!-- Hecarim 4/18-->
         <item>the revered inventor, heimerdinger</item>
         <item>the will of the blades, irelia</item>
         <item>the storm\'s fury, janna</item>
@@ -2870,8 +2882,7 @@
         <item>the deceiver, leblanc</item>
         <item>the blind monk, lee sin</item>
         <item>the radiant dawn, leona</item>
-        <!-- March 20-->
-        <item>the fae sorceress, lulu</item>
+        <item>the fae sorceress, lulu</item><!-- March 20 Lulu-->
         <item>the lady of luminosity, lux</item>
         <item>shard of the monolith, malphite</item>
         <item>the prophet of the void, malzahar</item>
@@ -2954,6 +2965,7 @@
         <item>@drawable/garen_ban</item>
         <item>@drawable/gragas_ban</item>
         <item>@drawable/graves_ban</item>
+        <item>@drawable/hec_ban</item> <!--4/18-->
         <item>@drawable/heim_ban</item>
         <item>@drawable/irelia_ban</item>
         <item>@drawable/janna_ban</item>
@@ -3338,6 +3350,106 @@
         <item>Oracle\'s Extract</item>
         <item>Sight Ward</item>
         <item>Vision Ward</item>
+    </array>
+
+    <!-- Champ nick names -->
+    <array name="champ_list_egg">
+        <item>Fox</item>
+        <item>Akali</item>
+        <item>Cow</item>
+        <item>Amumu</item>
+        <item>Anivia</item>
+        <item>Annie</item>
+        <item>Ashe</item>
+        <item>Blitzcrank</item>
+        <item>Brand</item>
+        <item>Caitlyn</item>
+        <item>Cassiopeia</item>
+        <item>Cho\'Gath</item>
+        <item>Corki</item>
+        <item>Dr. Mundo</item>
+        <item>Evelynn</item>
+        <item>Ezreal</item>
+        <item>Fiddlesticks</item>
+        <item>Fiora</item>
+        <item>Fizz</item>
+        <item>Galio</item>
+        <item>Burger King</item>
+        <item>Garen</item>
+        <item>Gragas</item>
+        <item>Graves</item>
+        <item>Hecarim</item>
+        <item>Heimerdinger</item>
+        <item>Irelia</item>
+        <item>Janna</item>
+        <item>Jarvan IV</item>
+        <item>Jax</item>
+        <item>Karma</item>
+        <item>Karthus</item>
+        <item>Kassadin</item>
+        <item>Katarina</item>
+        <item>Kayle</item>
+        <item>Chipmunk</item>
+        <item>Kog\'Maw</item>
+        <item>Le Bonk</item>
+        <item>Lee Sin</item>
+        <item>Leona</item>
+        <item>Lulu</item>
+        <item>Lux</item>
+        <item>Malphite</item>
+        <item>Malzahar</item>
+        <item>Maokai</item>
+        <item>Master Yi</item>
+        <item>Miss Fortune</item>
+        <item>HUE HUE HUE</item>
+        <item>Morgana</item>
+        <item>Nasus</item>
+        <item>Nautilus</item>
+        <item>Nidalee</item>
+        <item>Nocturne</item>
+        <item>Nunu</item>
+        <item>Olaf</item>
+        <item>Orianna</item>
+        <item>Pantheon</item>
+        <item>Poppy</item>
+        <item>Rammus</item>
+        <item>Renekton</item>
+        <item>Riven</item>
+        <item>Rumble</item>
+        <item>Ryze</item>
+        <item>Sejuani</item>
+        <item>Shaco</item>
+        <item>Shen</item>
+        <item>Shyvana</item>
+        <item>Singed</item>
+        <item>Sion</item>
+        <item>Sivir</item>
+        <item>Skarner</item>
+        <item>Sona</item>
+        <item>Soraka</item>
+        <item>Swain</item>
+        <item>Talon</item>
+        <item>Taric</item>
+        <item>Teemo</item>
+        <item>Tristana</item>
+        <item>Trundle</item>
+        <item>Tryndamere</item>
+        <item>Twisted Fate</item>
+        <item>Twitch</item>
+        <item>Udyr</item>
+        <item>Urgot</item>
+        <item>Vayne</item>
+        <item>Veigar</item>
+        <item>Viktor</item>
+        <item>Vladimir</item>
+        <item>Volibear</item>
+        <item>Warwick</item>
+        <item>Wukong</item>
+        <item>Xerath</item>
+        <item>Xin Zhao</item>
+        <item>Yorick</item>
+        <item>Ziggs</item>
+        <item>Zilean</item>
     </array>
 
 </resources>

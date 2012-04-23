@@ -25,44 +25,42 @@ public class Info extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-//Flurry
+		//Flurry
 		FlurryAgent.onStartSession(this, " ");
 
-//===========================
-//==== GRID VIEW TESTING ====
+		//==== GRID VIEW TESTING ====
 		setContentView(R.layout.champ_grid);
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);
 		gridview.setAdapter(new CustomAdapter(this));
 
-
-//bundle test stuff
+		//bundle test stuff
 		final Intent intent = new Intent(Info.this, Champion.class);
 		final Bundle b = new Bundle();
 
 		final String[] champ_list_array = getResources().getStringArray(R.array.champ_list);
+		final String[] champ_list_joke = getResources().getStringArray(R.array.champ_list_egg);
 		final String[] champ_lore_array = getResources().getStringArray(R.array.champ_lore);
 		final String[] champ_stats_array = getResources().getStringArray(R.array.champ_stats);
 		final String[] champ_tag_lines = getResources().getStringArray(R.array.champ_taglines);
 
 		gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			public void onItemClick(AdapterView parent, View v, int position, long id) {
-//Copying stuff from list adapter click thing
+				//Copying stuff from list adapter click thing
 				ChampObj obj = new ChampObj();
 				obj.setChampName(champ_list_array[position]);
+				//obj.setChampName(newChamps[position]);
 				obj.setChampStory(champ_lore_array[position]);
 				obj.setChampStats(champ_stats_array[position]);
 				obj.setChampTags(champ_tag_lines[position]);
 
 				obj.setIndex(position);
-//Log.d(TAG, "Position=" + position);
 
 				intent.putExtra("net.neonlotus.lolandroidapp.ChampObj", obj);
 				startActivity(intent);
 			}
 		});
 	}
-
 
 	public class CustomAdapter extends BaseAdapter {
 		private Context mContext;
@@ -84,20 +82,31 @@ public class Info extends Activity {
 		}
 
 		final String[] champ_list_array = getResources().getStringArray(R.array.champ_list);
+		final String[] champ_list_joke = getResources().getStringArray(R.array.champ_list_egg);
+
 
 		// create a new ImageView for each item referenced by the Adapter
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View v;
+
 			if (convertView == null) { // if it's not recycled, initialize some attributes
 				v = new View(getApplicationContext());
 			} else {
 				v = (View) convertView;
 			}
-//Set content here...
+			//Set content here...
 			LayoutInflater li = getLayoutInflater();
 			v = li.inflate(R.layout.icon, null);
 			TextView tv = (TextView) v.findViewById(R.id.icon_text);
-			tv.setText(champ_list_array[position]);
+
+
+			if (PreferenceManager.get(getApplicationContext())) {
+				tv.setText(champ_list_joke[position]);
+			} else
+				tv.setText(champ_list_array[position]);
+			//tv.setText(champ_list_array[position]);
+
+
 			ImageView iv = (ImageView) v.findViewById(R.id.icon_image);
 			iv.setImageResource(mThumbIds[position]);
 			iv.setPadding(5, 5, 5, 5);
@@ -112,7 +121,7 @@ public class Info extends Activity {
 				R.drawable.cho, R.drawable.cork, R.drawable.drmu, R.drawable.evel, R.drawable.ezr, R.drawable.fiddle,
 				R.drawable.fiora,
 				R.drawable.fizz, R.drawable.galio, R.drawable.gang, R.drawable.garen, R.drawable.gragas,
-				R.drawable.graves,
+				R.drawable.graves, R.drawable.hecarim,
 				R.drawable.heim, R.drawable.irel, R.drawable.janna, R.drawable.jarv, R.drawable.jax, R.drawable.karma,
 				R.drawable.karth, R.drawable.kass, R.drawable.kata, R.drawable.kayle, R.drawable.kennen,
 				R.drawable.kog,
@@ -141,6 +150,5 @@ public class Info extends Activity {
 	{
 		super.onStop();
 		FlurryAgent.onEndSession(this);
-// your code
 	}
 }

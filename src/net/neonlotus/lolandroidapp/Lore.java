@@ -5,10 +5,12 @@ import android.app.ListActivity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.*;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.TextView;
 import com.commonsware.cwac.merge.MergeAdapter;
 import com.flurry.android.FlurryAgent;
 
@@ -195,7 +197,7 @@ public class Lore extends ListActivity {
 				intent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlPartOne+(position-5)));
 				startActivity(intent);
 				break;
-			case 34:
+			case 34: /*Volume 1 I 29*/
 				intent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlPartOne+(position-5)));
 				startActivity(intent);
 				break;

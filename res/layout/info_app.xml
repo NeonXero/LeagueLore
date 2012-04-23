@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="fill_parent"
+              android:layout_width="fill_parent"
+              android:paddingBottom="20dp"
+              android:orientation="vertical">
+
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20dip"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dip"
+            android:text="The Infamous More Tab"
+            />
+
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dip"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dip"
+            android:text="Want to email me suggestions, praise, hate mail? Tap here ^_^"
+            android:clickable="true"
+            android:id="@+id/emailTV" />
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dip"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dip"
+            android:text="Want to help me by donating with Paypal? Use this one ;)"
+            android:clickable="true"
+            android:id="@+id/donateTV" />
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dip"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dip"
+            android:text="Curious about the game? Tap here to use my referral link to get started!"
+            android:clickable="true"
+            android:id="@+id/refTV" />
+    <CheckBox android:id="@+id/checkbox"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Easter Egg? [COMING SOON]"/>
+    <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="16dip"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dip"
+            android:text="DAT TEST CORN"
+            android:id="@+id/tvClick" />
+
+</LinearLayout>
