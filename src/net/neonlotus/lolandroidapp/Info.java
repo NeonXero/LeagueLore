@@ -60,6 +60,11 @@ public class Info extends Activity {
 				startActivity(intent);
 			}
 		});
+	} //here is end of oncreate
+
+	public void onResume() {
+		super.onResume();
+		choseNames(); //this guy
 	}
 
 	public class CustomAdapter extends BaseAdapter {
@@ -99,11 +104,11 @@ public class Info extends Activity {
 			v = li.inflate(R.layout.icon, null);
 			TextView tv = (TextView) v.findViewById(R.id.icon_text);
 
-
-			if (PreferenceManager.get(getApplicationContext())) {
+			choseNames(tv, champ_list_array,champ_list_joke,position);
+			/*if (PreferenceManager.get(getApplicationContext())) {
 				tv.setText(champ_list_joke[position]);
 			} else
-				tv.setText(champ_list_array[position]);
+				tv.setText(champ_list_array[position]);*/
 			//tv.setText(champ_list_array[position]);
 
 
@@ -144,6 +149,13 @@ public class Info extends Activity {
 				R.drawable.volibear, R.drawable.warw, R.drawable.wukong, R.drawable.xera, R.drawable.xinz,
 				R.drawable.yorik, R.drawable.ziggs,R.drawable.zil
 		};
+	}
+
+	public void choseNames(TextView tv, String[] normal, String[] nick, Integer pos) {
+		if (PreferenceManager.get(getApplicationContext())) {
+			tv.setText(nick[pos]);
+		} else
+			tv.setText(normal[pos]);
 	}
 
 	public void onStop()

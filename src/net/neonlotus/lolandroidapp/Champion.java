@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -580,10 +579,6 @@ public class Champion extends Activity implements View.OnClickListener {
 		int test = theButton;
 		int test2 = theB;
 		String[] someItems = theArray;
-
-		//==== LOG testing ====//
-		//Log.d(TAG,"Button ?? " +test);
-		//Log.d(TAG,"Other thing ?? " +test2);
 
 		//switch for test
 		switch (test) { //initial button press

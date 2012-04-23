@@ -22,11 +22,8 @@ public class Main extends TabActivity {
 		TabHost tabHost = getTabHost();  // The activity TabHost
 		Resources res = getResources(); // Resource object to get Drawables
 
-
-
 		// Tab for Left page, overall lore
 		TabHost.TabSpec loreSpec = tabHost.newTabSpec("Lore");
-		// setting Title and Icon for the Tab
 		loreSpec.setIndicator("Lore", getResources().getDrawable(R.drawable.ken_tab));
 		Intent loreIntent = new Intent(this, Lore.class);
 		loreSpec.setContent(loreIntent);
@@ -35,7 +32,6 @@ public class Main extends TabActivity {
 		TabHost.TabSpec champSpec = tabHost.newTabSpec("Champions");
 		champSpec.setIndicator("Champions", getResources().getDrawable(R.drawable.pop_tab));
 		Intent champIntent = new Intent(this, Info.class);
-		champIntent.putExtra("RefreshChamps", true);
 		champSpec.setContent(champIntent);
 
 		// Tab for righ tpage, more tab..
@@ -45,9 +41,15 @@ public class Main extends TabActivity {
 		moreSpec.setContent(moreIntent);
 
 		// Adding all TabSpec to TabHost
-		tabHost.addTab(loreSpec); // Adding photos tab
-		tabHost.addTab(champSpec); // Adding songs tab
-		tabHost.addTab(moreSpec); // Adding videos tab
+		tabHost.addTab(loreSpec);
+		tabHost.addTab(champSpec);
+		tabHost.addTab(moreSpec);
+
+		tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
+			public void onTabChanged(String s) {
+				//To change body of implemented methods use File | Settings | File Templates.
+			}
+		});
 
 
 	}
