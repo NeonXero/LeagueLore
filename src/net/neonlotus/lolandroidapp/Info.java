@@ -64,7 +64,8 @@ public class Info extends Activity {
 
 	public void onResume() {
 		super.onResume();
-		choseNames(); //this guy
+		//TextView tv = (TextView) findViewById(R.id.icon_text);
+		//choseNames(tv, champ_list_joke,champ_list_array,2); //this guy
 	}
 
 	public class CustomAdapter extends BaseAdapter {
