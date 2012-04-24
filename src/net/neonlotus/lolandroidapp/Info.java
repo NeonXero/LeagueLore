@@ -1,13 +1,12 @@
 package net.neonlotus.lolandroidapp;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.*;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import com.flurry.android.FlurryAgent;
 
 /**
@@ -20,6 +19,7 @@ import com.flurry.android.FlurryAgent;
 public class Info extends Activity {
 
 	private static final String TAG = "LeagueLore";
+	private GridAdapter MyGridAdapter;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -30,9 +30,12 @@ public class Info extends Activity {
 
 		//==== GRID VIEW TESTING ====
 		setContentView(R.layout.champ_grid);
+		//grid = new GridAdapter(this);
+		MyGridAdapter = new GridAdapter(this);
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);
-		gridview.setAdapter(new CustomAdapter(this));
+		//gridview.setAdapter(new CustomAdapter(this));
+		gridview.setAdapter(MyGridAdapter);
 
 		//bundle test stuff
 		final Intent intent = new Intent(Info.this, Champion.class);
@@ -62,13 +65,16 @@ public class Info extends Activity {
 		});
 	} //here is end of oncreate
 
+	@Override
 	public void onResume() {
 		super.onResume();
-		//TextView tv = (TextView) findViewById(R.id.icon_text);
-		//choseNames(tv, champ_list_joke,champ_list_array,2); //this guy
+		Log.d(TAG,"Tab resume happened");
+		if(MyGridAdapter != null) {
+			MyGridAdapter.notifyDataSetChanged();
+		}
 	}
 
-	public class CustomAdapter extends BaseAdapter {
+	/*public class CustomAdapter extends BaseAdapter {
 		private Context mContext;
 
 		public CustomAdapter(Context c) {
@@ -105,11 +111,16 @@ public class Info extends Activity {
 			v = li.inflate(R.layout.icon, null);
 			TextView tv = (TextView) v.findViewById(R.id.icon_text);
 
-			choseNames(tv, champ_list_array,champ_list_joke,position);
-			/*if (PreferenceManager.get(getApplicationContext())) {
+			//choseNames(tv, champ_list_array,champ_list_joke,position);
+			if (choseNames()) {
+				tv.setText(champ_list_joke[position]);
+			} else {
+				tv.setText(champ_list_array[position]);
+			}
+			*//*if (PreferenceManager.get(getApplicationContext())) {
 				tv.setText(champ_list_joke[position]);
 			} else
-				tv.setText(champ_list_array[position]);*/
+				tv.setText(champ_list_array[position]);*//*
 			//tv.setText(champ_list_array[position]);
 
 
@@ -123,40 +134,34 @@ public class Info extends Activity {
 		private Integer[] mThumbIds = {
 				R.drawable.ahri, R.drawable.akal, R.drawable.ali, R.drawable.amumu, R.drawable.anivia,
 				R.drawable.annie, R.drawable.ashe, R.drawable.blitz, R.drawable.brand, R.drawable.cait,
-				R.drawable.cassi,
-				R.drawable.cho, R.drawable.cork, R.drawable.drmu, R.drawable.evel, R.drawable.ezr, R.drawable.fiddle,
-				R.drawable.fiora,
-				R.drawable.fizz, R.drawable.galio, R.drawable.gang, R.drawable.garen, R.drawable.gragas,
-				R.drawable.graves, R.drawable.hecarim,
-				R.drawable.heim, R.drawable.irel, R.drawable.janna, R.drawable.jarv, R.drawable.jax, R.drawable.karma,
+				R.drawable.cassi,R.drawable.cho, R.drawable.cork, R.drawable.drmu, R.drawable.evel, R.drawable.ezr,
+				R.drawable.fiddle,R.drawable.fiora,R.drawable.fizz, R.drawable.galio, R.drawable.gang,
+				R.drawable.garen, R.drawable.gragas,R.drawable.graves, R.drawable.hecarim,R.drawable.heim,
+				R.drawable.irel, R.drawable.janna, R.drawable.jarv, R.drawable.jax, R.drawable.karma,
 				R.drawable.karth, R.drawable.kass, R.drawable.kata, R.drawable.kayle, R.drawable.kennen,
-				R.drawable.kog,
-				R.drawable.leblanc, R.drawable.leesin, R.drawable.leona,R.drawable.lulu,R.drawable.lux, R.drawable.malph,
-				R.drawable.malz,
-				R.drawable.mao, R.drawable.master, R.drawable.missfort, R.drawable.mord, R.drawable.morg,
-				R.drawable.nasus, R.drawable.naut,
+				R.drawable.kog,R.drawable.leblanc, R.drawable.leesin, R.drawable.leona,R.drawable.lulu,
+				R.drawable.lux, R.drawable.malph,R.drawable.malz,R.drawable.mao, R.drawable.master,
+				R.drawable.missfort, R.drawable.mord, R.drawable.morg,R.drawable.nasus, R.drawable.naut,
 				R.drawable.nidalee, R.drawable.noct, R.drawable.nunu, R.drawable.olaf, R.drawable.orian,
-				R.drawable.panth,
-				R.drawable.poppy, R.drawable.rammus, R.drawable.rene, R.drawable.riven, R.drawable.rumb,
-				R.drawable.ryze,R.drawable.sej,
-				R.drawable.shaco, R.drawable.shen, R.drawable.shyv, R.drawable.singed, R.drawable.sion,
-				R.drawable.sivir,
-				R.drawable.skarn, R.drawable.sona, R.drawable.soraka, R.drawable.swain, R.drawable.talon,
-				R.drawable.taric,
-				R.drawable.teemo, R.drawable.trist, R.drawable.trundle, R.drawable.trynd, R.drawable.twifa,
-				R.drawable.twitch,
+				R.drawable.panth,R.drawable.poppy, R.drawable.rammus, R.drawable.rene, R.drawable.riven,
+				R.drawable.rumb,R.drawable.ryze,R.drawable.sej,R.drawable.shaco, R.drawable.shen, R.drawable.shyv,
+				R.drawable.singed, R.drawable.sion,R.drawable.sivir,R.drawable.skarn, R.drawable.sona,
+				R.drawable.soraka, R.drawable.swain, R.drawable.talon,R.drawable.taric,R.drawable.teemo,
+				R.drawable.trist, R.drawable.trundle, R.drawable.trynd, R.drawable.twifa,R.drawable.twitch,
 				R.drawable.udyr, R.drawable.urgot, R.drawable.vayne, R.drawable.veig, R.drawable.viktor,
-				R.drawable.vlad,
-				R.drawable.volibear, R.drawable.warw, R.drawable.wukong, R.drawable.xera, R.drawable.xinz,
-				R.drawable.yorik, R.drawable.ziggs,R.drawable.zil
+				R.drawable.vlad,R.drawable.volibear, R.drawable.warw, R.drawable.wukong, R.drawable.xera,
+				R.drawable.xinz,R.drawable.yorik, R.drawable.ziggs,R.drawable.zil
 		};
-	}
+	}*/
 
-	public void choseNames(TextView tv, String[] normal, String[] nick, Integer pos) {
+	public boolean choseNames(/*TextView tv, String[] normal, String[] nick, Integer pos*/) {
 		if (PreferenceManager.get(getApplicationContext())) {
-			tv.setText(nick[pos]);
-		} else
-			tv.setText(normal[pos]);
+			//tv.setText(nick[pos]);
+			return true;
+		} else {
+			//tv.setText(normal[pos]);
+			return false;
+		}
 	}
 
 	public void onStop()

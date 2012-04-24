@@ -27,8 +27,6 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.info_app);
 
-
-
 		tv1 = (TextView) findViewById(R.id.emailTV);
 		tv1.setOnTouchListener(this);
 		tv2 = (TextView) findViewById(R.id.donateTV);
