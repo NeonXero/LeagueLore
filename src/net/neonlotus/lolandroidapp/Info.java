@@ -84,6 +84,8 @@ public class Info extends Activity implements Observer {
 	}
 
 	public void update(Observable observable, Object o) {
-		MyGridAdapter.notifyDataSetChanged();
+		if(MyGridAdapter != null) {
+			MyGridAdapter.notifyDataSetChanged();
+		}
 	}
 }

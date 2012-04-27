@@ -18,9 +18,6 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 	Intent emailIntent;
 	private ChampModel mModel;
 
-	/**
-	 * Called when the activity is first created.
-	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

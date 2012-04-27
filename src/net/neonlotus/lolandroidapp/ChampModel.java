@@ -37,6 +37,3 @@ public class ChampModel extends Observable {
 		return champ_names;
 	}
 }
-
-//final String[] champ_list_array = getResources().getStringArray(R.array.champ_list);
-//final String[] champ_list_joke = getResources().getStringArray(R.array.champ_list_egg);
