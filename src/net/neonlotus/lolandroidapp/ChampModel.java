@@ -29,6 +29,7 @@ public class ChampModel extends Observable {
 		} else {
 			champ_names = realnames;
 		}
+		notifyObservers();
 
 	}
 

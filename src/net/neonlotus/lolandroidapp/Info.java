@@ -31,8 +31,6 @@ public class Info extends Activity implements Observer {
 
 		//Flurry
 		FlurryAgent.onStartSession(this, " ");
-
-		//==== GRID VIEW TESTING ====
 		setContentView(R.layout.champ_grid);
 
 		mModel = new ChampModel(this);
