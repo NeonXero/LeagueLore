@@ -9,6 +9,9 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import com.flurry.android.FlurryAgent;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  * Created by IntelliJ IDEA.
  * User: Ryan
@@ -16,10 +19,11 @@ import com.flurry.android.FlurryAgent;
  * Time: 7:03 PM
  * To change this template use File | Settings | File Templates.
  */
-public class Info extends Activity {
+public class Info extends Activity implements Observer {
 
 	private static final String TAG = "LeagueLore";
 	private GridAdapter MyGridAdapter;
+	private ChampModel mModel;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -30,11 +34,13 @@ public class Info extends Activity {
 
 		//==== GRID VIEW TESTING ====
 		setContentView(R.layout.champ_grid);
-		//grid = new GridAdapter(this);
+
+		mModel = new ChampModel(this);
+		mModel.addObserver(this);
+
 		MyGridAdapter = new GridAdapter(this);
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);
-		//gridview.setAdapter(new CustomAdapter(this));
 		gridview.setAdapter(MyGridAdapter);
 
 		//bundle test stuff
@@ -52,7 +58,6 @@ public class Info extends Activity {
 				//Copying stuff from list adapter click thing
 				ChampObj obj = new ChampObj();
 				obj.setChampName(champ_list_array[position]);
-				//obj.setChampName(newChamps[position]);
 				obj.setChampStory(champ_lore_array[position]);
 				obj.setChampStats(champ_stats_array[position]);
 				obj.setChampTags(champ_tag_lines[position]);
@@ -63,7 +68,7 @@ public class Info extends Activity {
 				startActivity(intent);
 			}
 		});
-	} //here is end of oncreate
+	}
 
 	@Override
 	public void onResume() {
@@ -78,5 +83,9 @@ public class Info extends Activity {
 	{
 		super.onStop();
 		FlurryAgent.onEndSession(this);
+	}
+
+	public void update(Observable observable, Object o) {
+		MyGridAdapter.notifyDataSetChanged();
 	}
 }

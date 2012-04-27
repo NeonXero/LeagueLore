@@ -38,9 +38,6 @@ public class GridAdapter extends BaseAdapter {
 		return i;
 	}
 
-
-
-
 	// create a new ImageView for each item referenced by the Adapter
 	public View getView(int position, View convertView, ViewGroup parent) {
 		View v;
@@ -51,23 +48,15 @@ public class GridAdapter extends BaseAdapter {
 			v = (View) convertView;
 		}
 		//Set content here...
-		//LayoutInflater li = getLayoutInflater();
 		LayoutInflater li = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		v = li.inflate(R.layout.icon, null);
 		TextView tv = (TextView) v.findViewById(R.id.icon_text);
 
-		//choseNames(tv, champ_list_array,champ_list_joke,position);
 		if (PreferenceManager.get(mContext)) {
 			tv.setText(champ_list_joke[position]);
 		} else {
 			tv.setText(champ_list_array[position]);
 		}
-		/*if (PreferenceManager.get(getApplicationContext())) {
-			  tv.setText(champ_list_joke[position]);
-		  } else
-			  tv.setText(champ_list_array[position]);*/
-		//tv.setText(champ_list_array[position]);
-
 
 		ImageView iv = (ImageView) v.findViewById(R.id.icon_image);
 		iv.setImageResource(mThumbIds[position]);

@@ -15,6 +15,7 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 	private static final String TAG = "LeagueLore";
 	private TextView tv1, tv2, tv3;
 	private CheckBox mCheckbox;
+	private ChampModel mModel;
 	Intent emailIntent;
 
 	/**
@@ -31,11 +32,14 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 		tv2.setOnTouchListener(this);
 		tv3 = (TextView) findViewById(R.id.refTV);
 		tv3.setOnTouchListener(this);
+		mModel = new ChampModel(this);
+
 
 		mCheckbox = (CheckBox) findViewById(R.id.checkbox);
 		mCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				// save the updated result
+				mModel.setChamp_names(PreferenceManager.get(getApplicationContext()));
 				PreferenceManager.save(getApplicationContext(), isChecked);
 			}
 		});

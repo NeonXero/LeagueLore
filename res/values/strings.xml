@@ -3356,32 +3356,32 @@
     <array name="champ_list_egg">
         <!--<item>Ahri</item>--><item>Foxy Lady</item>
         <item>Akali</item>
-        <!--<item>Alistar</item>--><item>Cow</item>
+        <!--<item>Alistar</item>--><item>Stronk Cow</item>
         <item>Amumu</item>
         <item>Anivia</item>
         <item>Annie</item>
-        <item>Ashe</item>
-        <item>Blitzcrank</item>
+        <!--<item>Ashe</item>--><item>Dat Ashe</item>
+        <!--<item>Blitzcrank</item>--><item>Crank Yank</item>
         <item>Brand</item>
         <item>Caitlyn</item>
         <item>Cassiopeia</item>
-        <item>Cho\'Gath</item>
+        <!--<item>Cho\'Gath</item>--><item>Nom Nom</item>
         <item>Corki</item>
         <item>Dr. Mundo</item>
-        <item>Evelynn</item>
+        <!--<item>Evelynn</item>--><item>Eve Too Good</item>
         <item>Ezreal</item>
         <!--<item>Fiddlesticks</item>--><item>Caw Caw Caw</item>
         <item>Fiora</item>
         <!--<item>Fizz</item>--><item>SHARK!</item>
         <item>Galio</item>
         <!--<item>Gangplank</item>--><item>Burger King</item>
-        <item>Garen</item>
+        <!--<item>Garen</item>--><item>Spin To Win</item>
         <item>Gragas</item>
         <item>Graves</item>
         <item>Hecarim</item>
         <!--<item>Heimerdinger</item>--><item>The Dinger</item>
         <item>Irelia</item>
-        <item>Janna</item>
+        <!--<item>Janna</item>--><item>Janaynay</item>
         <!--<item>Jarvan IV</item>--><item>J Dunk 4</item>
         <item>Jax</item>
         <item>Karma</item>
@@ -3389,7 +3389,7 @@
         <item>Kassadin</item>
         <item>Katarina</item>
         <item>Kayle</item>
-        <item>Kennen</item>
+        <!--<item>Kennen</item>--><item>Pokemon</item>
         <item>Kog\'Maw</item>
         <!--<item>LeBlanc</item>--><item>Le Bonk</item>
         <item>Lee Sin</item>
@@ -3399,35 +3399,35 @@
         <item>Malphite</item>
         <item>Malzahar</item>
         <!--<item>Maokai</item>--><item>Moo Koo</item>
-        <item>Master Yi</item>
+        <!--<item>Master Yi</item>--><item>Get Dunked</item>
         <item>Miss Fortune</item>
-        <item>Mordekaiser</item>
+        <!--<item>Mordekaiser</item>--><item>Morde #1</item>
         <!--<item>Morgana</item>--><item>Morgina</item>
         <item>Nasus</item>
         <item>Nautilus</item>
         <item>Nidalee</item>
         <item>Nocturne</item>
-        <item>Nunu</item>
+        <!--<item>Nunu</item>--><item>Nooners</item>
         <item>Olaf</item>
         <item>Orianna</item>
         <item>Pantheon</item>
         <item>Poppy</item>
-        <item>Rammus</item>
+        <!--<item>Rammus</item>--><item>Ram Rod</item>
         <item>Renekton</item>
         <item>Riven</item>
         <item>Rumble</item>
-        <item>Ryze</item>
+        <!--<item>Ryze</item>--><item>EZ Combo</item>
         <item>Sejuani</item>
         <item>Shaco</item>
         <item>Shen</item>
-        <item>Shyvana</item>
+        <!--<item>Shyvana</item>--><item>Dragon</item>
         <item>Singed</item>
         <item>Sion</item>
         <item>Sivir</item>
         <item>Skarner</item>
         <item>Sona</item>
         <item>Soraka</item>
-        <item>Swain</item>
+        <!--<item>Swain</item>--><item>Dem Birdz</item>
         <item>Talon</item>
         <item>Taric</item>
         <item>Teemo</item>
@@ -3442,14 +3442,14 @@
         <!--<item>Veigar</item>--><item>A Man</item>
         <item>Viktor</item>
         <item>Vladimir</item>
-        <item>Volibear</item>
-        <item>Warwick</item>
-        <item>Wukong</item>
+        <!--<item>Volibear</item>--><item>Volleyball</item>
+        <!--<item>Warwick</item>--><item>Werewolf</item>
+        <!--<item>Wukong</item>--><item>Monkey</item>
         <item>Xerath</item>
         <item>Xin Zhao</item>
         <item>Yorick</item>
         <item>Ziggs</item>
-        <item>Zilean</item>
+        <!--<item>Zilean</item>--><item>Father Time</item>
     </array>
 
 
