@@ -13,11 +13,9 @@ import com.flurry.android.FlurryAgent;
 
 public class AppInfo extends Activity implements View.OnTouchListener{
 	private static final String TAG = "LeagueLore";
-	private TextView tv1, tv2, tv3, tvC;
+	private TextView tv1, tv2, tv3;
 	private CheckBox mCheckbox;
 	Intent emailIntent;
-	//private SharedPreferences mPrefs;
-	//String preCheck;
 
 	/**
 	 * Called when the activity is first created.
@@ -33,15 +31,12 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 		tv2.setOnTouchListener(this);
 		tv3 = (TextView) findViewById(R.id.refTV);
 		tv3.setOnTouchListener(this);
-		tvC = (TextView) findViewById(R.id.tvClick);
 
 		mCheckbox = (CheckBox) findViewById(R.id.checkbox);
 		mCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				// save the updated result
 				PreferenceManager.save(getApplicationContext(), isChecked);
-				doText();
-
 			}
 		});
 		PreferenceManager.apply(getApplicationContext(), mCheckbox);
@@ -50,15 +45,6 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 		emailIntent.setType("plain/text");
 		emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"neonxero@gmail.com"});
 		emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "League Lore User");
-
-		//mPrefs = getPreferences(MODE_PRIVATE);
-		//mPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-		//LoadPreferences();
-		/*if (preCheck.equals("0")) {
-			cb1.setChecked(false);
-		} else if (preCheck.equals("1")) {
-			cb1.setChecked(true);
-		}*/
 
 		//Flurry
 		FlurryAgent.onStartSession(this, " ");
@@ -71,28 +57,8 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 		// your code
 	}
 
-	public void doText() {
-		if (PreferenceManager.get(getApplicationContext())) {
-			tvC.setText("TURNED ON");
-		} else {
-			tvC.setText("TURNED OFF");
-		}
-	}
-
-	/*public void onCheckboxClicked(View v) {
-		// Perform action on clicks, depending on whether it's now checked
-		if (((CheckBox) v).isChecked()) {
-			Toast.makeText(AppInfo.this, "Selected", Toast.LENGTH_SHORT).show();
-			SavePreferences("easterKey", "1");
-		} else {
-			Toast.makeText(AppInfo.this, "Not selected", Toast.LENGTH_SHORT).show();
-			SavePreferences("easterKey","0");
-		}
-	}*/
-
 	public boolean onTouch(View view, MotionEvent motionEvent) {
 		if (view == tv1) {
-			//Toast.makeText(getApplicationContext(),"EMAIL",Toast.LENGTH_SHORT).show();
 			startActivity(Intent.createChooser(emailIntent, "Send your email with:"));
 		} else if (view==tv2) {
 			Uri uri = Uri.parse( "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XSL3ED3KR87ZY" );
@@ -102,19 +68,6 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 			startActivity( new Intent( Intent.ACTION_VIEW, uri ) );
 		}
 
-		return false;  //To change body of implemented methods use File | Settings | File Templates.
+		return false;
 	}
-
-	/*private void SavePreferences(String key, String value) {
-		mPrefs = getPreferences(MODE_PRIVATE);
-		SharedPreferences.Editor editor = mPrefs.edit();
-		editor.putString(key, value);
-		editor.commit();
-	}
-	private void LoadPreferences() {
-		mPrefs = getPreferences(MODE_PRIVATE);
-		preCheck = mPrefs.getString("easterKey", "Checkderp");
-
-
-	}*/
 }

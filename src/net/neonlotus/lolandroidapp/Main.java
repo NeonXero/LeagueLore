@@ -44,18 +44,6 @@ public class Main extends TabActivity {
 		tabHost.addTab(loreSpec);
 		tabHost.addTab(champSpec);
 		tabHost.addTab(moreSpec);
-
-		tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener() {
-			public void onTabChanged(String s) {
-				//To change body of implemented methods use File | Settings | File Templates.
-				//Toast.makeText(getApplicationContext(), "Selected Tab "+s, Toast.LENGTH_LONG).show();
-				if (s.equals("Champions")) {
-					//.........?
-				}
-			}
-		});
-
-
 	}
 
 	public void onStop()

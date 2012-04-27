@@ -45,14 +45,7 @@
     <CheckBox android:id="@+id/checkbox"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:text="Easter Egg? [COMING SOON]"/>
-    <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:textSize="16dip"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dip"
-            android:text="DAT TEST CORN"
-            android:id="@+id/tvClick" />
+              android:text="Easter Egg?"/>
+
 
 </LinearLayout>
