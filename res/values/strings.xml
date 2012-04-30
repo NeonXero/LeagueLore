@@ -3426,7 +3426,7 @@
         <item>Sivir</item>
         <item>Skarner</item>
         <item>Sona</item>
-        <item>Soraka</item>
+        <!--<item>Soraka</item>--><item>Thunder Dolphin</item>
         <!--<item>Swain</item>--><item>Dem Birdz</item>
         <item>Talon</item>
         <item>Taric</item>
@@ -3444,7 +3444,7 @@
         <item>Vladimir</item>
         <!--<item>Volibear</item>--><item>Volleyball</item>
         <!--<item>Warwick</item>--><item>Werewolf</item>
-        <!--<item>Wukong</item>--><item>Monkey</item>
+        <!--<item>Wukong</item>--><item>Monkey King</item>
         <item>Xerath</item>
         <!--<item>Xin Zhao</item>--><item>A Man</item>
         <item>Yorick</item>

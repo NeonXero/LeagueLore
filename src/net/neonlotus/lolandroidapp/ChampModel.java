@@ -13,27 +13,41 @@ import java.util.Observable;
  */
 public class ChampModel extends Observable {
 	//String arrays for either real names or fake names
-	private String[] champ_names;
-	private String[] realnames;
-	private String[] nicknames;
+	private String[] mChampnames;
+	private String[] mRealnames;
+	private String[] mNicknames;
+	private String[] mLore;
+	private String[] real;
 
-	public ChampModel(Context c) {
-		realnames = c.getResources().getStringArray(R.array.champ_list);
-		nicknames = c.getResources().getStringArray(R.array.champ_list_egg);
-		champ_names = null;
+	public ChampModel(Context c) { //Context c
+		mRealnames = c.getResources().getStringArray(R.array.champ_list);
+		mNicknames = c.getResources().getStringArray(R.array.champ_list_egg);
+		mLore = c.getResources().getStringArray(R.array.champ_lore);
+		mChampnames = null;
 	}
 
-	public void setChamp_names(Boolean b) {
+	/*public ChampModel() {
+		//To change body of created methods use File | Settings | File Templates.
+		real = mRealnames;
+		String[] fake = mNicknames;
+	}*/
+
+	public void setChampNames(Boolean b) {
 		if (b) { //if checkbox is ticked, set names to "nicknames"
-			champ_names = nicknames;
+			mChampnames = mNicknames;
 		} else {
-			champ_names = realnames;
+			mChampnames = mRealnames;
 		}
 		notifyObservers();
-
 	}
 
-	public String[] getChamp_names() {
-		return champ_names;
+	public String[] getChampNames() {
+		//return mChampnames;
+		return real;
+	}
+	public String[] getLore() {
+		return mLore;
 	}
 }
+
+//Possible function rewrite to return each individual array rather than checking and returning one
