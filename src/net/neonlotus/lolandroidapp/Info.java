@@ -58,7 +58,8 @@ public class Info extends Activity implements Observer {
 				//Copying stuff from list adapter click thing
 				ChampObj obj = new ChampObj();
 
-				obj.setChampName(champ_list_array[position]);
+				//obj.setChampName(champ_list_array[position]);
+				obj.setChampName(mManager.getChampNames()[position]);
 				//obj.setChampName(mModel.getChampNames()[position]);
 
 				//obj.setChampStory(champ_lore_array[position]);

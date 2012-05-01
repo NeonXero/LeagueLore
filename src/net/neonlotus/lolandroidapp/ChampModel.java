@@ -42,7 +42,7 @@ public class ChampModel extends Observable {
 		if (mChampnames!= null) {
 			return mChampnames;
 		} else {
-			return mChampnames;
+			return mRealnames;
 		}
 	}
 	public String[] getLore() {

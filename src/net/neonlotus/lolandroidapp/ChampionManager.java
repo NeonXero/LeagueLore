@@ -17,7 +17,6 @@ public class ChampionManager {
 
 	public ChampionManager(Context c) {
 		champModel = new ChampModel(c);
-
 	}
 
 	public void setChampNames(Boolean b) {
