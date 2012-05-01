@@ -18,11 +18,14 @@ public class ChampModel extends Observable {
 	private String[] mNicknames;
 	private String[] mLore;
 	private String[] mStats;
+	private String[] mTags;
 
 	public ChampModel(Context c) { //Context c
 		mRealnames = c.getResources().getStringArray(R.array.champ_list);
 		mNicknames = c.getResources().getStringArray(R.array.champ_list_egg);
 		mLore = c.getResources().getStringArray(R.array.champ_lore);
+		mStats = c.getResources().getStringArray(R.array.champ_stats);
+		mTags = c.getResources().getStringArray(R.array.champ_taglines);
 		mChampnames = null;
 	}
 
@@ -44,6 +47,12 @@ public class ChampModel extends Observable {
 	}
 	public String[] getLore() {
 		return mLore;
+	}
+	public String[] getStats() {
+		return mStats;
+	}
+	public String[] getTags() {
+		return mTags;
 	}
 }
 

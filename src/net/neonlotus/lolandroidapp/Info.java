@@ -50,8 +50,8 @@ public class Info extends Activity implements Observer {
 		final String[] champ_list_array = getResources().getStringArray(R.array.champ_list);
 		final String[] champ_list_joke = getResources().getStringArray(R.array.champ_list_egg);
 		//final String[] champ_lore_array = getResources().getStringArray(R.array.champ_lore);
-		final String[] champ_stats_array = getResources().getStringArray(R.array.champ_stats);
-		final String[] champ_tag_lines = getResources().getStringArray(R.array.champ_taglines);
+		//final String[] champ_stats_array = getResources().getStringArray(R.array.champ_stats);
+		//final String[] champ_tag_lines = getResources().getStringArray(R.array.champ_taglines);
 
 		gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			public void onItemClick(AdapterView parent, View v, int position, long id) {
@@ -65,9 +65,11 @@ public class Info extends Activity implements Observer {
 				//obj.setChampStory(mModel.getLore()[position]);
 				obj.setChampStory(mManager.getChampLore()[position]);
 
-				obj.setChampStats(champ_stats_array[position]);
+				//obj.setChampStats(champ_stats_array[position]);
+				obj.setChampStats(mManager.getChampStats()[position]);
 
-				obj.setChampTags(champ_tag_lines[position]);
+				//obj.setChampTags(champ_tag_lines[position]);
+				obj.setChampTags(mManager.getChampTags()[position]);
 
 				obj.setIndex(position);
 

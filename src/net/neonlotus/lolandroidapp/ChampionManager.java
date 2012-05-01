@@ -35,5 +35,11 @@ public class ChampionManager {
 	public String[] getChampLore() {
 		return champModel.getLore();
 	}
+	public String[] getChampStats() {
+		return champModel.getStats();
+	}
+	public String[] getChampTags() {
+		return champModel.getTags();
+	}
 
 }
