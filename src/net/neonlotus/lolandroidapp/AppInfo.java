@@ -30,14 +30,15 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 		tv2.setOnTouchListener(this);
 		tv3 = (TextView) findViewById(R.id.refTV);
 		tv3.setOnTouchListener(this);
-		//mModel= new ChampModel();
-		championManager = new ChampionManager();
+		//mModel= new ChampModel(this);
+		championManager = new ChampionManager(getApplicationContext());
 
 		mCheckbox = (CheckBox) findViewById(R.id.checkbox);
 		mCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				// save the updated result
 				//mModel.setChampNames(mCheckbox.isChecked());
+				championManager.setChampNames(mCheckbox.isChecked());
 
 				PreferenceManager.save(getApplicationContext(), isChecked);
 			}

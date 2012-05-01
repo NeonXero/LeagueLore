@@ -17,7 +17,7 @@ public class ChampModel extends Observable {
 	private String[] mRealnames;
 	private String[] mNicknames;
 	private String[] mLore;
-	private String[] real;
+	private String[] mStats;
 
 	public ChampModel(Context c) { //Context c
 		mRealnames = c.getResources().getStringArray(R.array.champ_list);
@@ -25,12 +25,6 @@ public class ChampModel extends Observable {
 		mLore = c.getResources().getStringArray(R.array.champ_lore);
 		mChampnames = null;
 	}
-
-	/*public ChampModel() {
-		//To change body of created methods use File | Settings | File Templates.
-		real = mRealnames;
-		String[] fake = mNicknames;
-	}*/
 
 	public void setChampNames(Boolean b) {
 		if (b) { //if checkbox is ticked, set names to "nicknames"
@@ -42,8 +36,11 @@ public class ChampModel extends Observable {
 	}
 
 	public String[] getChampNames() {
-		//return mChampnames;
-		return real;
+		if (mChampnames!= null) {
+			return mChampnames;
+		} else {
+			return mChampnames;
+		}
 	}
 	public String[] getLore() {
 		return mLore;
