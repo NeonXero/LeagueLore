@@ -10,35 +10,34 @@ import android.content.Context;
  * To change this template use File | Settings | File Templates.
  */
 public class ChampionManager {
-	ChampModel champModel;
-	private String[] mChampnames;
-	private String[] mRealnames;
-	private String[] mNicknames;
+	private ChampModel mChampModel;
+	private Boolean mStatus; //todo: better name later
 
 	public ChampionManager(Context c) {
-		champModel = new ChampModel(c);
+		mChampModel = new ChampModel(c);
 	}
 
-	public void setChampNames(Boolean b) {
-		if (b) { //if checkbox is ticked, set names to "nicknames"
-			mChampnames = mNicknames;
+	public void setChampNames (boolean b) {
+		mStatus = b;
+	} //todo: lookup value and reference variable passing (obj: reference) (value: simple variable)
+	//todo: overall just make sure variables are consistently named
+
+	public String[] getChampNames() {
+		if (mStatus) {
+			return mChampModel.getChampNames();
 		} else {
-			mChampnames = mRealnames;
+			return mChampModel.getChampNicknames();
 		}
 	}
 
-
-	public String[] getChampNames() {
-		return champModel.getChampNames();
-	}
 	public String[] getChampLore() {
-		return champModel.getLore();
+		return mChampModel.getLore();
 	}
 	public String[] getChampStats() {
-		return champModel.getStats();
+		return mChampModel.getStats();
 	}
 	public String[] getChampTags() {
-		return champModel.getTags();
+		return mChampModel.getTags();
 	}
 
 }

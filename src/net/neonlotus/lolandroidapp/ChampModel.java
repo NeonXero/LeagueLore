@@ -26,25 +26,17 @@ public class ChampModel extends Observable {
 		mLore = c.getResources().getStringArray(R.array.champ_lore);
 		mStats = c.getResources().getStringArray(R.array.champ_stats);
 		mTags = c.getResources().getStringArray(R.array.champ_taglines);
-		mChampnames = null;
 	}
 
-	public void setChampNames(Boolean b) {
-		if (b) { //if checkbox is ticked, set names to "nicknames"
-			mChampnames = mNicknames;
-		} else {
-			mChampnames = mRealnames;
-		}
-		notifyObservers();
-	}
+
 
 	public String[] getChampNames() {
-		if (mChampnames!= null) {
-			return mChampnames;
-		} else {
-			return mRealnames;
-		}
+		return mRealnames;
 	}
+	public String[] getChampNicknames() {
+		return mNicknames;
+	}
+
 	public String[] getLore() {
 		return mLore;
 	}
