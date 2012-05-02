@@ -40,6 +40,8 @@ public class Info extends Activity implements Observer {
 		mManager.addObserver(this);
 		mManager = new ChampionManager(getApplicationContext());
 
+		//mManager.setChampNames(PreferenceManager.get(getApplicationContext())); //set boolean on load?
+
 		MyGridAdapter = new GridAdapter(this);
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);

@@ -13,24 +13,28 @@ import java.util.Observable;
  */
 public class ChampionManager extends Observable {
 	private ChampModel mChampModel;
-	private Boolean mStatus; //todo: better name later
+	private boolean mStatus; //todo: better name later
+	private String LOG = "League/ChampManager";
 
 	public ChampionManager(Context c) {
 		mChampModel = new ChampModel(c);
+		mStatus = PreferenceManager.get(c);
 	}
 
 	public void setChampNames (boolean b) {
 		mStatus = b;
+		//Log.d(LOG, "mstatus is now - " +mStatus.toString());
 	}
 	//todo: Research value and reference variable passing (obj: reference) (value: simple variable)
 	//todo: overall just make sure variables are consistently named and better
 
 	public String[] getChampNames() {
 		if (mStatus) {
-			return mChampModel.getChampNames();
-		} else {
 			return mChampModel.getChampNicknames();
+		}  else{
+			return mChampModel.getChampNames();
 		}
+		//mstatus is always false currently... or rather, the else statement is being returned
 	}
 
 	public String[] getChampLore() {

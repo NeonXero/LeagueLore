@@ -43,6 +43,8 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 				PreferenceManager.save(getApplicationContext(), isChecked);
 			}
 		});
+		// nope championManager.setChampNames(mCheckbox.isChecked()); //"initialize" the names?
+
 		PreferenceManager.apply(getApplicationContext(), mCheckbox);
 
 		emailIntent = new Intent(android.content.Intent.ACTION_SEND);
