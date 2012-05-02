@@ -22,7 +22,7 @@ import java.util.Observer;
 public class Info extends Activity implements Observer {
 
 	private static final String TAG = "LeagueLore";
-	private GridAdapter MyGridAdapter;
+	private GridAdapter mGridAdapter;
 	//private ChampModel mModel;
 	private ChampionManager mManager;
 
@@ -42,14 +42,14 @@ public class Info extends Activity implements Observer {
 
 		//mManager.setChampNames(PreferenceManager.get(getApplicationContext())); //set boolean on load?
 
-		MyGridAdapter = new GridAdapter(this);
+		mGridAdapter = new GridAdapter(this);
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);
-		gridview.setAdapter(MyGridAdapter);
+		gridview.setAdapter(mGridAdapter);
 
 		//bundle test stuff
 		final Intent intent = new Intent(Info.this, Champion.class);
-		final Bundle b = new Bundle();
+		//final Bundle b = new Bundle();
 
 		//final String[] champ_list_array = getResources().getStringArray(R.array.champ_list);
 		//final String[] champ_list_joke = getResources().getStringArray(R.array.champ_list_egg);
@@ -92,8 +92,8 @@ public class Info extends Activity implements Observer {
 	public void onResume() {
 		super.onResume();
 		Log.d(TAG,"Tab resume happened");
-		if(MyGridAdapter != null) {
-			MyGridAdapter.notifyDataSetChanged();
+		if(mGridAdapter != null) {
+			mGridAdapter.notifyDataSetChanged();
 		}
 	}
 
@@ -104,8 +104,8 @@ public class Info extends Activity implements Observer {
 	}
 
 	public void update(Observable observable, Object o) {
-		if(MyGridAdapter != null) {
-			MyGridAdapter.notifyDataSetChanged();
+		if(mGridAdapter != null) {
+			mGridAdapter.notifyDataSetChanged();
 		}
 	}
 }

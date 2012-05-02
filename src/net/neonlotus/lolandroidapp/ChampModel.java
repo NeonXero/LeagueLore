@@ -11,7 +11,7 @@ import android.content.Context;
  */
 public class ChampModel {
 	//String arrays for either real names or fake names
-	private String[] mChampnames;
+	//private String[] mChampnames;
 	private String[] mRealnames;
 	private String[] mNicknames;
 	private String[] mLore;
@@ -19,7 +19,7 @@ public class ChampModel {
 	private String[] mTags;
 	private Integer[] mThumbIds;
 
-	public ChampModel(Context c) { //Context c
+	public ChampModel(Context c) {
 		mRealnames = c.getResources().getStringArray(R.array.champ_list);
 		mNicknames = c.getResources().getStringArray(R.array.champ_list_egg);
 		mLore = c.getResources().getStringArray(R.array.champ_lore);
