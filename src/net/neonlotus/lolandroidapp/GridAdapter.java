@@ -17,17 +17,20 @@ import android.widget.TextView;
  */
 public class GridAdapter extends BaseAdapter {
 	private Context mContext;
-	private String[] champ_list_array;
-	private String[] champ_list_joke;
+	//private String[] champ_list_array;
+	//private String[] champ_list_joke;
+	private ChampionManager mManager;
 
 	public GridAdapter(Context c) {
 		mContext = c;
-		champ_list_array = mContext.getResources().getStringArray(R.array.champ_list);
-		champ_list_joke = mContext.getResources().getStringArray(R.array.champ_list_egg);
+		//champ_list_array = mContext.getResources().getStringArray(R.array.champ_list);
+		//champ_list_joke = mContext.getResources().getStringArray(R.array.champ_list_egg);
+		mManager = new ChampionManager(c);
 	}
 
 	public int getCount() {
-		return mThumbIds.length;
+		//return mThumbIds.length;
+		return mManager.getThumbIds().length;
 	}
 
 	public Object getItem(int i) {
@@ -53,19 +56,23 @@ public class GridAdapter extends BaseAdapter {
 		TextView tv = (TextView) v.findViewById(R.id.icon_text);
 
 		if (PreferenceManager.get(mContext)) {
-			tv.setText(champ_list_joke[position]);
+			//tv.setText(champ_list_joke[position]);
+			tv.setText(mManager.getChampNames()[position]);
 		} else {
-			tv.setText(champ_list_array[position]);
+			//tv.setText(champ_list_array[position]);
+			tv.setText(mManager.getChampNames()[position]);
 		}
 
 		ImageView iv = (ImageView) v.findViewById(R.id.icon_image);
-		iv.setImageResource(mThumbIds[position]);
+		//iv.setImageResource(mThumbIds[position]);
+		iv.setImageResource(mManager.getThumbIds()[position]);
 		iv.setPadding(5, 5, 5, 5);
 		return v;
 	}
 
 	// references to our images
-	private Integer[] mThumbIds = {
+	//todo: put these in model, then delegate to the manager
+	/*private Integer[] mThumbIds = {
 			R.drawable.ahri, R.drawable.akal, R.drawable.ali, R.drawable.amumu, R.drawable.anivia,
 			R.drawable.annie, R.drawable.ashe, R.drawable.blitz, R.drawable.brand, R.drawable.cait,
 			R.drawable.cassi,R.drawable.cho, R.drawable.cork, R.drawable.drmu, R.drawable.evel, R.drawable.ezr,
@@ -85,5 +92,5 @@ public class GridAdapter extends BaseAdapter {
 			R.drawable.udyr, R.drawable.urgot, R.drawable.vayne, R.drawable.veig, R.drawable.viktor,
 			R.drawable.vlad,R.drawable.volibear, R.drawable.warw, R.drawable.wukong, R.drawable.xera,
 			R.drawable.xinz,R.drawable.yorik, R.drawable.ziggs,R.drawable.zil
-	};
+	};*/
 }

@@ -23,7 +23,7 @@ public class Info extends Activity implements Observer {
 
 	private static final String TAG = "LeagueLore";
 	private GridAdapter MyGridAdapter;
-	private ChampModel mModel;
+	//private ChampModel mModel;
 	private ChampionManager mManager;
 
 	@Override
@@ -34,8 +34,10 @@ public class Info extends Activity implements Observer {
 		FlurryAgent.onStartSession(this, " ");
 		setContentView(R.layout.champ_grid);
 
-		mModel = new ChampModel(getApplicationContext());
-		mModel.addObserver(this);
+		//mModel = new ChampModel(getApplicationContext());
+		//mModel.addObserver(this);
+		mManager = new ChampionManager(getApplicationContext());
+		mManager.addObserver(this);
 		mManager = new ChampionManager(getApplicationContext());
 
 		MyGridAdapter = new GridAdapter(this);
@@ -47,8 +49,8 @@ public class Info extends Activity implements Observer {
 		final Intent intent = new Intent(Info.this, Champion.class);
 		final Bundle b = new Bundle();
 
-		final String[] champ_list_array = getResources().getStringArray(R.array.champ_list);
-		final String[] champ_list_joke = getResources().getStringArray(R.array.champ_list_egg);
+		//final String[] champ_list_array = getResources().getStringArray(R.array.champ_list);
+		//final String[] champ_list_joke = getResources().getStringArray(R.array.champ_list_egg);
 		//final String[] champ_lore_array = getResources().getStringArray(R.array.champ_lore);
 		//final String[] champ_stats_array = getResources().getStringArray(R.array.champ_stats);
 		//final String[] champ_tag_lines = getResources().getStringArray(R.array.champ_taglines);
@@ -57,6 +59,7 @@ public class Info extends Activity implements Observer {
 			public void onItemClick(AdapterView parent, View v, int position, long id) {
 				//Copying stuff from list adapter click thing
 				ChampObj obj = new ChampObj();
+				//todo: manager.getchampobj take position in
 
 				//obj.setChampName(champ_list_array[position]);
 				obj.setChampName(mManager.getChampNames()[position]);
@@ -65,6 +68,9 @@ public class Info extends Activity implements Observer {
 				//obj.setChampStory(champ_lore_array[position]);
 				//obj.setChampStory(mModel.getLore()[position]);
 				obj.setChampStory(mManager.getChampLore()[position]);
+				//todo: mManager.getChampLore(position)
+				//todo: getChampLore(int pos) { return mChampModel.getChampLore()[pos];
+				//todo: wiki article 'programming delegation'
 
 				//obj.setChampStats(champ_stats_array[position]);
 				obj.setChampStats(mManager.getChampStats()[position]);

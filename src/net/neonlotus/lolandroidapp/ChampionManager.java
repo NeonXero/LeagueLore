@@ -2,6 +2,8 @@ package net.neonlotus.lolandroidapp;
 
 import android.content.Context;
 
+import java.util.Observable;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Ryan
@@ -9,7 +11,7 @@ import android.content.Context;
  * Time: 3:59 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ChampionManager {
+public class ChampionManager extends Observable {
 	private ChampModel mChampModel;
 	private Boolean mStatus; //todo: better name later
 
@@ -19,8 +21,9 @@ public class ChampionManager {
 
 	public void setChampNames (boolean b) {
 		mStatus = b;
-	} //todo: lookup value and reference variable passing (obj: reference) (value: simple variable)
-	//todo: overall just make sure variables are consistently named
+	}
+	//todo: Research value and reference variable passing (obj: reference) (value: simple variable)
+	//todo: overall just make sure variables are consistently named and better
 
 	public String[] getChampNames() {
 		if (mStatus) {
@@ -38,6 +41,9 @@ public class ChampionManager {
 	}
 	public String[] getChampTags() {
 		return mChampModel.getTags();
+	}
+	public Integer[] getThumbIds() {
+		return mChampModel.getThumbIds();
 	}
 
 }

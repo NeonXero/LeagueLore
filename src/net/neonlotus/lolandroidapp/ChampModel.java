@@ -2,8 +2,6 @@ package net.neonlotus.lolandroidapp;
 
 import android.content.Context;
 
-import java.util.Observable;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Ryan
@@ -11,7 +9,7 @@ import java.util.Observable;
  * Time: 1:07 PM
  * To change this template use File | Settings | File Templates.
  */
-public class ChampModel extends Observable {
+public class ChampModel {
 	//String arrays for either real names or fake names
 	private String[] mChampnames;
 	private String[] mRealnames;
@@ -19,6 +17,7 @@ public class ChampModel extends Observable {
 	private String[] mLore;
 	private String[] mStats;
 	private String[] mTags;
+	private Integer[] mThumbIds;
 
 	public ChampModel(Context c) { //Context c
 		mRealnames = c.getResources().getStringArray(R.array.champ_list);
@@ -26,6 +25,28 @@ public class ChampModel extends Observable {
 		mLore = c.getResources().getStringArray(R.array.champ_lore);
 		mStats = c.getResources().getStringArray(R.array.champ_stats);
 		mTags = c.getResources().getStringArray(R.array.champ_taglines);
+
+		mThumbIds = new Integer[]{
+				R.drawable.ahri, R.drawable.akal, R.drawable.ali, R.drawable.amumu, R.drawable.anivia,
+				R.drawable.annie, R.drawable.ashe, R.drawable.blitz, R.drawable.brand, R.drawable.cait,
+				R.drawable.cassi, R.drawable.cho, R.drawable.cork, R.drawable.drmu, R.drawable.evel, R.drawable.ezr,
+				R.drawable.fiddle, R.drawable.fiora, R.drawable.fizz, R.drawable.galio, R.drawable.gang,
+				R.drawable.garen, R.drawable.gragas, R.drawable.graves, R.drawable.hecarim, R.drawable.heim,
+				R.drawable.irel, R.drawable.janna, R.drawable.jarv, R.drawable.jax, R.drawable.karma,
+				R.drawable.karth, R.drawable.kass, R.drawable.kata, R.drawable.kayle, R.drawable.kennen,
+				R.drawable.kog, R.drawable.leblanc, R.drawable.leesin, R.drawable.leona, R.drawable.lulu,
+				R.drawable.lux, R.drawable.malph, R.drawable.malz, R.drawable.mao, R.drawable.master,
+				R.drawable.missfort, R.drawable.mord, R.drawable.morg, R.drawable.nasus, R.drawable.naut,
+				R.drawable.nidalee, R.drawable.noct, R.drawable.nunu, R.drawable.olaf, R.drawable.orian,
+				R.drawable.panth, R.drawable.poppy, R.drawable.rammus, R.drawable.rene, R.drawable.riven,
+				R.drawable.rumb, R.drawable.ryze, R.drawable.sej, R.drawable.shaco, R.drawable.shen, R.drawable.shyv,
+				R.drawable.singed, R.drawable.sion, R.drawable.sivir, R.drawable.skarn, R.drawable.sona,
+				R.drawable.soraka, R.drawable.swain, R.drawable.talon, R.drawable.taric, R.drawable.teemo,
+				R.drawable.trist, R.drawable.trundle, R.drawable.trynd, R.drawable.twifa, R.drawable.twitch,
+				R.drawable.udyr, R.drawable.urgot, R.drawable.vayne, R.drawable.veig, R.drawable.viktor,
+				R.drawable.vlad, R.drawable.volibear, R.drawable.warw, R.drawable.wukong, R.drawable.xera,
+				R.drawable.xinz, R.drawable.yorik, R.drawable.ziggs, R.drawable.zil
+		};
 	}
 
 
@@ -45,6 +66,9 @@ public class ChampModel extends Observable {
 	}
 	public String[] getTags() {
 		return mTags;
+	}
+	public Integer[] getThumbIds() {
+		return mThumbIds;
 	}
 }
 

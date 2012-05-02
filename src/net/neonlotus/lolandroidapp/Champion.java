@@ -295,7 +295,6 @@ public class Champion extends Activity implements View.OnClickListener {
 
 		@Override
 		public void finishUpdate(View arg0) {
-			// TODO Auto-generated method stub
 		}
 
 		@Override
@@ -305,18 +304,15 @@ public class Champion extends Activity implements View.OnClickListener {
 
 		@Override
 		public void restoreState(Parcelable arg0, ClassLoader arg1) {
-			// TODO Auto-generated method stub
 		}
 
 		@Override
 		public Parcelable saveState() {
-			// TODO Auto-generated method stub
 			return null;
 		}
 
 		@Override
 		public void startUpdate(View arg0) {
-			// TODO Auto-generated method stub
 		}
 
 		public String getTitle(int position) {
