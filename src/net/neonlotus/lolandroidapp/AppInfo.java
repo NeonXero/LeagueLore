@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.CheckBox;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 import com.flurry.android.FlurryAgent;
 
 public class AppInfo extends Activity implements View.OnTouchListener{
-	private static final String TAG = "LeagueLore";
+	private String LOG = "League/AppInfo";
 	private TextView tv1, tv2, tv3;
 	private CheckBox mCheckbox;
 	Intent emailIntent;
@@ -38,9 +39,15 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				// save the updated result
 				//mModel.setChampNames(mCheckbox.isChecked());
-				championManager.setChampNames(mCheckbox.isChecked());
 
-				PreferenceManager.save(getApplicationContext(), isChecked);
+				//mCheckbox.
+
+				PreferenceManager.save(getApplicationContext(), mCheckbox.isChecked());
+				boolean nameTemp = mCheckbox.isChecked();
+				//Log.d(LOG, "App info checkbox changed to value " + PreferenceManager.get(getApplicationContext()));
+				Log.d(LOG, "App info checkbox changed to value " + nameTemp);
+				//championManager.setChampNames(mCheckbox.isChecked());
+				championManager.setChampNames(PreferenceManager.get(getApplicationContext()));
 			}
 		});
 		// nope championManager.setChampNames(mCheckbox.isChecked()); //"initialize" the names?

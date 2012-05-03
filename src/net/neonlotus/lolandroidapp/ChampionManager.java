@@ -1,6 +1,7 @@
 package net.neonlotus.lolandroidapp;
 
 import android.content.Context;
+import android.util.Log;
 
 import java.util.Observable;
 
@@ -19,11 +20,17 @@ public class ChampionManager extends Observable {
 	public ChampionManager(Context c) {
 		mChampModel = new ChampModel(c);
 		//mStatus = PreferenceManager.get(c);
+		Log.d(LOG,"Pref mang" + PreferenceManager.get(c));
 		setChampNames(PreferenceManager.get(c));
 	}
 
 	public void setChampNames (boolean b) {
 		mStatus = b;
+		Log.d(LOG,"Set champ name manager was called");
+		Log.d(LOG,"mstatus is " + mStatus);
+		notifyObservers(); //this?
+
+
 		//Log.d(LOG, "mstatus is now - " +mStatus.toString());
 		//^ when I changed that to Boolean, and logged it out.. seems to be correctly changing from false to true based on the state of the checkbox in AppInfo...
 	}
@@ -31,6 +38,8 @@ public class ChampionManager extends Observable {
 	//todo: overall just make sure variables are consistently named and better
 
 	public String[] getChampNames() {
+		Log.d(LOG,"get champ was called");
+		Log.d(LOG,"mstatus = " + mStatus);
 		if (mStatus) {
 			return mChampModel.getChampNicknames();
 			//return mChampModel.getChampNames();

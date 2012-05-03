@@ -20,6 +20,7 @@ public class GridAdapter extends BaseAdapter {
 	//private String[] champ_list_array;
 	//private String[] champ_list_joke;
 	private ChampionManager mManager;
+	private String LOG = "League/GridAdapter";
 
 	public GridAdapter(Context c) {
 		mContext = c;

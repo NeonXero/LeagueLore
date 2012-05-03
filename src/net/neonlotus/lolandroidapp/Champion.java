@@ -35,7 +35,7 @@ public class Champion extends Activity implements View.OnClickListener {
 	String item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12;
 	//Temp string... for saving prefs
 	String t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12;
-	private static final String TAG = "LeagueLore";
+	private String LOG = "League/Champion";
 	
 	private int bPost;
 

@@ -21,7 +21,7 @@ import java.util.Observer;
  */
 public class Info extends Activity implements Observer {
 
-	private static final String TAG = "LeagueLore";
+	private String LOG = "League/Info";
 	private GridAdapter mGridAdapter;
 	//private ChampModel mModel;
 	private ChampionManager mManager;
@@ -91,7 +91,7 @@ public class Info extends Activity implements Observer {
 	@Override
 	public void onResume() {
 		super.onResume();
-		Log.d(TAG,"Tab resume happened");
+		Log.d(LOG,"Tab resume happened");
 		if(mGridAdapter != null) {
 			mGridAdapter.notifyDataSetChanged();
 		}

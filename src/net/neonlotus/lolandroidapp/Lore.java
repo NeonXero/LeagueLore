@@ -23,6 +23,8 @@ import com.flurry.android.FlurryAgent;
  */
 public class Lore extends ListActivity {
 
+	private String LOG = "League/Lore";
+
 	private static final String[] LoreList = new String[]{
 			"Demacia", "Noxus", "The League of Legends"
 	};
@@ -43,6 +45,8 @@ public class Lore extends ListActivity {
 
 		//Flurry
 		FlurryAgent.onStartSession(this, " ");
+
+		//PreferenceManager.save(getApplicationContext(),false);
 
 		//Merge Adapter thing...
 		adapter=new MergeAdapter();
