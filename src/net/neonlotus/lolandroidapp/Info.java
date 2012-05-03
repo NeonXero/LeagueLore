@@ -38,7 +38,7 @@ public class Info extends Activity implements Observer {
 		//mModel.addObserver(this);
 		mManager = new ChampionManager(getApplicationContext());
 		mManager.addObserver(this);
-		mManager = new ChampionManager(getApplicationContext());
+		//mManager = new ChampionManager(getApplicationContext());
 
 		//mManager.setChampNames(PreferenceManager.get(getApplicationContext())); //set boolean on load?
 

@@ -18,12 +18,14 @@ public class ChampionManager extends Observable {
 
 	public ChampionManager(Context c) {
 		mChampModel = new ChampModel(c);
-		mStatus = PreferenceManager.get(c);
+		//mStatus = PreferenceManager.get(c);
+		setChampNames(PreferenceManager.get(c));
 	}
 
 	public void setChampNames (boolean b) {
 		mStatus = b;
 		//Log.d(LOG, "mstatus is now - " +mStatus.toString());
+		//^ when I changed that to Boolean, and logged it out.. seems to be correctly changing from false to true based on the state of the checkbox in AppInfo...
 	}
 	//todo: Research value and reference variable passing (obj: reference) (value: simple variable)
 	//todo: overall just make sure variables are consistently named and better
@@ -31,9 +33,12 @@ public class ChampionManager extends Observable {
 	public String[] getChampNames() {
 		if (mStatus) {
 			return mChampModel.getChampNicknames();
-		}  else{
-			return mChampModel.getChampNames();
-		}
+			//return mChampModel.getChampNames();
+		}  /*else{
+			//return mChampModel.getChampNames();
+			return mChampModel.getChampNicknames();
+		}*/
+		return mChampModel.getChampNames();
 		//mstatus is always false currently... or rather, the else statement is being returned
 	}
 
@@ -51,3 +56,13 @@ public class ChampionManager extends Observable {
 	}
 
 }
+
+/*
+//todo: investigate this...
+ guess what i mean was
+when your app starts
+PrefManager.set(true);
+and then log it out in your manager
+if it says false there that means your over writing it somewhere
+then you can log out the set function in the manager and see how often it's being called
+*/
