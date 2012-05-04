@@ -14,7 +14,7 @@ import java.util.Observable;
  */
 public class ChampionManager extends Observable {
 	private ChampModel mChampModel;
-	private boolean mStatus; //todo: better name later
+	private Boolean mStatus; //todo: better name later
 	private String LOG = "League/ChampManager";
 
 	public ChampionManager(Context c) {
@@ -28,19 +28,25 @@ public class ChampionManager extends Observable {
 		mStatus = b;
 		Log.d(LOG,"Set champ name manager was called");
 		Log.d(LOG,"mstatus is " + mStatus);
-		notifyObservers(); //this?
+		//notifyObservers(); //this? nope
+
 
 
 		//Log.d(LOG, "mstatus is now - " +mStatus.toString());
 		//^ when I changed that to Boolean, and logged it out.. seems to be correctly changing from false to true based on the state of the checkbox in AppInfo...
 	}
+
+	public void notifyData() {
+		notifyObservers();
+	}
+
 	//todo: Research value and reference variable passing (obj: reference) (value: simple variable)
 	//todo: overall just make sure variables are consistently named and better
 
 	public String[] getChampNames() {
 		Log.d(LOG,"get champ was called");
 		Log.d(LOG,"mstatus = " + mStatus);
-		if (mStatus) {
+		if (mStatus.booleanValue()) {
 			return mChampModel.getChampNicknames();
 			//return mChampModel.getChampNames();
 		}  /*else{

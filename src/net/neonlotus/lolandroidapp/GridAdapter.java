@@ -56,13 +56,15 @@ public class GridAdapter extends BaseAdapter {
 		v = li.inflate(R.layout.icon, null);
 		TextView tv = (TextView) v.findViewById(R.id.icon_text);
 
-		if (PreferenceManager.get(mContext)) {
+		//this is kind of curious.... maybe?
+		/*if (PreferenceManager.get(mContext)) {
 			//tv.setText(champ_list_joke[position]);
 			tv.setText(mManager.getChampNames()[position]);
 		} else {
 			//tv.setText(champ_list_array[position]);
 			tv.setText(mManager.getChampNames()[position]);
-		}
+		}*/
+		tv.setText(mManager.getChampNames()[position]); //removing the if statement?
 
 		ImageView iv = (ImageView) v.findViewById(R.id.icon_image);
 		//iv.setImageResource(mThumbIds[position]);
@@ -70,28 +72,4 @@ public class GridAdapter extends BaseAdapter {
 		iv.setPadding(5, 5, 5, 5);
 		return v;
 	}
-
-	// references to our images
-	//todo: put these in model, then delegate to the manager
-	/*private Integer[] mThumbIds = {
-			R.drawable.ahri, R.drawable.akal, R.drawable.ali, R.drawable.amumu, R.drawable.anivia,
-			R.drawable.annie, R.drawable.ashe, R.drawable.blitz, R.drawable.brand, R.drawable.cait,
-			R.drawable.cassi,R.drawable.cho, R.drawable.cork, R.drawable.drmu, R.drawable.evel, R.drawable.ezr,
-			R.drawable.fiddle,R.drawable.fiora,R.drawable.fizz, R.drawable.galio, R.drawable.gang,
-			R.drawable.garen, R.drawable.gragas,R.drawable.graves, R.drawable.hecarim,R.drawable.heim,
-			R.drawable.irel, R.drawable.janna, R.drawable.jarv, R.drawable.jax, R.drawable.karma,
-			R.drawable.karth, R.drawable.kass, R.drawable.kata, R.drawable.kayle, R.drawable.kennen,
-			R.drawable.kog,R.drawable.leblanc, R.drawable.leesin, R.drawable.leona,R.drawable.lulu,
-			R.drawable.lux, R.drawable.malph,R.drawable.malz,R.drawable.mao, R.drawable.master,
-			R.drawable.missfort, R.drawable.mord, R.drawable.morg,R.drawable.nasus, R.drawable.naut,
-			R.drawable.nidalee, R.drawable.noct, R.drawable.nunu, R.drawable.olaf, R.drawable.orian,
-			R.drawable.panth,R.drawable.poppy, R.drawable.rammus, R.drawable.rene, R.drawable.riven,
-			R.drawable.rumb,R.drawable.ryze,R.drawable.sej,R.drawable.shaco, R.drawable.shen, R.drawable.shyv,
-			R.drawable.singed, R.drawable.sion,R.drawable.sivir,R.drawable.skarn, R.drawable.sona,
-			R.drawable.soraka, R.drawable.swain, R.drawable.talon,R.drawable.taric,R.drawable.teemo,
-			R.drawable.trist, R.drawable.trundle, R.drawable.trynd, R.drawable.twifa,R.drawable.twitch,
-			R.drawable.udyr, R.drawable.urgot, R.drawable.vayne, R.drawable.veig, R.drawable.viktor,
-			R.drawable.vlad,R.drawable.volibear, R.drawable.warw, R.drawable.wukong, R.drawable.xera,
-			R.drawable.xinz,R.drawable.yorik, R.drawable.ziggs,R.drawable.zil
-	};*/
 }

@@ -10,6 +10,8 @@ import com.flurry.android.FlurryAgent;
 
 public class Main extends TabActivity {
 
+	private ChampionManager mManager;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,6 +20,8 @@ public class Main extends TabActivity {
 		FlurryAgent.onStartSession(this, " ");
 
 		setContentView(R.layout.main);
+
+		mManager = new ChampionManager(getApplicationContext());
 
 		TabHost tabHost = getTabHost();  // The activity TabHost
 		Resources res = getResources(); // Resource object to get Drawables
@@ -39,6 +43,15 @@ public class Main extends TabActivity {
 		moreSpec.setIndicator("More", getResources().getDrawable(R.drawable.teemo_tab));
 		Intent moreIntent = new Intent(this, AppInfo.class);
 		moreSpec.setContent(moreIntent);
+
+		//tab change listener? nope...
+		/*
+		tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener(){
+			public void onTabChanged(String tabId) {
+				mManager.setChampNames(PreferenceManager.get(getApplicationContext()));
+			}});
+		*/
+
 
 		// Adding all TabSpec to TabHost
 		tabHost.addTab(loreSpec);

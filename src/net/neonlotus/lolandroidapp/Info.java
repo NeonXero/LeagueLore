@@ -3,7 +3,6 @@ package net.neonlotus.lolandroidapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -91,7 +90,7 @@ public class Info extends Activity implements Observer {
 	@Override
 	public void onResume() {
 		super.onResume();
-		Log.d(LOG,"Tab resume happened");
+		//Log.d(LOG,"Tab resume happened");
 		if(mGridAdapter != null) {
 			mGridAdapter.notifyDataSetChanged();
 		}
@@ -107,5 +106,6 @@ public class Info extends Activity implements Observer {
 		if(mGridAdapter != null) {
 			mGridAdapter.notifyDataSetChanged();
 		}
+		//mManager.setChampNames(PreferenceManager.get(getApplicationContext())); //watthis?
 	}
 }
