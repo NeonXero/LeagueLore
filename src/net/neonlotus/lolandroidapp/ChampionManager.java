@@ -42,13 +42,11 @@ public class ChampionManager extends Observable {
 		Log.d(LOG,"mstatus = " + mStatus);
 		if (mStatus) {
 			return mChampModel.getChampNicknames();
-			//return mChampModel.getChampNames();
-		}  /*else{
-			//return mChampModel.getChampNames();
-			return mChampModel.getChampNicknames();
-		}*/
-		return mChampModel.getChampNames();
+		}  else{
+			return mChampModel.getChampNames();
+		}
 		//mstatus is always false currently... or rather, the else statement is being returned
+		//Actually it just looks like you have to close/reopen app for changes to go into effect..?
 	}
 
 	public String[] getChampLore() {

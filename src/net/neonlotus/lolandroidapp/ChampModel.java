@@ -10,8 +10,6 @@ import android.content.Context;
  * To change this template use File | Settings | File Templates.
  */
 public class ChampModel {
-	//String arrays for either real names or fake names
-	//private String[] mChampnames;
 	private String LOG = "League/ChampModel";
 	private String[] mRealnames;
 	private String[] mNicknames;
@@ -72,5 +70,3 @@ public class ChampModel {
 		return mThumbIds;
 	}
 }
-
-//Possible function rewrite to return each individual array rather than checking and returning one
