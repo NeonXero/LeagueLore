@@ -17,20 +17,15 @@ import android.widget.TextView;
  */
 public class GridAdapter extends BaseAdapter {
 	private Context mContext;
-	//private String[] champ_list_array;
-	//private String[] champ_list_joke;
 	private ChampionManager mManager;
 	private String LOG = "League/GridAdapter";
 
 	public GridAdapter(Context c) {
 		mContext = c;
-		//champ_list_array = mContext.getResources().getStringArray(R.array.champ_list);
-		//champ_list_joke = mContext.getResources().getStringArray(R.array.champ_list_egg);
 		mManager = new ChampionManager(c);
 	}
 
 	public int getCount() {
-		//return mThumbIds.length;
 		return mManager.getThumbIds().length;
 	}
 

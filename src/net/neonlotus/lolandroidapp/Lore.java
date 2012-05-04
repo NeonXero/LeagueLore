@@ -46,8 +46,6 @@ public class Lore extends ListActivity {
 		//Flurry
 		FlurryAgent.onStartSession(this, " ");
 
-		//PreferenceManager.save(getApplicationContext(),false);
-
 		//Merge Adapter thing...
 		adapter=new MergeAdapter();
 		adapter.addView(buildTop());

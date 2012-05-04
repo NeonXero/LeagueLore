@@ -44,15 +44,6 @@ public class Main extends TabActivity {
 		Intent moreIntent = new Intent(this, AppInfo.class);
 		moreSpec.setContent(moreIntent);
 
-		//tab change listener? nope...
-		/*
-		tabHost.setOnTabChangedListener(new TabHost.OnTabChangeListener(){
-			public void onTabChanged(String tabId) {
-				mManager.setChampNames(PreferenceManager.get(getApplicationContext()));
-			}});
-		*/
-
-
 		// Adding all TabSpec to TabHost
 		tabHost.addTab(loreSpec);
 		tabHost.addTab(champSpec);
