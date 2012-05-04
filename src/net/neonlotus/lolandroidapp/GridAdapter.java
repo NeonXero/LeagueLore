@@ -52,14 +52,14 @@ public class GridAdapter extends BaseAdapter {
 		TextView tv = (TextView) v.findViewById(R.id.icon_text);
 
 		//this is kind of curious.... maybe?
-		/*if (PreferenceManager.get(mContext)) {
+		if (PreferenceManager.get(mContext)) {
 			//tv.setText(champ_list_joke[position]);
 			tv.setText(mManager.getChampNames()[position]);
 		} else {
 			//tv.setText(champ_list_array[position]);
 			tv.setText(mManager.getChampNames()[position]);
-		}*/
-		tv.setText(mManager.getChampNames()[position]); //removing the if statement?
+		}
+		//tv.setText(mManager.getChampNames()[position]); //removing the if statement?
 
 		ImageView iv = (ImageView) v.findViewById(R.id.icon_image);
 		//iv.setImageResource(mThumbIds[position]);
