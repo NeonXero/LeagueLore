@@ -25,6 +25,7 @@ public class PreferenceManager {
         SharedPreferences.Editor editor = context.getSharedPreferences(PREFERENCES, Context.MODE_PRIVATE).edit();
         editor.putBoolean(CHECKBOX, value);
 		Log.d(LOG,"Save was called");
+		editor.commit(); //bonus?
         return editor.commit();
     }
     public static boolean get(Context context) {

@@ -28,7 +28,7 @@ public class ChampionManager extends Observable {
 		mStatus = b;
 		Log.d(LOG,"Set champ name manager was called");
 		Log.d(LOG,"mstatus is " + mStatus);
-		notifyObservers(); //this?
+		notifyObservers(b); //this? no...
 
 
 		//Log.d(LOG, "mstatus is now - " +mStatus.toString());

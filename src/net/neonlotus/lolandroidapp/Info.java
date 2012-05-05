@@ -76,6 +76,8 @@ public class Info extends Activity implements Observer {
 		if(mGridAdapter != null) {
 			mGridAdapter.notifyDataSetChanged();
 		}
+
+
 	}
 
 	public void onStop()
