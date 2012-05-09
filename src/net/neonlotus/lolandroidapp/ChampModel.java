@@ -42,9 +42,9 @@ public class ChampModel {
 				R.drawable.singed, R.drawable.sion, R.drawable.sivir, R.drawable.skarn, R.drawable.sona,
 				R.drawable.soraka, R.drawable.swain, R.drawable.talon, R.drawable.taric, R.drawable.teemo,
 				R.drawable.trist, R.drawable.trundle, R.drawable.trynd, R.drawable.twifa, R.drawable.twitch,
-				R.drawable.udyr, R.drawable.urgot, R.drawable.vayne, R.drawable.veig, R.drawable.viktor,
-				R.drawable.vlad, R.drawable.volibear, R.drawable.warw, R.drawable.wukong, R.drawable.xera,
-				R.drawable.xinz, R.drawable.yorik, R.drawable.ziggs, R.drawable.zil
+				R.drawable.udyr, R.drawable.urgot, R.drawable.varus, R.drawable.vayne, R.drawable.veig,
+				R.drawable.viktor,R.drawable.vlad, R.drawable.volibear, R.drawable.warw, R.drawable.wukong,
+				R.drawable.xera,R.drawable.xinz, R.drawable.yorik, R.drawable.ziggs, R.drawable.zil
 		};
 	}
 

@@ -87,6 +87,7 @@
         <item>Twitch</item>
         <item>Udyr</item>
         <item>Urgot</item>
+        <item>Varus</item>
         <item>Vayne</item>
         <item>Veigar</item>
         <item>Viktor</item>
@@ -2266,6 +2267,15 @@
             \'We can rebuild him. We have the techmaturgy.\' --Professor Stanwick Pididly
         </item>
         <!--urgot_story-->
+        <!--Varus below-->
+        <item>
+            For his incomparable skill with the bow and his unquestioned sense of honor, Varus was chosen to be the warden of a sacred Ionian temple. The temple was built to contain an ancient pit of corruption so vile that Ionian Elders feared it could envelop the island in darkness. Varus prided himself on his position, as only the most exceptional Ionian warriors were selected for the role. He lived with his family in a nearby village and led a quiet life of disciplined routine until the day the forces of Noxus invaded Ionia. Their shock troops left nothing but death and desolation in their wake, and the temple lay in their path. Varus was forced to make a decision. He was bound by honor to stay and defend the temple, but without him the village\'s few inhabitants could offer little resistance against the oncoming war machine. Gravely, he chose to fulfill his duty as a warden. The corruption could not be allowed to escape.\n\n
+
+            His arrows sundered the troops who tried to wrest the temple from him that day. However, when he returned to his village, he found that it had been reduced to a smoldering graveyard. Remorse at the sight of his slain family gave way to overwhelming regret and then to seething hatred. He swore to slaughter every Noxian invader, but first he needed to become stronger. He turned to that which he had sacrificed everything to protect. The pit of corruption would consume him wholly, as a flame devours a wick, but its abominable power would burn within him until he was lost. This was a path from which there could be no return. With grim resolve, he condemned himself to the black flames, feeling malevolent energy bond to his skin... and with it, the promise of ruin. He left, seeking the blood of all Noxians involved with the invasion, a grisly task that eventually led him to the invasion\'s most infamous perpetrators in the League of Legends.\n\n
+
+            \'The life of an arrow is fleeting, built of nothing but direction and intent.\'\n
+            Varus
+        </item>
         <item>The world is not always as civilized as people might think. There are still those who would follow the
             blackest paths of magic and become corrupted by the darker powers that flow through Runeterra. Shauna Vayne
             knows this fact well. As a young privileged girl in the heart of Demacia\'s elite, her father tried to
@@ -2632,6 +2642,7 @@
         <item>Carry, stealth, ranged</item>
         <item>Fighter, melee</item>
         <item>Fighter, ranged</item>
+        <!--Varus--><item>Carry, ranged</item>
         <item>Carry, ranged, assassin, stealth</item>
         <item>Mage, ranged</item>
         <item>Mage, ranged, pusher</item>
@@ -2707,139 +2718,6 @@
         at least be in the front of) the team fight and stay in; soaking up damage, helping focus certain enemies, and
         protecting vulnerable allies.
     </string>
-
-    <!--Huge Item List-->
-    <array name="item_list">
-        <item>Abyssal Scepter</item>
-        <item>Aegis of the Legion</item>
-        <item>Amplifying Tome</item>
-        <item>Archangel\'s Staff</item>
-        <item>Atma\'s Impaler</item>
-        <item>Avarice Blade</item>
-        <item>B. F. Sword</item>
-        <item>Banshee\'s Veil</item>
-        <item>Berserker\'s Greaves</item>
-        <item>Bilgewater Cutlass</item>
-        <item>Blasting Wand</item>
-        <item>Boots of Mobility</item>
-        <item>Boots of Speed</item>
-        <item>Boots of Swiftness</item>
-        <item>Brawler\'s Gloves</item>
-        <item>Catalyst the Protector</item>
-        <item>Chain Vest</item>
-        <item>Chalice of Harmony</item>
-        <item>Cloak and Dagger</item>
-        <item>Cloak of Agility</item>
-        <item>Cloth Armor</item>
-        <item>Dagger</item>
-        <item>Deathfire Grasp</item>
-        <item>Doran\'s Blade</item>
-        <item>Doran\'s Ring</item>
-        <item>Doran\'s Shield</item>
-        <item>Eleisa\'s Miracle</item>
-        <item>Elixir of Agility</item>
-        <item>Elixir of Brilliance</item>
-        <item>Elixir of Fortitude</item>
-        <item>Emblem of Valour</item>
-        <item>Entropy</item>
-        <item>Executioner\'s Calling</item>
-        <item>Faerie Charm</item>
-        <item>Fiendish Codex</item>
-        <item>Force of Nature</item>
-        <item>Frozen Heart</item>
-        <item>Frozen Mallet</item>
-        <item>Giant\'s Belt</item>
-        <item>Glacial Shroud</item>
-        <item>Guardian Angel</item>
-        <item>Guinsoo\'s Rageblade</item>
-        <item>Haunting Guise</item>
-        <item>Health Potion</item>
-        <item>Heart of Gold</item>
-        <item>Hexdrinker</item>
-        <item>Hextech Gunblade</item>
-        <item>Hextech Revolver</item>
-        <item>Hextech Sweeper</item>
-        <item>Infinity Edge</item>
-        <item>Innervating Locket</item>
-        <item>Ionian Boots of Lucidity</item>
-        <item>Ionic Spark</item>
-        <item>Kage\'s Lucky Pick</item>
-        <item>Kindlegem</item>
-        <item>Kitae\'s Bloodrazor</item>
-        <item>Last Whisper</item>
-        <item>Leviathan</item>
-        <item>Lich Bane</item>
-        <item>Long Sword</item>
-        <item>Madred\'s Bloodrazor</item>
-        <item>Madred\'s Razors</item>
-        <item>Malady</item>
-        <item>Mana Manipulator</item>
-        <item>Mana Potion</item>
-        <item>Manamune</item>
-        <item>Mejai\'s Soulstealer</item>
-        <item>Meki Pendant</item>
-        <item>Mercury\'s Treads</item>
-        <item>Moonflair Spellblade</item>
-        <item>Morello\'s Evil Tome</item>
-        <item>Nashor\'s Tooth</item>
-        <item>Needlessly Large Rod</item>
-        <item>Negatron Cloak</item>
-        <item>Ninja Tabi</item>
-        <item>Null-Magic Mantle</item>
-        <item>Odyn\'s Veil</item>
-        <item>Oracle\'s Elixir</item>
-        <item>Oracle\'s Extract</item>
-        <item>Phage</item>
-        <item>Phantom Dancer</item>
-        <item>Philosopher\'s Stone</item>
-        <item>Pickaxe</item>
-        <item>Priscilla\'s Blessing</item>
-        <item>Prospector\'s Blade</item>
-        <item>Prospector\'s Ring</item>
-        <item>Quicksilver Sash</item>
-        <item>Rabadon\'s Deathcap</item>
-        <item>Randuin\'s Omen</item>
-        <item>Recurve Bow</item>
-        <item>Regrowth Pendant</item>
-        <item>Rejuvenation Bead</item>
-        <item>Rod of Ages</item>
-        <item>Ruby Crystal</item>
-        <item>Rylai\'s Crystal Scepter</item>
-        <item>Sage\'s Ring</item>
-        <item>Sanguine Blade</item>
-        <item>Sapphire Crystal</item>
-        <item>Sheen</item>
-        <item>Shurelya\'s Reverie</item>
-        <item>Sight Ward</item>
-        <item>Sorcerer\'s Shoes</item>
-        <item>Soul Shroud</item>
-        <item>Spirit Visage</item>
-        <item>Stark\'s Fervor</item>
-        <item>Stinger</item>
-        <item>Sunfire Cape</item>
-        <item>Sword of the Divine</item>
-        <item>Sword of the Occult</item>
-        <item>Tear of the Goddess</item>
-        <item>The Black Cleaver</item>
-        <item>The Bloodthirster</item>
-        <item>The Brutalizer</item>
-        <item>The Lightbringer</item>
-        <item>Thornmail</item>
-        <item>Tiamat</item>
-        <item>Trinity Force</item>
-        <item>Vampiric Scepter</item>
-        <item>Vision Ward</item>
-        <item>Void Staff</item>
-        <item>Warden\'s Mail</item>
-        <item>Warmog\'s Armor</item>
-        <item>Will of the Ancients</item>
-        <item>Wit\'s End</item>
-        <item>Wriggle\'s Lantern</item>
-        <item>Youmuu\'s Ghostblade</item>
-        <item>Zeal</item>
-        <item>Zhonya\'s Hourglass</item>
-        <item>Zhonya\'s Ring</item>
-    </array>
 
     <array name="champ_taglines">
         <item>the 9 tails fox, ahri</item>
@@ -2926,6 +2804,7 @@
         <item>the plague rat, twitch</item>
         <item>the animal spirit, udyr</item>
         <item>the headsman\'s pride, urgot</item>
+        <!-- Varus 5/8--><item>the arrow of retribution, varus</item>
         <item>the night hunter, vayne</item>
         <item>the tiny master of evil, veigar</item>
         <item>the machine herald, viktor</item>
@@ -3025,6 +2904,7 @@
         <item>@drawable/twitch_ban</item>
         <item>@drawable/udyr_ban</item>
         <item>@drawable/urgot_ban</item>
+        <item>@drawable/varus_ban</item><!-- Varus, may 8-->
         <item>@drawable/vayne_ban</item>
         <item>@drawable/vig_ban</item>
         <item>@drawable/vik_ban</item>
@@ -3369,7 +3249,7 @@
         <item>Corki</item>
         <item>Dr. Mundo</item>
         <!--<item>Evelynn</item>--><item>Eve Too Good</item>
-        <item>Ezreal</item>
+        <!--<item>Ezreal</item>--><item>Big EZ</item>
         <!--<item>Fiddlesticks</item>--><item>Caw Caw Caw</item>
         <item>Fiora</item>
         <!--<item>Fizz</item>--><item>SHARK!</item>
@@ -3397,10 +3277,10 @@
         <item>Lulu</item>
         <item>Lux</item>
         <item>Malphite</item>
-        <item>Malzahar</item>
+        <!--<item>Malzahar</item>--><item>Aladdin</item>
         <!--<item>Maokai</item>--><item>TREE</item>
         <!--<item>Master Yi</item>--><item>Get Dunked</item>
-        <item>Miss Fortune</item>
+        <!--<item>Miss Fortune</item>--><item>Pirate</item>
         <!--<item>Mordekaiser</item>--><item>Morde #1</item>
         <!--<item>Morgana</item>--><item>Morgina</item>
         <!--<item>Nasus</item>--><item>Susan</item>
@@ -3408,12 +3288,12 @@
         <item>Nidalee</item>
         <item>Nocturne</item>
         <!--<item>Nunu</item>--><item>Nooners</item>
-        <item>Olaf</item>
+        <!--<item>Olaf</item>--><item>Bro</item>
         <!--<item>Orianna</item>--><item>Straight Baller</item>
-        <item>Pantheon</item>
+        <!--<item>Pantheon</item>--><item>Mantheon</item>
         <item>Poppy</item>
         <!--<item>Rammus</item>--><item>Ram Rod</item>
-        <item>Renekton</item>
+        <!--<item>Renekton</item>--><item>Investigator</item>
         <item>Riven</item>
         <item>Rumble</item>
         <!--<item>Ryze</item>--><item>EZ Combo</item>
@@ -3430,14 +3310,15 @@
         <!--<item>Swain</item>--><item>Dem Birdz</item>
         <item>Talon</item>
         <item>Taric</item>
-        <item>Teemo</item>
+        <!--<item>Teemo</item>--><item>Herp Derp</item>
         <item>Tristana</item>
         <item>Trundle</item>
         <!--<item>Tryndamere</item>--><item>TRONMAR</item>
         <item>Twisted Fate</item>
-        <item>Twitch</item>
+        <!--<item>Twitch</item>--><item>Stinky</item>
         <!--<item>Udyr</item>--><item>Da Bear</item>
         <item>Urgot</item>
+        <item>Varus</item>
         <item>Vayne</item>
         <!--<item>Veigar</item>--><item>Vajayjar</item>
         <item>Viktor</item>

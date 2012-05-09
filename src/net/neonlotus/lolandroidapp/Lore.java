@@ -32,7 +32,7 @@ public class Lore extends ListActivity {
 			"Issue 01", "Issue 02","Issue 03","Issue 04","Issue 05","Issue 06","Issue 07","Issue 08","Issue 09",
 			"Issue 10","Issue 11","Issue 12","Issue 13","Issue 14","Issue 15","Issue 16","Issue 17","Issue 18",
 			"Issue 19","Issue 20","Issue 21","Issue 22","Issue 23","Issue 24","Issue 25","BREAKING NEWS!",
-			"Issue 26","Issue 27","Issue 28","Issue 29"
+			"Issue 26","Issue 27","Issue 28","Issue 29","Issue 30"
 	};
 
 	private MergeAdapter adapter=null;
@@ -201,6 +201,10 @@ public class Lore extends ListActivity {
 				break;
 			case 34: /*Volume 1 I 29*/
 				intent = new Intent(Intent.ACTION_VIEW, Uri.parse(urlPartOne+(position-5)));
+				startActivity(intent);
+				break;
+			case 35: //Ep 30, around mid May 2012 added
+				intent = new Intent(Intent.ACTION_VIEW,Uri.parse(urlPartOne+(position-5)));
 				startActivity(intent);
 				break;
 
