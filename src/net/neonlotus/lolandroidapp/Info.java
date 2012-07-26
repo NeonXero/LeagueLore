@@ -3,7 +3,6 @@ package net.neonlotus.lolandroidapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -36,6 +35,8 @@ public class Info extends Activity implements Observer {
 		mManager = new ChampionManager(getApplicationContext());
 		mManager.addObserver(this);
 
+		//mManager.setChampNames(PreferenceManager.get(getApplicationContext())); //set boolean on load?
+
 		mGridAdapter = new GridAdapter(this);
 
 		GridView gridview = (GridView) findViewById(R.id.gridview);
@@ -43,6 +44,9 @@ public class Info extends Activity implements Observer {
 
 		//bundle test stuff
 		final Intent intent = new Intent(Info.this, Champion.class);
+
+		//final Bundle b = new Bundle();
+
 
 		gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			public void onItemClick(AdapterView parent, View v, int position, long id) {
@@ -72,7 +76,7 @@ public class Info extends Activity implements Observer {
 	@Override
 	public void onResume() {
 		super.onResume();
-		Log.d(LOG,"Tab resume happened");
+		//Log.d(LOG,"Tab resume happened");
 		if(mGridAdapter != null) {
 			mGridAdapter.notifyDataSetChanged();
 		}

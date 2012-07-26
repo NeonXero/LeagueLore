@@ -36,7 +36,6 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 		mCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 			public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 				// save the updated result
-
 				PreferenceManager.save(getApplicationContext(), mCheckbox.isChecked());
 				//Log.d(LOG, "App info checkbox changed to value " + PreferenceManager.get(getApplicationContext()));
 				Log.d(LOG, "App info checkbox changed to value " + PreferenceManager.get(getApplicationContext()));

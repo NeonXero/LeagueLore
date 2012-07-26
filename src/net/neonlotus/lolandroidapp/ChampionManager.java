@@ -28,12 +28,14 @@ public class ChampionManager extends Observable {
 		mStatus = b;
 		Log.d(LOG,"Set champ name manager was called");
 		Log.d(LOG,"mstatus is " + mStatus);
-		notifyObservers(b); //this? no...
-
-
-		//Log.d(LOG, "mstatus is now - " +mStatus.toString());
-		//^ when I changed that to Boolean, and logged it out.. seems to be correctly changing from false to true based on the state of the checkbox in AppInfo...
+		//notifyObservers(b); //this? no...
 	}
+
+
+	public void notifyData() {
+		notifyObservers();
+	}
+
 	//todo: Research value and reference variable passing (obj: reference) (value: simple variable)
 	//todo: overall just make sure variables are consistently named and better
 
@@ -43,11 +45,17 @@ public class ChampionManager extends Observable {
 		if (mStatus) {
 			return mChampModel.getChampNicknames();
 		}  else{
+
 			return mChampModel.getChampNames();
 		}
 		//mstatus is always false currently... or rather, the else statement is being returned
 		//Actually it just looks like you have to close/reopen app for changes to go into effect..?
+
+			//return mChampModel.getChampNicknames();
 	}
+		//mstatus is not updating while app still running
+
+//}
 
 	public String[] getChampLore() {
 		return mChampModel.getLore();

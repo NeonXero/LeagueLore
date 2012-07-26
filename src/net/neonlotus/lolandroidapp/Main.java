@@ -10,6 +10,8 @@ import com.flurry.android.FlurryAgent;
 
 public class Main extends TabActivity {
 
+	private ChampionManager mManager;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -18,6 +20,8 @@ public class Main extends TabActivity {
 		FlurryAgent.onStartSession(this, " ");
 
 		setContentView(R.layout.main);
+
+		mManager = new ChampionManager(getApplicationContext());
 
 		TabHost tabHost = getTabHost();  // The activity TabHost
 		Resources res = getResources(); // Resource object to get Drawables

@@ -10,6 +10,7 @@ import android.content.Context;
  * To change this template use File | Settings | File Templates.
  */
 public class ChampModel {
+
 	private String LOG = "League/ChampModel";
 	private String[] mRealnames;
 	private String[] mNicknames;
