@@ -42,9 +42,10 @@ public class AppInfo extends Activity implements View.OnTouchListener{
 				Log.d(LOG, "App info checkbox changed to value " + PreferenceManager.get(getApplicationContext()));
 				//championManager.setChampNames(mCheckbox.isChecked());
 				championManager.setChampNames(PreferenceManager.get(getApplicationContext()));
+
 			}
 		});
-		// nope championManager.setChampNames(mCheckbox.isChecked()); //"initialize" the names?
+		championManager.setChampNames(PreferenceManager.get(getApplicationContext())); //"initialize" the names?
 
 		PreferenceManager.apply(getApplicationContext(), mCheckbox);
 

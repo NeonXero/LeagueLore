@@ -28,10 +28,11 @@ public class ChampModel {
 		mThumbIds = new Integer[]{
 				R.drawable.ahri, R.drawable.akal, R.drawable.ali, R.drawable.amumu, R.drawable.anivia,
 				R.drawable.annie, R.drawable.ashe, R.drawable.blitz, R.drawable.brand, R.drawable.cait,
-				R.drawable.cassi, R.drawable.cho, R.drawable.cork, R.drawable.drmu, R.drawable.evel, R.drawable.ezr,
+				R.drawable.cassi, R.drawable.cho, R.drawable.cork, R.drawable.darius, R.drawable.drmu, R.drawable.draven,
+				R.drawable.evel, R.drawable.ezr,
 				R.drawable.fiddle, R.drawable.fiora, R.drawable.fizz, R.drawable.galio, R.drawable.gang,
 				R.drawable.garen, R.drawable.gragas, R.drawable.graves, R.drawable.hecarim, R.drawable.heim,
-				R.drawable.irel, R.drawable.janna, R.drawable.jarv, R.drawable.jax, R.drawable.karma,
+				R.drawable.irel, R.drawable.janna, R.drawable.jarv, R.drawable.jax, R.drawable.jayce, R.drawable.karma,
 				R.drawable.karth, R.drawable.kass, R.drawable.kata, R.drawable.kayle, R.drawable.kennen,
 				R.drawable.kog, R.drawable.leblanc, R.drawable.leesin, R.drawable.leona, R.drawable.lulu,
 				R.drawable.lux, R.drawable.malph, R.drawable.malz, R.drawable.mao, R.drawable.master,

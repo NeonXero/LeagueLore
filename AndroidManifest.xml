@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="net.neonlotus.lolandroidapp"
             android:installLocation="auto"
-          android:versionCode="11"
-          android:versionName="1.27">
+          android:versionCode="12"
+          android:versionName="1.6">
     <!-- New champ = .01 New feature = .05 New huge = .1-->
     <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="7"/>
 

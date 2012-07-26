@@ -15,7 +15,11 @@
         <item>Cassiopeia</item>
         <item>Cho\'Gath</item>
         <item>Corki</item>
+        <!-- added 7/18 :( -->
+        <item>Darius</item>
         <item>Dr. Mundo</item>
+        <!-- added 7/18 :( -->
+        <item>Draven</item>
         <item>Evelynn</item>
         <item>Ezreal</item>
         <item>Fiddlesticks</item>
@@ -33,6 +37,8 @@
         <item>Janna</item>
         <item>Jarvan IV</item>
         <item>Jax</item>
+        <!-- added 7/18 :( -->
+        <item>Jayce</item>
         <item>Karma</item>
         <item>Karthus</item>
         <item>Kassadin</item>
@@ -595,6 +601,15 @@
             He is Corki - death from above!
         </item>
         <!--Corki-->
+        <!-- Darius below 718 -->
+        <item>
+            There is no greater symbol of Noxian might than Darius, the nation\'s most feared and battle-hardened warrior. Orphaned at a young age, Darius had to fight to keep himself and his younger brother alive. By the time he joined the military, he had already developed the strength and discipline of a veteran soldier. The first true test of Darius\'s resolve occurred in a crucial battle against Demacia, where the Noxian forces were exhausted and outnumbered. Darius\'s captain called for his troops to retreat, but Darius refused to accept such an act of cowardice. Breaking formation, Darius strode towards the captain and decapitated him with one sweep of his gigantic axe. Both terrified and inspired, the soldiers followed Darius into battle and fought with incredible strength and fervor. After a long and grueling battle, they ultimately emerged victorious.\n\n
+
+            Seizing momentum from this victory, Darius led his now fiercely loyal troops in a devastating campaign against Demacia. After proving his power on the battlefield, Darius turned his gaze homeward. He saw a Noxus riddled with weakness, where greedy, complacent nobles drained the nation\'s strength. Seeking to restore his country to greatness, Darius took it upon himself to reshape the Noxian leadership. He identified weak figureheads and violently removed them from their positions of power. Many in Noxus saw Darius\'s cull as an attempt to seize power, but he had a different plan for the throne. He had been watching the rise of Jericho Swain with keen interest. In Swain, Darius saw a leader with the mind and determination to bring Noxus to glory. Now allied with the Master Tactician, Darius works to unite the nation behind his vision of true Noxian strength.\n\n
+
+            \"A united Noxus could control the world - and would deserve to.\"\n
+            Darius
+        </item>
         <item>It is said that the man now known as Dr. Mundo was born without any sort of conscience. Instead,
             he had an
             unquenchable desire to inflict pain through experimentation. By the time he was five, most of the pets in
@@ -619,6 +634,15 @@
             Beware the Madman of Zaun. In his eyes, you are already dead.
         </item>
         <!--Mundo-->
+        <!-- Draven below 718 -->
+        <item>
+            Unlike his brother Darius, victory in battle was never enough for Draven. He craved recognition, acclaim, and glory. He first sought greatness in the Noxian military, but his flair for the dramatic went severely underappreciated. Thirsting for a method to share \"Draven\" with the world, he turned his attention to the prison system. There he carved out the celebrity he desired by turning the tedious affair of executions into a premiere spectacle.\n\n
+
+            At Draven\'s first execution, he shocked onlookers when he ordered the doomed prisoner to run for dear life. Just before the man managed to flee from sight, Draven brought him down with a flawless throw of his axe. Soon, all Draven\'s executions became a gauntlet through which Noxian prisoners raced for a final chance at life. He used this trial as his own personal stage, and turned executions into a leading form of entertainment. He rallied onlookers into a frenzy, while desperate prisoners scrambled to evade him. They never succeeded. Rejecting the solemn, black uniforms of Noxian executioners, Draven donned bright outfits and developed flashy signature moves to distinguish himself. Crowds flocked to see Draven in action, and tales of his performances spread quickly. As his popularity grew, so did his already-inflated ego. He belonged at the center of attention. Before long, the scope of his ambitions outgrew the population of Noxus. He decided that the glorious exploits of Draven should be put on display for the entire world.\n\n
+
+            \"The \"best\" is wherever I decide to set the bar each day.\"\n
+            - Draven
+        </item>
         <item>Evelynn\'s origins are shrouded in mystery - a mystery she herself helps to perpetuate. What everyone
             does
             know about Evelynn, however, is that she is one of the most skilled assassins in Valoran. It is clear upon
@@ -1000,6 +1024,15 @@
             \'Be advised - there has been an outbreak of lamppost-shaped bruises in the League of Legends.\' - Gragas
         </item>
         <!--Jax-->
+        <!-- Jayce below -->
+        <item>
+            Armed with wit, charm, and his signature transforming hammer, Jayce lives to protect his native Piltover. Long before his nation called him a hero, however, he was a promising young inventor. When Piltover commissioned him to study a rare arcane crystal, Jayce discovered it could be used as a vast energy source. Eager to make a name for himself, he began developing a device to harness its power. Word of the crystal\'s potential reached beyond the borders of Piltover. Viktor, the machine-augmented scientist from Zaun, brought Jayce an offer – together, they could use the crystal to advance his \"glorious evolution,\" a vision of humanity fused with technology. Jayce refused, but the Zaunite had no intention of leaving empty handed. He effortlessly blasted Jayce aside and seized the crystal, incinerating the lab\'s meager security force as he left for Zaun. Jayce implored the Piltover government to respond, but the officials refused to support an act of aggression. He decided to act alone, realizing that if no one struck back, Piltover would never be safe.\n\n
+
+            Jayce returned to the lab to prepare for his attack. After intense research, development, and hands-on testing, he emerged with his crowning achievement – the Mercury Hammer. Weapon in hand, Jayce marched to Zaun and began his one-man assault. Viktor\'s acolytes rushed to stop him, but Jayce smashed them aside, fighting his way into the heart of the lab. Inside, Jayce saw the horrifying brilliance of Viktor\'s creations, all powered by the energy of the arcane crystal. He realized that his only option was to destroy the power source, but Viktor stood in his way. Though their clash left both scientists heavily wounded, Jayce managed a desperate strike at the crystal. He shattered it and escaped as Viktor\'s machines erupted in flames. When he returned home, exhausted but victorious, the citizens of Piltover hailed Jayce as a hero. He reveled in the adoration, but knew that his actions had drawn the attention of dangerous enemies. Now devoted to the defense of his people, Jayce is Piltover\'s best hope for a bright future.\n\n
+
+            \"Trust me: if we\'re smart, Piltover can stand strong against any threat. Hey, I\'m living proof.\"\n
+            -Jayce
+        </item>
         <item>Even in her youth, Karma exhibited almost superhuman composure. While her peers explored the torrent of
             emotions that came with adolescence, Karma meditated in the Lotus Gardens. She was convinced that the true
             path to enlightenment was a journey inward, to a place within the self, overlooked by most. She exuded such
@@ -2571,7 +2604,9 @@
         <item>Mage, ranged</item>
         <item>Fighter, mage, melee</item>
         <item>Ranged, carry</item>
+        <item>Fighter, melee</item><!-- added 7/18 :( Darius -->
         <item>Fighter, melee</item>
+        <item>Carry, ranged</item> <!-- added 7/18 :( Draven -->
         <item>Assassin, stealth, melee</item>
         <item>Carry, ranged</item>
         <item>Mage, jungler, ranged</item>
@@ -2585,6 +2620,7 @@
         <item>Fighter, jungler, melee</item> <!-- Hecarim 4/18-->
         <item>Mage, pusher, ranged</item>
         <item>Assassin, melee</item>
+        <item>Fighter, Melee, Ranged</item> <!-- added 7/18 :( Jayce -->
         <item>Support, ranged</item>
         <item>Fighter, melee</item>
         <item>Fighter, melee</item>
@@ -2733,7 +2769,9 @@
         <item>the serpent\'s embrace, cassiopeia</item>
         <item>the terror of the void, cho\'gath</item>
         <item>the daring bombardier, corki</item>
+        <item>the hand of noxus, darius</item> <!-- added 7/18 :( -->
         <item>the madman of zaun, dr. mundo</item>
+        <item>the glorious executioner, draven</item> <!-- added 7/18 :( -->
         <item>the widowmaker, evelynn</item>
         <item>the prodigal explorer, ezreal</item>
         <item>the harbinger of doom, fiddlesticks</item>
@@ -2750,6 +2788,7 @@
         <item>the storm\'s fury, janna</item>
         <item>the exemplar of demacia, jarvan iv</item>
         <item>grandmaster at arms, jax</item>
+        <item>the defender of tomorrow, jayce</item> <!-- added 7/18 :( -->
         <item>the enlightened one, karma</item>
         <item>the deathsinger, karthus</item>
         <item>the void walker, kassadin</item>
@@ -2833,7 +2872,9 @@
         <item>@drawable/cass_ban</item>
         <item>@drawable/cho_ban</item>
         <item>@drawable/corki_ban</item>
+        <item>@drawable/darius_ban</item> <!-- Darius 718-->
         <item>@drawable/drm_ban</item>
+        <item>@drawable/draven_ban</item><!-- Draven 718 -->
         <item>@drawable/eve_ban</item>
         <item>@drawable/ez_ban</item>
         <item>@drawable/fiddle_ban</item>
@@ -2850,6 +2891,7 @@
         <item>@drawable/janna_ban</item>
         <item>@drawable/jarvan_ban</item>
         <item>@drawable/jax_ban</item>
+        <item>@drawable/jayce_ban</item><!-- jayce 718-->
         <item>@drawable/karma_ban</item>
         <item>@drawable/karth_ban</item>
         <item>@drawable/kas_ban</item>
@@ -3247,7 +3289,9 @@
         <!--<item>Cassiopeia</item>--><item>Snakey Snakey</item>
         <!--<item>Cho\'Gath</item>--><item>Nom Nom</item>
         <item>Corki</item>
+        <!--<item>Darius</item>--><item>Not Dyrus</item>
         <item>Dr. Mundo</item>
+        <!--<item>Draven</item>--><item>AND MY AXE!</item>
         <!--<item>Evelynn</item>--><item>Eve Too Good</item>
         <!--<item>Ezreal</item>--><item>Big EZ</item>
         <!--<item>Fiddlesticks</item>--><item>Caw Caw Caw</item>
@@ -3264,6 +3308,7 @@
         <!--<item>Janna</item>--><item>Janaynay</item>
         <!--<item>Jarvan IV</item>--><item>J Dunk 4</item>
         <item>Jax</item>
+        <item>Jayce</item>
         <item>Karma</item>
         <item>Karthus</item>
         <item>Kassadin</item>
