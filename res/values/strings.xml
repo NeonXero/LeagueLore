@@ -17,6 +17,7 @@
         <item>Corki</item>
         <!-- added 7/18 :( -->
         <item>Darius</item>
+        <item>Diana</item>  <!-- 9/13 udpate -->
         <item>Dr. Mundo</item>
         <!-- added 7/18 :( -->
         <item>Draven</item>
@@ -69,6 +70,7 @@
         <item>Poppy</item>
         <item>Rammus</item>
         <item>Renekton</item>
+        <item>Rengar</item> <!-- 9/13 udpate -->
         <item>Riven</item>
         <item>Rumble</item>
         <item>Ryze</item>
@@ -106,6 +108,7 @@
         <item>Yorick</item>
         <item>Ziggs</item>
         <item>Zilean</item>
+        <item>Zyra</item> <!-- 9/13 udpate -->
     </array>
 
     <string name="dem_story">
@@ -2770,6 +2773,7 @@
         <item>the terror of the void, cho\'gath</item>
         <item>the daring bombardier, corki</item>
         <item>the hand of noxus, darius</item> <!-- added 7/18 :( -->
+        <item>the scorn of the moon, diana</item> <!-- 9/13 -->
         <item>the madman of zaun, dr. mundo</item>
         <item>the glorious executioner, draven</item> <!-- added 7/18 :( -->
         <item>the widowmaker, evelynn</item>
@@ -2819,6 +2823,7 @@
         <item>the iron ambassador, poppy</item>
         <item>the armordillo, rammus</item>
         <item>the butcher of the sands, renekton</item>
+        <item>the pridestalker, rengar</item> <!-- 9/13 update-->
         <item>the exile, riven</item>
         <item>the mechanized menace, rumble</item>
         <item>the rogue mage, ryze</item>
@@ -2856,6 +2861,7 @@
         <item>the gravedigger, yorick</item>
         <item>the hexplosives expert, ziggs</item>
         <item>the chronokeeper, zilean</item>
+        <item>the rise of the thorns, zyra</item>  <!-- 9/13 udpate -->
     </array>
 
     <array name="champ_banners">
