@@ -29,7 +29,7 @@ public class ChampModel {
 		mThumbIds = new Integer[]{
 				R.drawable.ahri, R.drawable.akal, R.drawable.ali, R.drawable.amumu, R.drawable.anivia,
 				R.drawable.annie, R.drawable.ashe, R.drawable.blitz, R.drawable.brand, R.drawable.cait,
-				R.drawable.cassi, R.drawable.cho, R.drawable.cork, R.drawable.darius, R.drawable.drmu, R.drawable.draven,
+				R.drawable.cassi, R.drawable.cho, R.drawable.corki, R.drawable.darius, R.drawable.diana, R.drawable.drmu, R.drawable.draven,
 				R.drawable.evel, R.drawable.ezr,
 				R.drawable.fiddle, R.drawable.fiora, R.drawable.fizz, R.drawable.galio, R.drawable.gang,
 				R.drawable.garen, R.drawable.gragas, R.drawable.graves, R.drawable.hecarim, R.drawable.heim,
@@ -39,14 +39,14 @@ public class ChampModel {
 				R.drawable.lux, R.drawable.malph, R.drawable.malz, R.drawable.mao, R.drawable.master,
 				R.drawable.missfort, R.drawable.mord, R.drawable.morg, R.drawable.nasus, R.drawable.naut,
 				R.drawable.nidalee, R.drawable.noct, R.drawable.nunu, R.drawable.olaf, R.drawable.orian,
-				R.drawable.panth, R.drawable.poppy, R.drawable.rammus, R.drawable.rene, R.drawable.riven,
+				R.drawable.panth, R.drawable.poppy, R.drawable.rammus, R.drawable.rene, R.drawable.rengar, R.drawable.riven,
 				R.drawable.rumb, R.drawable.ryze, R.drawable.sej, R.drawable.shaco, R.drawable.shen, R.drawable.shyv,
 				R.drawable.singed, R.drawable.sion, R.drawable.sivir, R.drawable.skarn, R.drawable.sona,
 				R.drawable.soraka, R.drawable.swain, R.drawable.talon, R.drawable.taric, R.drawable.teemo,
 				R.drawable.trist, R.drawable.trundle, R.drawable.trynd, R.drawable.twifa, R.drawable.twitch,
 				R.drawable.udyr, R.drawable.urgot, R.drawable.varus, R.drawable.vayne, R.drawable.veig,
 				R.drawable.viktor,R.drawable.vlad, R.drawable.volibear, R.drawable.warw, R.drawable.wukong,
-				R.drawable.xera,R.drawable.xinz, R.drawable.yorik, R.drawable.ziggs, R.drawable.zil
+				R.drawable.xera,R.drawable.xinz, R.drawable.yorik, R.drawable.ziggs, R.drawable.zil, R.drawable.zyra
 		};
 	}
 

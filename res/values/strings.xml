@@ -613,6 +613,14 @@
             \"A united Noxus could control the world - and would deserve to.\"\n
             Darius
         </item>
+        <!-- Diana below-->
+        <item>
+            An unyielding avatar of the moon\'s power, Diana wages a dark crusade against the sun-worshipping Solari. Though she once sought the acceptance of her people, years of futile struggle shaped her into a bitter, resentful warrior. She now presents her foes with a terrible ultimatum: revere the moon\'s light, or die by her crescent blade.\n\n
+
+            Though she was born to the Solari, Diana\'s inquisitive nature set her apart from her brethren. She had always found solace and guidance in the night sky, and questioned the dominance of the sun in her society. The Solari elders responded to her challenges with only derision and punishment. Diana remained convinced, however, that if she could find evidence of the moon\'s power, the elders would listen to reason. For years, she studied Solari archives in solitude until she discovered an encoded message hidden in an old tome. This clue led her to a secluded valley on Mount Targon where she unearthed the hidden entrance to an ancient, sealed temple. Inside, among aging relics and faded murals, she found an ornate suit of armor and a beautiful crescent blade, both inscribed with sigils of the moon. Diana donned the armaments and returned to the Solari elders that night. She declared that the artifacts proved others had once worshipped the moon as she did. Her discovery of evidence challenging Solari dominion shocked the elders. To Diana\'s horror, they pronounced her a heretic and condemned her to death. As the elders prepared her for execution, Diana\'s anger and sorrow overwhelmed her desire for acceptance. She lifted her gaze to the sky, calling upon the moon for strength. Lunar power surged within her and she shattered her bindings. Raising her relic blade, she turned and slaughtered the elders. With the temple in ruins behind her, Diana resolved to destroy all those who would deny the power of the moon.\n\n
+
+            \"The sun does not reveal truth. Its light only burns and blinds.\" - Diana
+        </item>
         <item>It is said that the man now known as Dr. Mundo was born without any sort of conscience. Instead,
             he had an
             unquenchable desire to inflict pain through experimentation. By the time he was five, most of the pets in
@@ -1764,6 +1772,15 @@
             \'My brother has become hollow. Full of rage, but empty.\' -- Nasus, the Curator of the Sands.
         </item>
         <!--renekton_story-->
+        <!-- Rengar below -->
+        <item>
+            On every wall of his den, the trophy hunter Rengar mounts the heads, horns, claws, and fangs of the most lethal creatures in Valoran. Though his collection is extensive, he remains unsatisfied, tirelessly seeking greater game. He takes time with every kill, studying his prey, learning, and preparing himself for the next encounter with the one monster he never managed to defeat.\n\n
+
+            Rengar never knew his real parents, but was raised by a human who was revered as a legendary hunter. He was an ideal pupil, intently absorbing the lessons of his father, and improving them with his uncanny feral instincts. Before his mane had fully grown, Rengar set off on his own and claimed a wide territory for himself. Along its perimeter, he mounted the skulls of his slain prey - a warning to would-be aggressors. He thought undisputed reign of a region would fulfill him, but instead, he grew restless. No beasts in his domain proved challenging prey, and without formidable adversaries to push his limits, Rengar\'s spirit waned. He feared that no worthwhile game remained, that he would never again feel the thrill of the hunt. Just when things seemed their bleakest, he encountered the monster. It was a disturbing, alien thing, distinctly out of place in his world. It bore huge scything claws and devoured any animal that strayed across its path. Overzealous at the prospect of a challenge, Rengar ambushed the monster in haste. It far outclassed anything he\'d hunted before. Their fight was savage, and each suffered crippling wounds. Rengar lost an eye, but the most grievous blow was to his pride. He had never before failed to make the kill. Worse yet, the severity of his injuries forced him to retreat. Over the following days, he hovered on the threshold between life and death. He was wracked with pain, but beneath it, he felt a glimmer of joy. The hunt was on. If such powerful beings existed in the world, he would find them, and stack their heads high. The monster, however, was a kill he wanted to savor. On his den\'s largest wall, he reserves a space for the beast\'s head, a trophy he swears will one day be the centerpiece of his collection.\n\n
+
+            \"Prey on the weak and you will survive, prey on the strong and you will live.\"
+            -Rengar
+        </item>
         <item>In Noxus, any citizen may rise to power regardless of race, gender, or social standing - strength is all
             that matters. It was with committed faith in this ideal that Riven strove to greatness. She showed early
             potential as a soldier, forcing herself to master the weight of a long sword when she was barely its
@@ -2591,6 +2608,13 @@
             - Zilean
         </item>
         <!--zilean_story-->
+        <item> <!-- Zyra -->
+            Longing to take control of her fate, the ancient, dying plant Zyra transferred her consciousness into a human body for a second chance at life. Centuries ago, she and her kind dominated the Plague Lands, using thorns and vines to consume any animal that set foot in their territory. As the years passed, the animal population steadily died off. Food became increasingly scarce, and Zyra could only stand by helplessly as the last of her kin withered away. She thought she would perish alone, until the appearance of an unwary sorceress presented her with an opportunity for salvation.\n\n
+
+            It was the first time in years Zyra had sensed a creature wander so close. Hunger drew her to the sorceress, but some other, deeper instinct compelled her. She enveloped the woman in thorns with ease, but as she savored this final meal, foreign memories invaded her thoughts. She saw great jungles of metal and stone where humans and animals thrived. Potent magic surged through her vines, and she devised an elegant but risky plan to survive. Using the woman\'s memories, Zyra poured her newfound magic into the creation of a human-shaped vessel. She didn?t know what sort of world awaited her, but she had nothing left to lose. When Zyra opened her eyes, she was overwhelmed by the raw power ready at her fingertips. It wasn\'t until she noticed the shriveled remains of the plant she once was that she realized how vulnerable she had become. If this body died, there would be no network of vines to retreat through, no roots to regrow her...but she felt truly alive. She beheld the world for the first time as animals did, and a dark smile crept across her lips. She was reborn, and there was so much now within her grasp.\n\n
+
+            Closer to the flower, closer to the thorns. - Zyra
+        </item>
     </array>
 
     <array name="champ_stats">
@@ -2882,6 +2906,7 @@
         <item>@drawable/cho_ban</item>
         <item>@drawable/corki_ban</item>
         <item>@drawable/darius_ban</item> <!-- Darius 718-->
+        <item>@drawable/diana_ban</item> <!-- Diana-->
         <item>@drawable/drm_ban</item>
         <item>@drawable/draven_ban</item><!-- Draven 718 -->
         <item>@drawable/eve_ban</item>
@@ -2931,6 +2956,7 @@
         <item>@drawable/poppy_ban</item>
         <item>@drawable/ram_ban</item>
         <item>@drawable/ren_ban</item>
+        <item>@drawable/rengar_ban</item> <!-- Rengar-->
         <item>@drawable/riven_ban</item>
         <item>@drawable/rumble_ban</item>
         <item>@drawable/ryze_ban</item>
@@ -2968,6 +2994,7 @@
         <item>@drawable/yorick_ban</item>
         <!--Ziggs--><item>@drawable/ziggs_ban</item>
         <item>@drawable/zil_ban</item>
+        <item>@drawable/zyra_ban</item> <!-- Zyra-->
     </array>
 
     <string name="expandable_list_sample_action">wat</string>
@@ -3034,6 +3061,7 @@
     <array name="mresistItems">
         <item>Abyssal Scepter</item>
         <item>Aegis of the Legion</item>
+        <item>Athene\'s Unholy Grail</item>
         <item>Banshee\'s Veil</item>
         <item>Chalice of Harmony</item>
         <item>Force of Nature</item>
@@ -3054,14 +3082,12 @@
         <item>Eleisa\'s Miracle</item>
         <item>Emblem of Valor</item>
         <item>Force of Nature</item>
-        <item>Guardian Angel</item>
         <item>Locket of the Iron Solari</item>
         <item>Philosopher\'s Stone</item>
         <item>Randuin\'s Omen</item>
         <item>Regrowth Pendant</item>
         <item>Rejuvenation Bead</item>
         <item>Shurelya\'s Reverie</item>
-        <item>Quicksilver Sash</item>
         <item>Tiamat</item>
         <item>Warden\'s Mail</item>
         <item>Warmog\'s Armor</item>
@@ -3090,6 +3116,7 @@
         <item>Atma\'s Impaler</item>
         <item>B. F. Sword</item>
         <item>Bilgewater Cutlass</item>
+        <item>Bonetooth Necklace</item>
         <item>Doran\'s Blade</item>
         <item>Elixir of Fortitude</item>
         <item>Entropy</item>
@@ -3103,6 +3130,7 @@
         <item>Long Sword</item>
         <item>Madred\'s Bloodrazor</item>
         <item>Madred\'s Razors</item>
+        <item>Manamune</item>
         <item>Maw of Malmortius</item>
         <item>Phage</item>
         <item>Pickaxe</item>
@@ -3152,7 +3180,7 @@
         <item>Wit\'s End</item>
         <item>Youmuu\'s Ghostblade</item>
         <item>Zeal</item>
-        <item>	Zeke\'s Herald</item>
+        <item>Zeke\'s Herald</item>
     </array>
     <array name="lifestealItems">
         <item>Bilgewater Cutlass</item>
@@ -3170,6 +3198,7 @@
         <item>Abyssal Scepter</item>
         <item>Amplifying Tome</item>
         <item>Archangel\'s Staff</item>
+        <item>Athene\'s Unholy Grail</item>
         <item>Blasting Wand</item>
         <item>Deathfire Grasp</item>
         <item>Doran\'s Ring</item>
@@ -3199,6 +3228,7 @@
         <item>Zhonya\'s Hourglass</item>
     </array>
     <array name="cdrItems">
+        <item>Athene\'s Unholy Grail</item>
         <item>Deathfire Grasp</item>
         <item>Elixir of Brilliance</item>
         <item>Fiendish Codex</item>
@@ -3235,6 +3265,7 @@
     </array>
     <array name="manaregenItems">
         <item>Archangel\'s Staff</item>
+        <item>Athene\'s Unholy Grail</item>
         <item>Chalice of Harmony</item>
         <item>Deathfire Grasp</item>
         <item>Doran\'s Ring</item>
@@ -3299,6 +3330,7 @@
         <!--<item>Cho\'Gath</item>--><item>Nom Nom</item>
         <item>Corki</item>
         <!--<item>Darius</item>--><item>Not Dyrus</item>
+        <!--Diana--> <item>Mooney</item>
         <item>Dr. Mundo</item>
         <!--<item>Draven</item>--><item>AND MY AXE!</item>
         <!--<item>Evelynn</item>--><item>Eve Too Good</item>
@@ -3348,6 +3380,7 @@
         <item>Poppy</item>
         <!--<item>Rammus</item>--><item>Ram Rod</item>
         <!--<item>Renekton</item>--><item>Investigator</item>
+        <!--Rengar--><item>Woof woof</item>
         <item>Riven</item>
         <item>Rumble</item>
         <!--<item>Ryze</item>--><item>EZ Combo</item>
@@ -3385,6 +3418,7 @@
         <item>Yorick</item>
         <item>Ziggs</item>
         <!--<item>Zilean</item>--><item>Father Time</item>
+        <!--Zyra--><item>Plant Girl</item>
     </array>
 
 </resources>
