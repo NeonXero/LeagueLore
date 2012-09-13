@@ -2608,6 +2608,7 @@
         <item>Fighter, mage, melee</item>
         <item>Ranged, carry</item>
         <item>Fighter, melee</item><!-- added 7/18 :( Darius -->
+        <!-- Diana --> <item>Fighter, mage, melee</item>
         <item>Fighter, melee</item>
         <item>Carry, ranged</item> <!-- added 7/18 :( Draven -->
         <item>Assassin, stealth, melee</item>
@@ -2657,7 +2658,8 @@
         <item>Fighter, assassin, melee</item>
         <item>Tank, melee, recommended</item>
         <item>Fighter, melee</item>
-        <item>Fighter, melee</item>
+        <!-- Rengar--><item>Fighter, melee, stealth</item>
+        <item>Fighter, melee</item> <!--Riven-->
         <item>Mage, melee, pusher</item>
         <item>Mage, ranged, recommended</item>
         <!--Sej--><item>Tank, jungler, melee</item>
@@ -2693,7 +2695,8 @@
         <item>Fighter, assassin, melee</item>        <!--Xin-->
         <item>Fighter, pusher, melee</item>        <!--Yor-->
         <!--Zigs--><item>Mage, ranged, pusher</item>
-        <item>Mage, support, ranged</item>        <!--Zilean?-->
+        <item>Mage, support, ranged</item>        <!--Zilean-->
+        <!--Zyra--><item>Mage, pusher, ranged</item>
     </array>
 
     <!-- Role explanations-->
